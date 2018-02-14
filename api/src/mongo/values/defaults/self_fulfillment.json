@@ -1,0 +1,1028 @@
+[
+  {
+    "_id":"acceptance",
+    "name":"Acceptance",
+    "description":"to assent to the reality of a situation, recognizing a process or condition",
+    "i18n":{
+      "sv":{
+        "name":"Acceptans",
+        "description":"att erkänna och godta verkligheten i en situation eller tillstånd"
+      },
+      "fi":{
+        "name":"Hyväksyntä",
+        "description":"tosiasioiden myöntäminen, prosessin tai edellytyksen tunnistaminen"
+      },
+      "et":{
+        "name":"Aktsepteerimine",
+        "description":"nõustuda olukorraga nii, nagu see tegelikkuses on"
+      },
+      "de":{
+        "name":"Akzeptanz",
+        "description":"eine Situation annehmen, wie sie ist; Prozesse oder Umstände anerkennen "
+      },
+      "li":{
+        "name":"Priėmimas",
+        "description":"Pritarti situacijos realybei, proceso ar būklės pripažinimas "
+      }
+    }
+  },
+  {
+    "_id":"achieve",
+    "name":"Achieve",
+    "description":"to succeed or to reach and accomplish personal and shared aims",
+    "i18n":{
+      "sv":{
+        "name":"Prestera",
+        "description":"att åstadkomma och lyckas nå personliga och gemensamma mål"
+      },
+      "fi":{
+        "name":"Saavutus",
+        "description":"henkilökohtaisten ja jaettujen tavoitteiden saavuttaminen"
+      },
+      "et":{
+        "name":"Saavutus",
+        "description":"õnnestumine, soovitud isikliku või ühise eesmärgini jõudmine"
+      },
+      "de":{
+        "name":"Leistung",
+        "description":"Erfolg haben oder persönliche und gemeinsame Ziele erreichen"
+      },
+      "li":{
+        "name":"Pasiekimai",
+        "description":"Pasiekti ir įgyvendinti asmeninius ir bendrus tikslus"
+      }
+    }
+  },
+  {
+    "_id":"appear",
+    "name":"Appear",
+    "description":"to express, show and manifest personal skills and talents",
+    "i18n":{
+      "sv":{
+        "name":"Uppträda",
+        "description":"att visa upp, uttrycka och framföra personliga färdigheter och talanger"
+      },
+      "fi":{
+        "name":"Kyvykkyyden ilmaisu",
+        "description":"oman osaamisen ja kykyjen näyttäminen ja osoittaminen"
+      },
+      "et":{
+        "name":"Silma paistmine",
+        "description":"isiklike oskuste ja annete väljendamine ja teistele näitamine"
+      },
+      "de":{
+        "name":"Auftreten",
+        "description":"persönliche Fähigkeiten und Talente zeigen und zum Ausdruck bringen"
+      },
+      "li":{
+        "name":"Pasirodymas",
+        "description":"Išreikšti, parodyti ir pademonstruoti asmeninius įgūdžius ir gabumus"
+      }
+    }
+  },
+  {
+    "_id":"artistic",
+    "name":"Artistic",
+    "description":"to be involved in or appreciate artistic expression",
+    "i18n":{
+      "sv":{
+        "name":"Konstnärlig",
+        "description":"att vara involverad i eller uppskatta konstnärligt uttryck"
+      },
+      "fi":{
+        "name":"Taiteellisuus",
+        "description":"taiteellinen ilmaisu tai sen arvostus"
+      },
+      "et":{
+        "name":"Kunstilisus",
+        "description":"kunstilise väljenduse kasutamine ja hindamine "
+      },
+      "de":{
+        "name":"Kunst",
+        "description":"künstlerischen Ausdruck (Musik, Bild, Tanz …) schätzen oder umsetzen"
+      },
+      "li":{
+        "name":"Artistiškumas",
+        "description":"Dalyvauti ar vertinti meninę išraišką"
+      }
+    }
+  },
+  {
+    "_id":"authenticity",
+    "name":"Authenticity",
+    "description":"to be genuine, congruent and true to myself",
+    "i18n":{
+      "sv":{
+        "name":"Äkthet",
+        "description":"att vara genuin, autentisk och sann mot mig själv"
+      },
+      "fi":{
+        "name":"Aitous",
+        "description":"autenttisuus, johdonmukaisuus ja omana itsenä pysyminen"
+      },
+      "et":{
+        "name":"Ehtsus",
+        "description":"olla siiras ja tõene iseendale "
+      },
+      "de":{
+        "name":"Authentizität",
+        "description":"echt sein; im Einklang mit mir selbst sein und handeln"
+      },
+      "li":{
+        "name":"Autentiškumas",
+        "description":"Būti nuoširdžiu, atitinkančiu ir tikru savimi"
+      }
+    }
+  },
+  {
+    "_id":"awareness",
+    "name":"Awareness",
+    "description":"to be mindful and conscious about myself and my intentions",
+    "i18n":{
+      "sv":{
+        "name":"Medvetenhet",
+        "description":"att vara observant och uppmärksam på mig själv och mina intentioner"
+      },
+      "fi":{
+        "name":"Tiedostaminen",
+        "description":"tietoisuus omasta itsestä ja omista tarkoitusperistä"
+      },
+      "et":{
+        "name":"Teadlikkus",
+        "description":"olla tähelepanelik ja teadvustada iseennast ja oma kavatsusi"
+      },
+      "de":{
+        "name":"Bewusstsein",
+        "description":"mich selbst und meine Absichten mit Aufmerksamkeit wahrnehmen"
+      },
+      "li":{
+        "name":"Sąmoningumas",
+        "description":"Būti nuovokiu ir suvokiančiu apie save ir savo ketinimus"
+      }
+    }
+  },
+  {
+    "_id":"balance",
+    "name":"Balance",
+    "description":"to be in internal harmony and to strive for equilibrium in my environment",
+    "i18n":{
+      "sv":{
+        "name":"Balans",
+        "description":"att känna inre harmoni och sträva efter jämvikt i min omgivning"
+      },
+      "fi":{
+        "name":"Tasapaino",
+        "description":"sisäinen harmonia ja pyrkimys tasapainoon ympäristön kanssa"
+      },
+      "et":{
+        "name":"Tasakaal",
+        "description":"olla sisemiselt harmooniline ja püüelda tasakaalu poole väliskeskkonnaga"
+      },
+      "de":{
+        "name":"Ausgeglichenheit",
+        "description":"in innerer Harmonie sein und in meinem Umfeld nach Gleichgewicht streben"
+      },
+      "li":{
+        "name":"Balansas",
+        "description":"Būti harmonijoje su savimi ir siekti pusiausvyros savo aplinkoje"
+      }
+    }
+  },
+  {
+    "_id":"calm",
+    "name":"Calm",
+    "description":"to be peaceful, quiet and without worry, even in demanding situations",
+    "i18n":{
+      "sv":{
+        "name":"Lugn",
+        "description":"att vara stilla, behärskad och fri från oro, även i krävande situationer"
+      },
+      "fi":{
+        "name":"Tyyneys",
+        "description":"rauhallisuus, hiljaisuus ja huolettomuus, myös vaativissa tilanteissa"
+      },
+      "et":{
+        "name":"Rahulikkus",
+        "description":"olla rahuliku meelega ja muretu, isegi nõudlikes situatsioonides"
+      },
+      "de":{
+        "name":"Ruhe",
+        "description":"friedlich, ruhig und ohne Sorgen sein, auch in herausfordernden Situationen"
+      },
+      "li":{
+        "name":"Ramus",
+        "description":"Būti taikiu, tyliu ir ramiu net ir sunkiose situacijose"
+      }
+    }
+  },
+  {
+    "_id":"challenge",
+    "name":"Challenge",
+    "description":"to dispute, question and test my abilities and surroundings",
+    "i18n":{
+      "sv":{
+        "name":"Utmana",
+        "description":"att trotsa, ifrågasätta och pröva mina förmågor och min omgivning"
+      },
+      "fi":{
+        "name":"Haastaminen",
+        "description":"omien kykyjen ja ympäristön kyseenalaistaminen ja testaaminen"
+      },
+      "et":{
+        "name":"Väljakutse",
+        "description":"seada kahtluse alla, testida oma võimekusi ja ümbritsevat keskkonda"
+      },
+      "de":{
+        "name":"Herausforderung",
+        "description":"die Grenzen meiner Fähigkeiten und Umgebung austesten; Dinge in Frage stellen"
+      },
+      "li":{
+        "name":"Iššūkis",
+        "description":"Ginčytis, klausti ir išbandyti savo sugebėjimus ir aplinką"
+      }
+    }
+  },
+  {
+    "_id":"communication",
+    "name":"Communication",
+    "description":"to exchange thoughts, feelings, ideas and information",
+    "i18n":{
+      "sv":{
+        "name":"Kommunicera",
+        "description":"att utbyta tankar, känslor, idéer och information"
+      },
+      "fi":{
+        "name":"Kommunikaatio",
+        "description":"ajatusten, tunteiden, ideoiden ja tiedon vaihtaminen"
+      },
+      "et":{
+        "name":"Suhtlemine",
+        "description":"vahetada mõtteid, tundeid, ideid ja informatsiooni"
+      },
+      "de":{
+        "name":"Austausch",
+        "description":"Gedanken, Gefühle, Ideen und Informationen mit anderen teilen"
+      },
+      "li":{
+        "name":"Komunikabilumas",
+        "description":"Keistis mintimis, jausmais, idėjomis ir informacija"
+      }
+    }
+  },
+  {
+    "_id":"cooperation",
+    "name":"Cooperation",
+    "description":"to work or act together for a common purpose or benefit",
+    "i18n":{
+      "sv":{
+        "name":"Samarbete",
+        "description":"att arbeta eller agera tillsammans för ett gemensamt mål eller syfte"
+      },
+      "fi":{
+        "name":"Yhteistyö",
+        "description":"yhdessä työskentely tai toimiminen yhteisen tavoitteen tai edun eteen"
+      },
+      "et":{
+        "name":"Koostöö",
+        "description":"töötada või tegutseda koos ühise eesmärgi või kasu nimel"
+      },
+      "de":{
+        "name":"Zusammenarbeit",
+        "description":"mit anderen für einen gemeinsamen Zweck oder Nutzen arbeiten"
+      },
+      "li":{
+        "name":"Bendradarbiavimas",
+        "description":"Dirbti ir veikti drauge siekiant bendro tikslo ar naudos"
+      }
+    }
+  },
+  {
+    "_id":"courage",
+    "name":"Courage",
+    "description":"to be brave and have the ability to go against my fears",
+    "i18n":{
+      "sv":{
+        "name":"Mod",
+        "description":"att vara tapper och gå emot mina rädslor"
+      },
+      "fi":{
+        "name":"Rohkeus",
+        "description":"urheus ja kyky tehdä asioita, jotka pelottavat"
+      },
+      "et":{
+        "name":"Julgus",
+        "description":"olla vapper ja astuda vastu oma hirmudele"
+      },
+      "de":{
+        "name":"Mut",
+        "description":"beherzt sein; die Fähigkeit, meine Ängste zu überwinden"
+      },
+      "li":{
+        "name":"Drąsa",
+        "description":"Būti drąsiu ir sugebėti atsisakyti savo baimių"
+      }
+    }
+  },
+  {
+    "_id":"creativity",
+    "name":"Creativity",
+    "description":"to use imagination and transcend traditional ideas, rules or patterns ",
+    "i18n":{
+      "sv":{
+        "name":"Kreativitet",
+        "description":"att använda fantasin och gå ifrån traditionella idéer, regler eller mönster"
+      },
+      "fi":{
+        "name":"Luovuus",
+        "description":"mielikuvituksen käyttäminen ja kyky poiketa perinteisistä ajattelutavoista, säännöistä ja ajattelumalleista "
+      },
+      "et":{
+        "name":"Loovus",
+        "description":"kasutada kujutlusvõimet ja mõelda väljaspool traditsioonilisi ideid, reegelid ja mustreid"
+      },
+      "de":{
+        "name":"Kreation",
+        "description":"etwas schaffen, das nicht von selbst entstehen würde"
+      },
+      "li":{
+        "name":"Kūrybiškumas",
+        "description":"Panaudoti vaizduotę ir peržengti nusistovėjusias idėjas, taisykles ir modelius"
+      }
+    }
+  },
+  {
+    "_id":"create",
+    "name":"Create",
+    "description":"to realize something into being that would not naturally evolve ",
+    "i18n":{
+      "sv":{
+        "name":"Skapa",
+        "description":"att förverkliga något som inte skulle ha uppstått naturligt"
+      },
+      "fi":{
+        "name":"Luominen",
+        "description":"jonkin sellaisen aikaansaaminen, joka ei syntyisi luonnostaan "
+      },
+      "et":{
+        "name":"Loomine",
+        "description":"panna alguse millegile ja see teostada"
+      },
+      "de":{
+        "name":"Kreativität",
+        "description":"die Phantasie nutzen, abseits gewohnter Ideen, Regeln oder Muster"
+      },
+      "li":{
+        "name":"Kūrimas",
+        "description":"Kažką realizuoti, kas nebūtų natūraliai išsivystę"
+      }
+    }
+  },
+  {
+    "_id":"curiosity",
+    "name":"Curiosity",
+    "description":"to show interest and to learn and inquire about something or someone ",
+    "i18n":{
+      "sv":{
+        "name":"Nyfikenhet",
+        "description":"att vara frågvis, vetgirig och visa intresse för något eller någon"
+      },
+      "fi":{
+        "name":"Uteliaisuus",
+        "description":"kiinnostuksen osoittaminen ja perehtyminen johonkin tai johonkuhun toiseen, oppiminen jostakusta tai jostakin "
+      },
+      "et":{
+        "name":"Uudishimu",
+        "description":"näidata välja huvi ja õppida, uurida millegi või kellegi kohta"
+      },
+      "de":{
+        "name":"Neugier",
+        "description":"Interesse zeigen, lernen und sich nach Menschen oder Dingen erkundigen"
+      },
+      "li":{
+        "name":"Smalsumas",
+        "description":"Parodyti susidomėjimą, papildomai mokytis ir domėtis apie kažką"
+      }
+    }
+  },
+  {
+    "_id":"educated",
+    "name":"Educated",
+    "description":"to be skilled, well-informed and confident in a profession or subject",
+    "i18n":{
+      "sv":{
+        "name":"Utbildad",
+        "description":"att vara skicklig, säker och välinformerade inom ett område eller ett yrke"
+      },
+      "fi":{
+        "name":"Sivistyneisyys",
+        "description":"osaaminen, hyvät ja itseluottamus tietyssä ammatissa tai asiassa"
+      },
+      "et":{
+        "name":"Haritus",
+        "description":"olla kogenud, heade teadmistega ja enesekindel mingil ametialal või valdkonnas"
+      },
+      "de":{
+        "name":"Bildung",
+        "description":"qualifiziert, gut informiert und sicher in einem Beruf oder Thema sein"
+      },
+      "li":{
+        "name":"Išsilavinimas",
+        "description":"Būti kvalifikuotu, gerai informuotu ir pasitikinčiu profesijoje ar tam tikrame dalyke"
+      }
+    }
+  },
+  {
+    "_id":"empathy",
+    "name":"Empathy",
+    "description":"to be able to understand and share the feelings of another",
+    "i18n":{
+      "sv":{
+        "name":"Empati",
+        "description":"att leva sig in i, förstå och dela andras känslor"
+      },
+      "fi":{
+        "name":"Empatia",
+        "description":"kyky ymmärtää toisten tunteita ja jakaa ne"
+      },
+      "et":{
+        "name":"Empaatia",
+        "description":"olla võimeline mõistma ja jagama teiste tundeid"
+      },
+      "de":{
+        "name":"Empathie",
+        "description":"in der Lage sein, die Gefühle von anderen zu verstehen und zu teilen"
+      },
+      "li":{
+        "name":"Empatija",
+        "description":"Sugebėjimas suprasti ir pasidalinti jausmais su kitais"
+      }
+    }
+  },
+  {
+    "_id":"explore",
+    "name":"Explore",
+    "description":"to search, try and discover new territories, experiences and perspectives ",
+    "i18n":{
+      "sv":{
+        "name":"Utforska",
+        "description":"att undersöka, testa och upptäcka nya områden, erfarenheter och perspektiv"
+      },
+      "fi":{
+        "name":"Uuden etsintä",
+        "description":"uusien alueiden, kokemusten ja näkökulmien etsiminen ja löytäminen "
+      },
+      "et":{
+        "name":"Avastamine",
+        "description":"otsida ja uurida uusi valdkondi, kogemusi ja vaatenurki"
+      },
+      "de":{
+        "name":"Erkundung",
+        "description":"neue Erfahrungen und Perspektiven suchen und entdecken"
+      },
+      "li":{
+        "name":"Tyrinėjimas",
+        "description":"Ieškoti ir atrasti naujas teritorijas, patirtis ir perspektyvas"
+      }
+    }
+  },
+  {
+    "_id":"focus",
+    "name":"Focus",
+    "description":"to concentrate and direct attention or efforts towards a particular subject",
+    "i18n":{
+      "sv":{
+        "name":"Fokus",
+        "description":"att koncentrera sig och rikta sin uppmärksamhet mot någon eller något"
+      },
+      "fi":{
+        "name":"Keskittyminen",
+        "description":"tiettyyn aiheeseen keskittyminen, suuntautuminen ja panostaminen"
+      },
+      "et":{
+        "name":"Fookus",
+        "description":"keskenduda ja suunata tähelepanu ja pingutus ühele kindlale asjale"
+      },
+      "de":{
+        "name":"Fokus",
+        "description":"meine Aufmerksamkeit oder Bemühungen konzentriert auf ein bestimmtes Thema richten"
+      },
+      "li":{
+        "name":"Dėmesio sutelkimas",
+        "description":"Būti susitelkusiam ir nukreipti dėmesį ar jėgas į tam tikra linkme"
+      }
+    }
+  },
+  {
+    "_id":"generous",
+    "name":"Generosity",
+    "description":"to be liberal in giving and sharing, often more than what is expected",
+    "i18n":{
+      "sv":{
+        "name":"Generös",
+        "description":"att frikostigt ge och dela med sig, ofta mer än vad som är förväntat"
+      },
+      "fi":{
+        "name":"Anteliaisuus",
+        "description":"anteliaisuus ja aulis jakaminen omastaan, usein yli odotusten"
+      },
+      "et":{
+        "name":"Heldekäelisus",
+        "description":"olla lahke andmises ja jagamises, rohkem kui tavaliselt oodatakse"
+      },
+      "de":{
+        "name":"Großzügigkeit",
+        "description":"freigebig sein und teilen, oft mehr als erwartet wird"
+      },
+      "li":{
+        "name":"Dosnumas",
+        "description":"Duoti ir dalintis dažniau nei kiti tikisi"
+      }
+    }
+  },
+  {
+    "_id":"gratitude",
+    "name":"Gratitude",
+    "description":"to feel thankful for kindnesses, benefits or learnings received",
+    "i18n":{
+      "sv":{
+        "name":"Tacksamhet",
+        "description":"att känna tillfredsställelse över något man har fått uppleva eller lärt sig"
+      },
+      "fi":{
+        "name":"Kiitollisuus",
+        "description":"kiitollisuus saaduista ystävällisistä eleistä, eduista ja opeista"
+      },
+      "et":{
+        "name":"Tänulikkus",
+        "description":"olla tänumeelne saadud headuse, kasude ja õpetuste eest"
+      },
+      "de":{
+        "name":"Dankbarkeit",
+        "description":"sich dankbar fühlen für Freundlichkeiten, Unterstützung und Erfahrungen"
+      },
+      "li":{
+        "name":"Dėkingumas",
+        "description":"Jaustis dėkingam už gerumą, naudą ar gautą pamokymą"
+      }
+    }
+  },
+  {
+    "_id":"honesty",
+    "name":"Honesty",
+    "description":"to be sincere, honorable and truthful in intentions and actions",
+    "i18n":{
+      "sv":{
+        "name":"Ärlighet",
+        "description":"att vara uppriktig, hederlig och sanningsenlig i mina avsikter och ageranden"
+      },
+      "fi":{
+        "name":"Rehellisyys",
+        "description":"tarkoitusperien ja tekojen vilpittömyys, kunniallisuus ja totuudenmukaisuus"
+      },
+      "et":{
+        "name":"Ausus",
+        "description":"olla siiras, austatud ja tõene oma kavatsustes ja tegudes"
+      },
+      "de":{
+        "name":"Ehrlichkeit",
+        "description":"aufrichtig und wahrhaftig in Absichten und Handlungen sein"
+      },
+      "li":{
+        "name":"Sąžiningumas",
+        "description":"Būti nuoširdžiu, garbingu ir teisingu savo ketinimuose ir veiksmuose"
+      }
+    }
+  },
+  {
+    "_id":"independence",
+    "name":"Independence",
+    "description":"to be self-sufficient and free from the control or influence of others",
+    "i18n":{
+      "sv":{
+        "name":"Oberoende",
+        "description":"att vara självständig och fri från andras kontroll eller påverkan "
+      },
+      "fi":{
+        "name":"Itsenäisyys",
+        "description":"riippumattomuus, vapaus muiden vaikutusvallasta tai kontrollista"
+      },
+      "et":{
+        "name":"Iseseisvus",
+        "description":"tulla asjadega ise toime ning olla teiste kontrollist ja mõjust sõltumatu"
+      },
+      "de":{
+        "name":"Unabhängigkeit",
+        "description":"autark sein und frei von der Kontrolle oder dem Einfluss anderer"
+      },
+      "li":{
+        "name":"Nepriklausomybė",
+        "description":"Būti savarankiškam ir laisvam nuo kitų žmonių kontrolės ar įtakos"
+      }
+    }
+  },
+  {
+    "_id":"initiate",
+    "name":"Initiate",
+    "description":"to originate, launch or cause actions or processes to happen",
+    "i18n":{
+      "sv":{
+        "name":"Initiera",
+        "description":"att se till att processer, projekt eller ageranden påbörjas"
+      },
+      "fi":{
+        "name":"Aloitteellisuus",
+        "description":"tekojen ja prosessien ideoiminen, käynnistäminen ja aiheuttaminen"
+      },
+      "et":{
+        "name":"Initsiatiiv",
+        "description":"tegevuste või protsesside algatamine"
+      },
+      "de":{
+        "name":"Anstoß geben",
+        "description":"etwas ins Leben rufen, starten oder bewirken; Handlungen oder Prozesse anstoßen"
+      },
+      "li":{
+        "name":"Iniciatyvumas",
+        "description":"Pradėti, sukelti veiksmus ar procesus"
+      }
+    }
+  },
+  {
+    "_id":"innovation",
+    "name":"Innovation",
+    "description":"to create value from new and unprecedented ideas, structures and methods",
+    "i18n":{
+      "sv":{
+        "name":"Innovation",
+        "description":"att skapa värde utifrån nya och oförutsedda idéer, strukturer och metoder"
+      },
+      "fi":{
+        "name":"Innovatiivisuus",
+        "description":"arvon luominen uusien ja ennakoimattomien ajatusten, rakenteiden ja menetelmien avulla"
+      },
+      "et":{
+        "name":"Innovatsioon",
+        "description":"luua väärtust uutest ja enneolematutest ideedest, strutkuuridest ja meetoditest"
+      },
+      "de":{
+        "name":"Innovation",
+        "description":"Wert schaffen, auf Grundlage von neuen, nie dagewesenen Ideen, Strukturen und Methoden"
+      },
+      "li":{
+        "name":"Inovacijos",
+        "description":"Kurti vertę iš naujų ir precendento neturinčių idėjų, struktūrų ir metodų"
+      }
+    }
+  },
+  {
+    "_id":"integrity",
+    "name":"Integrity",
+    "description":"to act according to my personal values, beliefs and principles",
+    "i18n":{
+      "sv":{
+        "name":"Integritet",
+        "description":"att agera i enlighet med personliga värderingar, övertygelser och principer"
+      },
+      "fi":{
+        "name":"Eheys",
+        "description":"henkilökohtaisten arvojen, vakaumusten ja periaatteiden mukaan toimiminen"
+      },
+      "et":{
+        "name":"Põhimõttekindlus",
+        "description":"isiklikele väärtustele, uskumustele ja põhimõtetele vastav käitumine"
+      },
+      "de":{
+        "name":"Integrität",
+        "description":"nach meinen persönlichen Werten, Überzeugungen und Prinzipien handeln"
+      },
+      "li":{
+        "name":"Vientisumas",
+        "description":"Veikti pagal savo asmenines vertybės, įsitikinimus ir principus"
+      }
+    }
+  },
+  {
+    "_id":"lead",
+    "name":"Lead",
+    "description":"to guide or conduct others towards a certain goal or mission",
+    "i18n":{
+      "sv":{
+        "name":"Leda",
+        "description":"att styra eller guida andra i en viss riktning eller mot ett mål"
+      },
+      "fi":{
+        "name":"Johtajuus",
+        "description":"muiden ohjaaminen tai opastaminen tietyn tavoitteen saavuttamisessa tai tehtävän suorittamisessa"
+      },
+      "et":{
+        "name":"Eestvedamine",
+        "description":"suunata, juhtida inimesi teatud eesmärgi või missiooni suunas"
+      },
+      "de":{
+        "name":"Führung",
+        "description":"andere in Richtung eines bestimmten Zieles oder einer Mission leiten oder weisen"
+      },
+      "li":{
+        "name":"Lyderiavimas",
+        "description":"Vesti ar vadovauti kitiems siekiant tam tikro tikslo ar misijos"
+      }
+    }
+  },
+  {
+    "_id":"meaning",
+    "name":"Meaning",
+    "description":"to search and identify value, importance and purpose in my engagements",
+    "i18n":{
+      "sv":{
+        "name":"Mening",
+        "description":"att söka och identifiera signifikans, betydelse och syfte i mitt engagemang"
+      },
+      "fi":{
+        "name":"Merkitys",
+        "description":"arvon, merkityksen ja tarkoituksen etsiminen ja tunnistaminen omista sitoumuksista"
+      },
+      "et":{
+        "name":"Tähendus",
+        "description":"otsida ja leida oma ettevõtmistes peituv väärtus, tähtsus ja eesmärk"
+      },
+      "de":{
+        "name":"Bedeutung",
+        "description":"Wert, Wichtigkeit und Sinn in meinem Handeln suchen und finden"
+      },
+      "li":{
+        "name":"Prasmingumas",
+        "description":"Ieškoti ir nustatyti vertę, svarbumą ir tikslą savo įsipareigojimuose"
+      }
+    }
+  },
+  {
+    "_id":"openness",
+    "name":"Openness",
+    "description":"to be accessible and receptive to change and new ideas ",
+    "i18n":{
+      "sv":{
+        "name":"Öppenhet",
+        "description":"att vara tillgänglig, oskyddad och mottaglig för förändring eller nya perspektiv"
+      },
+      "fi":{
+        "name":"Avoimuus",
+        "description":"vastaanottavaisuus ja avoimuus muutokselle ja uusille ideoille "
+      },
+      "et":{
+        "name":"Avatus",
+        "description":"olla vastuvõtlik muutustele ja uutele ideedele"
+      },
+      "de":{
+        "name":"Offenheit",
+        "description":"zugänglich und empfänglich für Veränderungen und neue Ideen sein"
+      },
+      "li":{
+        "name":"Atvirumas",
+        "description":"Būti prieinamu ir priimti pokyčius ir naujas idėjas"
+      }
+    }
+  },
+  {
+    "_id":"passion",
+    "name":"Passion",
+    "description":"to be strongly enthusiastic and engaged in what i do",
+    "i18n":{
+      "sv":{
+        "name":"Passion",
+        "description":"att vara djupt engagerad och entusiastik i det jag gör"
+      },
+      "fi":{
+        "name":"Intohimo",
+        "description":"olla innostunut siitä mitä tekee ja omistautunut sille"
+      },
+      "et":{
+        "name":"Kirg",
+        "description":"olla tugevalt entusiastlik ja pühendunud oma tegevusele"
+      },
+      "de":{
+        "name":"Leidenschaft",
+        "description":"sehr begeistert und engagiert in dem sein, was ich tue"
+      },
+      "li":{
+        "name":"Aistra",
+        "description":"Būti entuziastingu ir įsitraukusiu tai ką darai"
+      }
+    }
+  },
+  {
+    "_id":"patience",
+    "name":"Patience",
+    "description":"to be tolerant, non complaining and content to wait if necessary",
+    "i18n":{
+      "sv":{
+        "name":"Tålamod",
+        "description":"att vara tolerant och uthärda väntan utan att bli otålig eller irriterad "
+      },
+      "fi":{
+        "name":"Kärsivällisyys",
+        "description":"suvaitsevaisuus, kyky olla valittamatta ja odottaa silloin kun se on tarpeen"
+      },
+      "et":{
+        "name":"Kannatlikkus",
+        "description":"olla tolereeriv, salliv ja valmis ootama kui see on vajalik"
+      },
+      "de":{
+        "name":"Geduld",
+        "description":"tolerant sein und sich nicht beklagen, wenn ich warten muss"
+      },
+      "li":{
+        "name":"Kantrybė",
+        "description":"Būti tolerantiškam, nesiskundžiančiu ir laukiančiu jei reikia"
+      }
+    }
+  },
+  {
+    "_id":"perceptive",
+    "name":"Perceptive",
+    "description":"to be sensitive, keen and attentive towards my surroundings",
+    "i18n":{
+      "sv":{
+        "name":"Lyhörd",
+        "description":"att vara inkännande, lyssnande och uppmärksam mot min omgivning"
+      },
+      "fi":{
+        "name":"Tarkkanäköisyys",
+        "description":"herkkyys, kiinnostus ja huomaavaisuus omaa ympäristöä kohtaan"
+      },
+      "et":{
+        "name":"Tundlikkus",
+        "description":"olla sensitiivne, tähelepanelik oma ümbruskonna suhtes"
+      },
+      "de":{
+        "name":"Wahrnehmung",
+        "description":"empfindsam, wach und aufmerksam auf meine Umgebung achten"
+      },
+      "li":{
+        "name":"Įžvalgumas",
+        "description":"Būti jautriam, entuziastingam ir dėmesingam supančiai aplinkai"
+      }
+    }
+  },
+  {
+    "_id":"quality",
+    "name":"Quality",
+    "description":"to pursue a level of excellence, perfection and high standard",
+    "i18n":{
+      "sv":{
+        "name":"Kvalitet",
+        "description":"att eftersträva en hög standard, exceptionellt god funktionalitet och perfektion"
+      },
+      "fi":{
+        "name":"Laatu",
+        "description":"huippuosaamisen, täydellisyyden ja korkean tason tavoittelu"
+      },
+      "et":{
+        "name":"Kvaliteet",
+        "description":"püüelda suurepäraste, täisulike ja kõrgete standardite poole"
+      },
+      "de":{
+        "name":"Qualität",
+        "description":"nach Exzellenz, Perfektion und einem hohen Standard streben"
+      },
+      "li":{
+        "name":"Kokybiškumas",
+        "description":"Siekti aukščiausios lygio tobulumo, idealumo ir aukštų standartų"
+      }
+    }
+  },
+  {
+    "_id":"rational",
+    "name":"Rational",
+    "description":"to base my reasoning on logic, sense and clear thinking",
+    "i18n":{
+      "sv":{
+        "name":"Rationell",
+        "description":"att basera mina resonemang på logik, klarhet och förnuft"
+      },
+      "fi":{
+        "name":"Rationaalisuus",
+        "description":"looginen, järkevä ja selkeä ajattelu"
+      },
+      "et":{
+        "name":"Ratsionaalsus",
+        "description":"loogikast, mõistusest ja selgusest lähtumine"
+      },
+      "de":{
+        "name":"Rationalität",
+        "description":"meine Argumentation auf Logik, Verstand und klares Denken stützen"
+      },
+      "li":{
+        "name":"Racionalumas",
+        "description":"Pagrįsti savo motyvus logika, jausmais ir aiškiu mąstymu"
+      }
+    }
+  },
+  {
+    "_id":"responsible",
+    "name":"Responsibility",
+    "description":"to be answerable and accountable for an act performed and its consequences",
+    "i18n":{
+      "sv":{
+        "name":"Ansvar",
+        "description":"att vara tillräknelig och svara för mina ageranden och dess konsekvenser"
+      },
+      "fi":{
+        "name":"Vastuullisuus",
+        "description":"vastuun ottaminen ja tilivelvollisuus omista teoista ja sen seurauksista"
+      },
+      "et":{
+        "name":"Vastutustundlikkus",
+        "description":"seista silmitsi tegude ja nende tagajärgedega"
+      },
+      "de":{
+        "name":"Verantwortung",
+        "description":"zu eigenen Handlungen und deren Konsequenzen stehen und dafür geradestehen"
+      },
+      "li":{
+        "name":"Atsakomybė",
+        "description":"Būti atsakingu už atliktą veiksmą ir prisiimti jo pasekmes"
+      }
+    }
+  },
+  {
+    "_id":"scientific",
+    "name":"Scientific",
+    "description":"to be systematic, careful and principled  when using objective methods",
+    "i18n":{
+      "sv":{
+        "name":"Vetenskaplig",
+        "description":"att vara systematisk, noggrann och principiell i användning av objektiva metoder"
+      },
+      "fi":{
+        "name":"Tieteellisyys",
+        "description":"järjestelmällisyys, huolellisuus ja periaatteellisuus objektiivisten menetelmien käytössä"
+      },
+      "et":{
+        "name":"Teaduslik",
+        "description":"olla süsteemne, täpne ja põhimõttekindel objektiivsete meetodite kasutamisel"
+      },
+      "de":{
+        "name":"Wissenschaftlichkeit",
+        "description":"objektive Methoden systematisch, genau und regelgetreu nutzen"
+      },
+      "li":{
+        "name":"Moksliškumas",
+        "description":"Būti sistematišku, atsargiu  ir principingu taikant objektyvius metodus"
+      }
+    }
+  },
+  {
+    "_id":"support",
+    "name":"Support",
+    "description":"to give aid, guidance or encouragement to someone or something",
+    "i18n":{
+      "sv":{
+        "name":"Stödja",
+        "description":"att stötta, uppmuntra och bygga upp någon eller något"
+      },
+      "fi":{
+        "name":"Tuki",
+        "description":"jonkun tai jonkin auttaminen, opastaminen tai rohkaisu"
+      },
+      "et":{
+        "name":"Toetus",
+        "description":"abistada, juhtida ja julgustada kedagi milleski"
+      },
+      "de":{
+        "name":"Unterstützung",
+        "description":"jemandem oder einer Sache Hilfe, Anleitung oder Ermutigung geben"
+      },
+      "li":{
+        "name":"Parama",
+        "description":"Suteikti pagalbą, patarimą ar paskatinti kažką "
+      }
+    }
+  },
+  {
+    "_id":"vitality",
+    "name":"Vitality",
+    "description":"to radiate exuberant strength, energy and mental vigor",
+    "i18n":{
+      "sv":{
+        "name":"Vitalitet",
+        "description":"att utstråla livskraft och en fysisk och mental stryka"
+      },
+      "fi":{
+        "name":"Elinvoimaisuus",
+        "description":"osoittaa suurta voimaa, energiaa ja tarmoa"
+      },
+      "et":{
+        "name":"Elujõud",
+        "description":"energia ja vaimse jõudu välja kiirgamine"
+      },
+      "de":{
+        "name":"Lebenskraft",
+        "description":"kraftvoll körperliche Stärke, Energie und/oder Geistesstärke ausstrahlen "
+      },
+      "li":{
+        "name":"Gyvybingumas",
+        "description":"Spinduliuoti didžiulę jėgą, energiją ir psichinę galią"
+      }
+    }
+  }
+]

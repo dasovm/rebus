@@ -1,0 +1,31 @@
+{
+  "name": "valuesmatch-backend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/valuesmatch/backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/valuesmatch/backend#readme",
+  "dependencies": {
+    "apollo-server-express": "1.2.0",
+    "body-parser": "1.18.2",
+    "express": "4.16.1",
+    "express-jwt": "5.3.0",
+    "graphql": "0.11.7",
+    "graphql-tools": "2.8.0",
+    "jsonwebtoken": "8.1.0",
+    "moment": "2.20.1",
+    "mongodb": "3.0.1",
+    "mongoose": "5.0.4",
+    "request": "~2.83.0",
+    "fb": "2.0.0"
+  }
+}

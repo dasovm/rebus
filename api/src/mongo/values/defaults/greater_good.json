@@ -1,0 +1,920 @@
+[
+  {
+    "_id":"activism",
+    "name":"Activism",
+    "description":"to advocate change that improves the social and ecological environment",
+    "i18n":{
+      "sv":{
+        "name":"Aktivism",
+        "description":"att aktivt förespråka förändringar som förbättrar den sociala och ekologiska miljön"
+      },
+      "fi":{
+        "name":"Aktivismi",
+        "description":"sosiaalisen ja ekologisen ympäristön muutoksen edistäminen"
+      },
+      "et":{
+        "name":"Ühiskondlik aktiivsus",
+        "description":"seista muutuste eest, mis parendavad sotsiaalset ja ökoloogilist keskkonda"
+      },
+      "de":{
+        "name":"Aktivismus",
+        "description":"Aktivismus"
+      },
+      "li":{
+        "name":"Aktyvizmas",
+        "description":"Skatinantis pokyčius, pagerinančius socialinę ir ekologinę aplinką"
+      }
+    }
+  },
+  {
+    "_id":"beauty",
+    "name":"Beauty",
+    "description":" to appreciate, nurture and cultivate the aesthetic side of life",
+    "i18n":{
+      "sv":{
+        "name":"Skönhet",
+        "description":"att uppskatta, värna om och utveckla det estetisk vackra i min omgivning"
+      },
+      "fi":{
+        "name":"Kauneus",
+        "description":"elämän esteettisen puolen arvostaminen, vaaliminen ja jalostaminen"
+      },
+      "et":{
+        "name":"Ilu",
+        "description":"elu esteetilise poole väärtustamine ja arendamine"
+      },
+      "de":{
+        "name":"Schönheit",
+        "description":"die ästhetische Seite des Lebens schätzen, nähren und pflegen"
+      },
+      "li":{
+        "name":"Grožis",
+        "description":"Džiaugtis, puosėlėti ir auginti estetinę gyvenimo pusę"
+      }
+    }
+  },
+  {
+    "_id":"co-creation",
+    "name":"Co-creation",
+    "description":"to collectively realize something in a self-evolving process",
+    "i18n":{
+      "sv":{
+        "name":"Samskapande",
+        "description":"att skapa något tillsammans i en självorganiserad process"
+      },
+      "fi":{
+        "name":"Yhdessä luominen",
+        "description":"yhdessä oivaltaminen itse itseään kehittävässä prosessissa"
+      },
+      "et":{
+        "name":"Ühisloome",
+        "description":"millegi üheskoos tegemine"
+      },
+      "de":{
+        "name":"Co-Kreation",
+        "description":"zusammen mit anderen etwas in einem gemeinsam gesteuerten Prozess verwirklichen"
+      },
+      "li":{
+        "name":"Bendras kūrimas",
+        "description":"Kolektyviai realizuoti kažką savarankiškai besikeičiančiame procese"
+      }
+    }
+  },
+  {
+    "_id":"compassion",
+    "name":"Compassion",
+    "description":"to be aware of the suffering of myself or others and act to relieve it",
+    "i18n":{
+      "sv":{
+        "name":"Medkänsla",
+        "description":"att uppmärksamma eget eller andras lidande och agera för att minska det"
+      },
+      "fi":{
+        "name":"Myötätunto",
+        "description":"oman ja muiden kärsimyksen tiedostaminen ja toimiminen sen vähentämiseksi"
+      },
+      "et":{
+        "name":"Kaastunne",
+        "description":"olla teadlik iseenda ja teiste kannatustest ja püüda neid leevendada"
+      },
+      "de":{
+        "name":"Mitgefühl",
+        "description":"mir meines eigenen Leidens oder des Leidens anderer bewusst sein und es lindern"
+      },
+      "li":{
+        "name":"Gailestingumas",
+        "description":"Žinojimas apie savo ir kitų kančias ir siekimas jas palengvinti"
+      }
+    }
+  },
+  {
+    "_id":"complexity",
+    "name":"Complexity",
+    "description":"to consider holistic systems that are larger than their interconnected parts",
+    "i18n":{
+      "sv":{
+        "name":"Komplexitet",
+        "description":"att beakta holistiska system som är större än summan av delarna "
+      },
+      "fi":{
+        "name":"Kompleksisuus",
+        "description":"kyky ottaa huomioon osiaan suuremmat kokonaisuudet"
+      },
+      "et":{
+        "name":"Kompleksus",
+        "description":"mõista holistilisi süsteeme, kus tervik on suurem kui seda ühendatavad osad"
+      },
+      "de":{
+        "name":"Komplexität",
+        "description":"Systeme, die mehr sind als die Summe ihrer verbundenen Teile in ihrer Vielschichtigkeit ganzheitlich betrachten"
+      },
+      "li":{
+        "name":"Kompleksiškumas",
+        "description":"Į vieną visumą apimantis visumą sudarančias mažesnes dalis, procesus"
+      }
+    }
+  },
+  {
+    "_id":"community",
+    "name":"Community",
+    "description":"to build and sustain a union based on shared interest or characteristics ",
+    "i18n":{
+      "sv":{
+        "name":"Samhörighet",
+        "description":"att bygga en gemenskap baserat på delade intressen"
+      },
+      "fi":{
+        "name":"Yhteisöllisyys",
+        "description":"jaetuille intresseille ja ominaisuuksille perustuvan liiton rakentaminen ja ylläpito "
+      },
+      "et":{
+        "name":"Kogukond",
+        "description":"luua ja hoida kooslust, mida ühendavad ühised huvid või tunnused"
+      },
+      "de":{
+        "name":"Gemeinschaft",
+        "description":"eine Einheit aufbauen und unterstützen, die auf geteilten Interessen oder Merkmalen beruht"
+      },
+      "li":{
+        "name":"Bendruomenė",
+        "description":"Kurti ir palaikyti sąjungą, pagrįsta bendrais interesais ir charakteristikomis"
+      }
+    }
+  },
+  {
+    "_id":"contribute",
+    "name":"Contribute",
+    "description":"to give or to offer something that adds to a larger whole or higher purpose",
+    "i18n":{
+      "sv":{
+        "name":"Bidra",
+        "description":"att ge eller erbjuda något som bidrar till en större helhet eller högre syfte"
+      },
+      "fi":{
+        "name":"Osallistuminen",
+        "description":"jonkin sellaisen antaminen tai tarjoaminen, joka edistää suurempaa kokonaisuutta tai tarkoitusta"
+      },
+      "et":{
+        "name":"Panustamine",
+        "description":"anda või pakkuda midagi, mis teenib suuremat või kõrgemat eesmärki"
+      },
+      "de":{
+        "name":"Beitrag",
+        "description":"etwas geben oder anbieten, das zu einem größeren Ganzen oder höheren Zweck beiträgt"
+      },
+      "li":{
+        "name":"Bendradarbiavimas",
+        "description":"Duoti arba pasiūlyti kažką, kas prisideda prie visumos ar geresnio rezultato "
+      }
+    }
+  },
+  {
+    "_id":"detachment",
+    "name":"Detachment",
+    "description":"to be unattached to worldly concerns and free from influence by my own or others’ feelings",
+    "i18n":{
+      "sv":{
+        "name":"Oavhängighet",
+        "description":"att vara frigjord från världsliga bekymmer och påverkan av egna eller andras känslor"
+      },
+      "fi":{
+        "name":"Erillisyys",
+        "description":"olla huolehtimatta maallisista murheista, omat tai muiden tunteet eivät vaikuta toimintaan"
+      },
+      "et":{
+        "name":"Eraldatus",
+        "description":"olla eemaldunud maailma muredest ja vaba oma või teiste tunnete mõjust"
+      },
+      "de":{
+        "name":"Loslösung",
+        "description":"frei sein von weltlichen Sorgen; unbeeinflusst sein durch meine eigenen Gefühle oder die Gefühle anderer"
+      },
+      "li":{
+        "name":"Atsiskyrimas",
+        "description":"Būti nesusijusiam su pasaulio rūpesčiais, neturėti įtakos savo ar kitų jausmams"
+      }
+    }
+  },
+  {
+    "_id":"develop",
+    "name":"Development",
+    "description":"to evolve, progress and create growth by bringing out possibilities and capabilities ",
+    "i18n":{
+      "sv":{
+        "name":"Utveckling",
+        "description":"att ständigt förbättra något och bidra till ökad mognad och progression"
+      },
+      "fi":{
+        "name":"Kehitys",
+        "description":"kasvun aikaansaaminen, luominen ja edistäminen tuomalla esiin mahdollisuudet ja kyvyt "
+      },
+      "et":{
+        "name":"Areng",
+        "description":"edasi viia, luua kasvu läbi võimaluste ja võimekuste"
+      },
+      "de":{
+        "name":"Entwicklung",
+        "description":"Möglichkeiten und Fähigkeiten entdecken und herausbilden, die Fortschritt bringen und Wachstum befördern"
+      },
+      "li":{
+        "name":"Vystymas",
+        "description":"Įtraukimas, progresas ir sukuriamas augimas, išryškinant tikimybes ir galimybes "
+      }
+    }
+  },
+  {
+    "_id":"diversity",
+    "name":"Diversity",
+    "description":"to value different ideas, expressions and cultures within a community",
+    "i18n":{
+      "sv":{
+        "name":"Mångfald",
+        "description":"att värdesätta olika övertygelser, uttryck och kulturer i en grupp eller samhälle"
+      },
+      "fi":{
+        "name":"Monimuotoisuus",
+        "description":"yhteisön erilaisten ajattelutapojen, ilmaisutapojen ja kulttuurien arvostaminen"
+      },
+      "et":{
+        "name":"Mitmekülgsus",
+        "description":"väärtustada erinevaid ideid, seisukohti ja kultuure sama ühiskonna sees"
+      },
+      "de":{
+        "name":"Vielfalt",
+        "description":"verschiedene Ideen, Ausdrucksformen und Kulturen innerhalb einer Gemeinschaft wertschätzen"
+      },
+      "li":{
+        "name":"Įvairovė",
+        "description":"Vertinti skirtingas idėjas, išraiškas ir bendruomenės kultūras"
+      }
+    }
+  },
+  {
+    "_id":"equality",
+    "name":"Equality",
+    "description":"to strive towards a society where all humans have the same social or political rights",
+    "i18n":{
+      "sv":{
+        "name":"Jämlikhet",
+        "description":"att sträva efter ett samhälle där alla människor har samma möjligheter och rättigheter"
+      },
+      "fi":{
+        "name":"Tasapuolisuus",
+        "description":"pyrkimys kohti yhteiskuntaa, jossa kaikilla on samat yhteiskunnalliset ja poliittiset oikeudet"
+      },
+      "et":{
+        "name":"Võrdsus",
+        "description":"püüelda ühiskonna poole, kus kõigil inimestel on samad sotsiaalsed ja poiliitisised õigused"
+      },
+      "de":{
+        "name":"Gleichheit",
+        "description":"eine Gesellschaft anstreben, in der alle Menschen die gleichen sozialen oder politischen Rechte haben"
+      },
+      "li":{
+        "name":"Lygybė",
+        "description":"Siekti visuomenės, kurioje visi žmonės turi tas pačias socialines ir politines teises"
+      }
+    }
+  },
+  {
+    "_id":"ethical",
+    "name":"Ethical",
+    "description":"to reflect upon and act according to beliefs about what is right and virtuous",
+    "i18n":{
+      "sv":{
+        "name":"Etisk",
+        "description":"att reflektera över och agera i linje med övertygelser om vad som är rätt"
+      },
+      "fi":{
+        "name":"Eettisyys",
+        "description":"kyky pohtia sitä, mikä on oikeaa ja hyveellistä, ja toimia sen mukaan"
+      },
+      "et":{
+        "name":"Eetilisus",
+        "description":"teadvustada ja käituda vastavalt sellele, mida pead õigeks ja moraalseks"
+      },
+      "de":{
+        "name":"Ethik",
+        "description":"darüber nachdenken, was richtig und tugendhaft ist und entsprechend handeln"
+      },
+      "li":{
+        "name":"Etiškumas",
+        "description":"Atspindėti ir veikti pagal įsitikinimus kas yra teisinga ir dorybinga"
+      }
+    }
+  },
+  {
+    "_id":"forgiveness",
+    "name":"Forgiveness",
+    "description":"to pardon and disregard negative feelings or the desire to blame myself or others",
+    "i18n":{
+      "sv":{
+        "name":"Förlåtelse",
+        "description":"att ha överseende och avstå från att lägga skuld på sig själv eller andra"
+      },
+      "fi":{
+        "name":"Anteeksianto",
+        "description":"kyky antaa anteeksi tai sivuuttaa negatiiviset tunteet tai halu syyttää itseään tai muita"
+      },
+      "et":{
+        "name":"Andestamine",
+        "description":"tunda kahetsust ning vältida negatiivseid tundeid ja soovi süüdistada ennast ja teisi"
+      },
+      "de":{
+        "name":"Vergebung",
+        "description":"verzeihen; mich über negative Gefühle oder den Wunsch hinwegsetzen, mich selbst oder andere zu beschuldigen"
+      },
+      "li":{
+        "name":"Atleidimas",
+        "description":"Pasigailėti ir nepaisyti neigiamų jausmų ar noro kaltinti save ar kitus"
+      }
+    }
+  },
+  {
+    "_id":"heal",
+    "name":"Heal",
+    "description":"to cure and restore the health and well-being of others",
+    "i18n":{
+      "sv":{
+        "name":"Hela",
+        "description":"att läka och återställa hälsa och välbefinnande hos andra"
+      },
+      "fi":{
+        "name":"Toipuminen",
+        "description":"muiden terveyden ja hyvinvoinnin palauttaminen"
+      },
+      "et":{
+        "name":"Tervendamine",
+        "description":"ravida ja taastada teiste tervist ja heaolu"
+      },
+      "de":{
+        "name":"Heilung",
+        "description":"die Gesundheit und das Wohlergehen anderer wiederherstellen"
+      },
+      "li":{
+        "name":"Gydymas",
+        "description":"Gydyti ir atstatyti kitų žmonių sveikatą ir gerovę"
+      }
+    }
+  },
+  {
+    "_id":"humble",
+    "name":"Humble",
+    "description":"to be modest, unassuming and aware of alternative perspectives",
+    "i18n":{
+      "sv":{
+        "name":"Ödmjuk",
+        "description":"att vara anspråkslös och medveten om alternativa perspektiv"
+      },
+      "fi":{
+        "name":"Vaatimattomuus",
+        "description":"vaihtoehtoisten näkökulmien tiedostaminen ja kohtaaminen asiallisesti ja ilman ennakko-oletuksia"
+      },
+      "et":{
+        "name":"Alandlikkus",
+        "description":"olla tagasihoidlik, teadlik ja arvestav teiste vaatenurkadega"
+      },
+      "de":{
+        "name":"Bescheidenheit",
+        "description":"genügsam oder anspruchslos sein und mir über andere Perspektiven bewusst sein"
+      },
+      "li":{
+        "name":"Nuolankumas",
+        "description":"Būti kukliu, nepakartojamu ir įžvelgiančiu alternatyvias perspektyvas"
+      }
+    }
+  },
+  {
+    "_id":"include",
+    "name":"Include",
+    "description":"to embrace different cultures, ideas and people",
+    "i18n":{
+      "sv":{
+        "name":"Inkludera",
+        "description":"att omfamna olika kulturer, människor och idéer "
+      },
+      "fi":{
+        "name":"Laajakatseisuus",
+        "description":"muiden kulttuurien, ajattelutapojen ja ihmisten hyväksyminen"
+      },
+      "et":{
+        "name":"Kaasamine",
+        "description":"erinevaid kultuure, ideid ja inimesi arvesse võttev"
+      },
+      "de":{
+        "name":"Inklusion",
+        "description":"verschiedene Kulturen, Ideen und Menschen offen aufnehmen"
+      },
+      "li":{
+        "name":"Įtraukimas",
+        "description":"Apimti skirtingas kultūras, idėjas ir žmones"
+      }
+    }
+  },
+  {
+    "_id":"inspire",
+    "name":"Inspire",
+    "description":"to give confidence, spirit or hope to others by encouragement or by being a role model",
+    "i18n":{
+      "sv":{
+        "name":"Inspirera",
+        "description":"att entusiasmera genom uppmuntran eller att vara en förebild"
+      },
+      "fi":{
+        "name":"Inspiroiminen",
+        "description":"muiden ihmisten itseluottamuksen ja mielialan kohentaminen ja toivon antaminen muille rohkaisemalla tai toimimalla roolimallina"
+      },
+      "et":{
+        "name":"Inspireerimine",
+        "description":"anda kindlustunnet, indu, lootust läbi julgustamise ja eeskujuks olemise"
+      },
+      "de":{
+        "name":"Inspiration",
+        "description":"anderen als Vorbild oder durch Ermutigung Zuversicht, Schwung oder Hoffnung schenken"
+      },
+      "li":{
+        "name":"Įkvėpimas",
+        "description":"Kelti pasitikėjimą suteikti vilties kitiems skatinant arba būnant pavyzdžiu"
+      }
+    }
+  },
+  {
+    "_id":"integrate",
+    "name":"Integrate",
+    "description":"to synthesize separate parts into a congruent and well functioning whole",
+    "i18n":{
+      "sv":{
+        "name":"Integrera",
+        "description":"att förena separata delar till en kongruent och välfungerande helhet"
+      },
+      "fi":{
+        "name":"Integrointi",
+        "description":"erillisten osien yhdistäminen johdonmukaiseksi ja toimivaksi kokonaisuudeksi"
+      },
+      "et":{
+        "name":"Ühendamine",
+        "description":"liita erinevaid osasid ühtseks ja toimivaks tervikuks"
+      },
+      "de":{
+        "name":"Integration",
+        "description":"einzelne Teile zu einem kongruenten und gut funktionierenden Ganzen zusammenfügen"
+      },
+      "li":{
+        "name":"Integravimas",
+        "description":"Sujungti atskiras dalis į suderintą ir gerai veikiančią visumą"
+      }
+    }
+  },
+  {
+    "_id":"interdependence",
+    "name":"Interdependence",
+    "description":"to form mutual relationships in ways that benefit all the involved parties",
+    "i18n":{
+      "sv":{
+        "name":"Ömsesidighet",
+        "description":"att bygga relationer på ett sätt som gynnar alla inblandade parter"
+      },
+      "fi":{
+        "name":"Vastavuoroisuus",
+        "description":"sellaisten ihmissuhteiden muodostaminen, joista molemmat osapuolet hyötyvät"
+      },
+      "et":{
+        "name":"Koosmõju",
+        "description":"luua vastastikuseid suhteid kasutoomise eesmärgil"
+      },
+      "de":{
+        "name":"Interdependenz",
+        "description":"gegenseitige Beziehungen in einer Weise  herausbilden, die allen beteiligten Parteien zugute kommt"
+      },
+      "li":{
+        "name":"Tarpusavio priklausomybė",
+        "description":"Suformuoti tarpusavio santykius taip, kad būtų naudinga visoms susijusioms pusėms"
+      }
+    }
+  },
+  {
+    "_id":"intuitive",
+    "name":"Intuition",
+    "description":"to be in touch with emotional levels of knowing without the need for conscious reasoning",
+    "i18n":{
+      "sv":{
+        "name":"Intuition",
+        "description":"att vara i kontakt med mitt emotionella vetande, utan att behöva medvetna resonemang"
+      },
+      "fi":{
+        "name":"Intuitio",
+        "description":"tunnetasojen tiedostaminen ilman tarvetta tietoiseen järkeilyyn"
+      },
+      "et":{
+        "name":"Intuitsioon",
+        "description":"usaldada oma vaistu ilma teadlike põhjendusteta"
+      },
+      "de":{
+        "name":"Intuition",
+        "description":"in Kontakt mit verschiedenen Ebenen von Wissens sein, ohne darüber bewusst nachdenken zu müssen"
+      },
+      "li":{
+        "name":"Intuicija",
+        "description":"Palaikyti emocinį žinojimo lygį be sąmoningo paaiškinimo"
+      }
+    }
+  },
+  {
+    "_id":"knowing",
+    "name":"Knowing",
+    "description":"to possess deeper insights, truths and understanding of the reality",
+    "i18n":{
+      "sv":{
+        "name":"Vetande",
+        "description":"att inneha djupare insikter, sanningar och förståelse för verkligheten"
+      },
+      "fi":{
+        "name":"Tietäminen",
+        "description":"syvälliset näkemykset, tieto ja ymmärrys todellisuudesta"
+      },
+      "et":{
+        "name":"Teadmine",
+        "description":"tunda reaalsuse sügavamat olemust, tõdesid ja mõistmist"
+      },
+      "de":{
+        "name":"Wissen",
+        "description":"über tiefe Einblicke und Einsichten verfügen mit Blick auf Aspekte der Realität"
+      },
+      "li":{
+        "name":"Žinojimas",
+        "description":"Turėti gilesnes įžvalgas, tiesas ir realybės suvokimą"
+      }
+    }
+  },
+  {
+    "_id":"mentor",
+    "name":"Mentor",
+    "description":"to facilitate growth and development in others by bringing out their potential",
+    "i18n":{
+      "sv":{
+        "name":"Mentor",
+        "description":"att stötta utvecklingen av andra genom att bringa fram deras potential"
+      },
+      "fi":{
+        "name":"Mentorointi",
+        "description":"muiden ihmisten kasvun ja kehityksen edesauttaminen saamalla heidät tiedostamaan potentiaalinsa"
+      },
+      "et":{
+        "name":"Mentorlus",
+        "description":"inimeste arengu ja kasvu toetamine läbi potentsiaali avamise"
+      },
+      "de":{
+        "name":"Mentoring",
+        "description":"das Wachstum und die Entwicklung in anderen erleichtern und sie dabei unterstützen, ihr Potenzial zu entfalten"
+      },
+      "li":{
+        "name":"Mentorius",
+        "description":"Pakreipti kitų augimą ir vystymąsį išnaudojant ju potencialą"
+      }
+    }
+  },
+  {
+    "_id":"peacefulness",
+    "name":"Peace",
+    "description":"to strive for a state of public order, security and freedom from civil disturbance",
+    "i18n":{
+      "sv":{
+        "name":"Fred",
+        "description":"att sträva efter ordning i samhället och trygghet för alla människor"
+      },
+      "fi":{
+        "name":"Rauha",
+        "description":"pyrkimys yhteiskunnalliseen järjestykseen, turvallisuuteen ja häiriöttömyyteen"
+      },
+      "et":{
+        "name":"Rahu",
+        "description":"püüdlemine korra, turvalisuse ja rahutuste lõppemise poole"
+      },
+      "de":{
+        "name":"Frieden",
+        "description":"einen Zustand der öffentlichen Ordnung, Sicherheit und Freiheit anstreben"
+      },
+      "li":{
+        "name":"Ramybė",
+        "description":"Siekti viešosios tvarkos, saugumo ir laisvės nuo pilietinių neramumų"
+      }
+    }
+  },
+  {
+    "_id":"presence",
+    "name":"Presence",
+    "description":"to be fully aware, free from expectations and engaged in the moment",
+    "i18n":{
+      "sv":{
+        "name":"Närvaro",
+        "description":"att vara fullt medveten, fri från förväntningar och aktiv i nuet"
+      },
+      "fi":{
+        "name":"Läsnäolo",
+        "description":"kyky täydelliseen läsnäoloon, ilman odotuksia ja hetkessä eläen"
+      },
+      "et":{
+        "name":"Kohalolek",
+        "description":"olla täielikult teadvel, vaba ootustest ja pühendunud hetkele"
+      },
+      "de":{
+        "name":"Präsenz",
+        "description":"hellwach und frei von Erwartungen sein, ganz im Moment aufgehen "
+      },
+      "li":{
+        "name":"Dabartis",
+        "description":"Būti gerai susipažinusiam su esama situacija, išsilaisvinti nuo ateities lūkesčių ir būti įsitraukusiam šiuo momentu"
+      }
+    }
+  },
+  {
+    "_id":"protect",
+    "name":"Protect",
+    "description":"to guard and shield others from injury, pain or harm",
+    "i18n":{
+      "sv":{
+        "name":"Försvara",
+        "description":"att vara över och skydda andra från fara, skada eller smärta"
+      },
+      "fi":{
+        "name":"Suojeleminen",
+        "description":"muiden varjelu vahingoittumiselta, kivulta ja kärsimykseltä"
+      },
+      "et":{
+        "name":"Kaitsmine",
+        "description":"hoida teisi vigastuste, valu ja halva eest"
+      },
+      "de":{
+        "name":"Schutz",
+        "description":"andere vor Verletzungen, Schmerzen oder Schäden schützen"
+      },
+      "li":{
+        "name":"Saugojimas",
+        "description":"Ginti ir apsaugoti kitus nuo sužalojimo, skausmo ir žalos"
+      }
+    }
+  },
+  {
+    "_id":"selfless",
+    "name":"Selfless",
+    "description":"to be concerned with the needs and wishes of others rather than my own",
+    "i18n":{
+      "sv":{
+        "name":"Osjälvisk",
+        "description":"att vara altruistisk och intressera sig mer för andras behov och önskningar än sina egna"
+      },
+      "fi":{
+        "name":"Epäitsekkyys",
+        "description":"muiden ihmisten tarpeiden ja toiveiden asettaminen omien tarpeiden ja toiveiden edelle"
+      },
+      "et":{
+        "name":"Omakasupüüdmatus",
+        "description":"olla keskendunud mitte enda, vaid teiste vajadustele ja soovidele"
+      },
+      "de":{
+        "name":"Selbstlosigkeit",
+        "description":"mich eher mit den Bedürfnissen und Wünschen anderer Beschäftigen als mit meinen eigenen"
+      },
+      "li":{
+        "name":"Pasiaukojimas",
+        "description":"Rūpintis kitų poreikiais ir norais labiau nei savo"
+      }
+    }
+  },
+  {
+    "_id":"simplicity",
+    "name":"Simplicity",
+    "description":"to strive for sincerity, minimalism and freedom from unnecessary complications",
+    "i18n":{
+      "sv":{
+        "name":"Enkelhet",
+        "description":"att sträva efter minimalism och frihet från onödiga komplikationer"
+      },
+      "fi":{
+        "name":"Helppous",
+        "description":"pyrkimys vilpittömyyteen, minimalismiin ja turhan monimutkaisuuden välttämiseen"
+      },
+      "et":{
+        "name":"Lihtsus",
+        "description":"püüelda siiruse, minimalismi ja ebavajalikust keerukusest vabanemise poole"
+      },
+      "de":{
+        "name":"Einfachheit",
+        "description":"frei sein von unnötigen Komplikationen; nach Aufrichtigkeit und Minimalismus streben"
+      },
+      "li":{
+        "name":"Paprastumas",
+        "description":"Siekti nuoširdumo, minimalizmo ir laisvės nuo nereikalingų komplikacijų"
+      }
+    }
+  },
+  {
+    "_id":"spirituality",
+    "name":"Spirituality",
+    "description":"to relate to spirit, soul or higher endowments of the human mind",
+    "i18n":{
+      "sv":{
+        "name":"Andlighet",
+        "description":"att relatera till själen, anden eller de högre förmågorna i det mänskliga sinnet"
+      },
+      "fi":{
+        "name":"Henkisyys",
+        "description":"ihmismieleen, sieluun ja korkeampiin kykyihin liittyvien kysymysten tiedostaminen"
+      },
+      "et":{
+        "name":"Spirituaalsus",
+        "description":"olla seotud hinge, vaimu või sügavama vaimsusega  "
+      },
+      "de":{
+        "name":"Spiritualität",
+        "description":"mein Bewusstsein auf Seele und Unergründlichkeit des menschlichen Seins richten"
+      },
+      "li":{
+        "name":"Dvasingumas",
+        "description":"Susieti dvasią, sielą ar didesnį talentą žmogaus proto  "
+      }
+    }
+  },
+  {
+    "_id":"sustainability",
+    "name":"Sustainability",
+    "description":"to meet current needs without compromising the ability of future generations to meet theirs ",
+    "i18n":{
+      "sv":{
+        "name":"Hållbarhet",
+        "description":" att möta dagens behov utan att äventyra kommande generationers möjligheter att tillgodose sina"
+      },
+      "fi":{
+        "name":"Kestävä kehitys",
+        "description":"ihmiskunnan nykyisten tarpeiden tyydyttäminen ilman, että tulevien sukupolvien tarpeiden tyydyttäminen vaarantuu"
+      },
+      "et":{
+        "name":"Jätkusuutlikkus",
+        "description":"rahuldada oma vajadusi nii, et see ei seaks ohtu tulevaste põlvkondade vajadusi"
+      },
+      "de":{
+        "name":"Nachhaltigkeit",
+        "description":"heutige Bedürfnisse stillen, ohne die Möglichkeit zukünftiger Generationen zu beeinträchtigen, ihre Bedürfnisse zu erfüllen"
+      },
+      "li":{
+        "name":"Tvarumas",
+        "description":"Patenkinti dabartinius savo poreikius, nepakenkiant ateities kartoms patenkinti savuosius"
+      }
+    }
+  },
+  {
+    "_id":"tranquility",
+    "name":"Tranquility",
+    "description":"to strive for a state of peacefullness and to be at ease with uncertainty",
+    "i18n":{
+      "sv":{
+        "name":"Stillhet",
+        "description":"att vara i tillstånd av ro, fridfullhet och vara tillfreds med osäkerhet"
+      },
+      "fi":{
+        "name":"Rauhallisuus",
+        "description":"pyrkimys rauhanomaisuuteen ja epävarmuuden hyväksyminen"
+      },
+      "et":{
+        "name":"Meelerahu",
+        "description":"olla rahulik ning tunda end hästi ebaselguses"
+      },
+      "de":{
+        "name":"Gelassenheit",
+        "description":"nach einem Zustand von Ruhe und Friedlichkeit streben und danach, sich mit Ungewissheit wohl zu fühlen"
+      },
+      "li":{
+        "name":"Ramybė",
+        "description":"Siekti ramybės būsenos ir jaustis gerai neapibrėžtume"
+      }
+    }
+  },
+  {
+    "_id":"transform",
+    "name":"Transform",
+    "description":"to evolve a complex system and change its form and character from within",
+    "i18n":{
+      "sv":{
+        "name":"Transformera",
+        "description":"att utveckla ett komplext system och inifrån förändra dess form och strukturer"
+      },
+      "fi":{
+        "name":"Muutos",
+        "description":"monimutkaisen järjestelmän kehittäminen ja sen muodon ja luonteen muuttaminen sisältä käsin"
+      },
+      "et":{
+        "name":"Muutmine",
+        "description":"keerulise süsteemi muutmine selle sisemise olemuse ja vormi tasandil"
+      },
+      "de":{
+        "name":"Transformation",
+        "description":"Form und Charakter eines komplexen Systems von innen verändern"
+      },
+      "li":{
+        "name":"Transformacija",
+        "description":"Išvystyti sudėtingą sistemą ir pakeisti jos formą ir savybes iš vidaus"
+      }
+    }
+  },
+  {
+    "_id":"understanding",
+    "name":"Understanding",
+    "description":"to facilitate new insights, connections and integration in social systems",
+    "i18n":{
+      "sv":{
+        "name":"Förståelse",
+        "description":"att facilitera nya insikter och kopplingar i sociala sammanhang"
+      },
+      "fi":{
+        "name":"Ymmärtäminen",
+        "description":"uusien näkemysten, yhteyksien ja yhdistelmien edistäminen yhteiskunnallisissa järjestelmissä"
+      },
+      "et":{
+        "name":"Mõistmine",
+        "description":"toetada uute tajude, seoste ja liitude tekkimist sotsiaalses süstemis"
+      },
+      "de":{
+        "name":"Verständnis",
+        "description":"das Verständnis sozialer Systeme befördern und damit Integration in diese Systeme erleichtern"
+      },
+      "li":{
+        "name":"Supratimas",
+        "description":"Koordinuoti naujas įžvalgas, ryšius ir ingraciją i socialines sistemas"
+      }
+    }
+  },
+  {
+    "_id":"vision",
+    "name":"Vision",
+    "description":"to visualize or imagine a possible and desirable future",
+    "i18n":{
+      "sv":{
+        "name":"Visionera",
+        "description":"att visualisera eller föreställa sig en möjlig och önskvärd framtid"
+      },
+      "fi":{
+        "name":"Visiointi",
+        "description":"kyky visualisoida tai kuvitella mahdollinen ja tavoittelun arvoinen tulevaisuus"
+      },
+      "et":{
+        "name":"Visioon",
+        "description":"võimaliku ja soovitava tuleviku visualiseerimine ja ettekujutamine"
+      },
+      "de":{
+        "name":"Vision",
+        "description":"eine mögliche oder wünschenswerte Zukunft aufzeigen und vorstellbar machen"
+      },
+      "li":{
+        "name":"Vizija",
+        "description":"Vizualizuoti ar įsivaizduoti galimą ar trokštamą ateitį"
+      }
+    }
+  },
+  {
+    "_id":"wisdom",
+    "name":"Wisdom",
+    "description":"to have experience, comprehend reality and make mature decisions",
+    "i18n":{
+      "sv":{
+        "name":"Visdom",
+        "description":"att ha erfarenhet, förstå verkligheten och fatta mogna beslut"
+      },
+      "fi":{
+        "name":"Viisaus",
+        "description":"kokeneisuus, todellisuuden ymmärtäminen, kyky tehdä kypsiä päätöksiä"
+      },
+      "et":{
+        "name":"Tarkus",
+        "description":"olla kogenud, mõista reaalsust ning teha läbimõeldud otsuseid"
+      },
+      "de":{
+        "name":"Weisheit",
+        "description":"Erfahrung haben, Realität verstehen und reife Entscheidungen treffen"
+      },
+      "li":{
+        "name":"Išmintis",
+        "description":"Turėti patirties, suprasti realybę ir priimti brandžius sprendimus"
+      }
+    }
+  }
+]

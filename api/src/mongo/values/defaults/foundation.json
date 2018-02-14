@@ -1,0 +1,1055 @@
+[
+  {
+    "_id":"affection",
+    "name":"Affection",
+    "description":"to give and receive tenderness, love and regard",
+    "i18n":{
+      "sv":{
+        "name":"Tillgivenhet",
+        "description":"att ge och ta emot ömhet och kärlek"
+      },
+      "fi":{
+        "name":"Kiintymys",
+        "description":"hellyyden, rakkauden ja arvostuksen antaminen ja vastaanottaminen"
+      },
+      "et":{
+        "name":"Kiindumus",
+        "description":"anda ja saada hellust, armastus ja hoolivust"
+      },
+      "de":{
+        "name":"Zuneigung",
+        "description":"Zärtlichkeit, Liebe und Achtung geben und empfangen"
+      },
+      "li":{
+        "name":"Prisirišimas",
+        "description":"Gauti pačiam ir suteikti kitiems švelnumą, meilę ir pagarbą"
+      }
+    }
+  },
+  {
+    "_id":"appreciate",
+    "name":"Appreciation",
+    "description":"to recognize, acknowledge and affirm the value of someone or something",
+    "i18n":{
+      "sv":{
+        "name":"Uppskattning",
+        "description":"att ge och få erkännande eller bekräftelse "
+      },
+      "fi":{
+        "name":"Arvostus",
+        "description":"jonkun tai jonkin arvon tunnistaminen, tunnustaminen ja vahvistaminen"
+      },
+      "et":{
+        "name":"Tunnustus",
+        "description":"mõista ja hinnata kellegi või millegi väärtust"
+      },
+      "de":{
+        "name":"Anerkennung",
+        "description":"den Wert von jemandem oder etwas erkennen, anerkennen und würdigen"
+      },
+      "li":{
+        "name":"Vertinimas",
+        "description":"Atpažinti, suvokti ir patvirtinti asmens ar daikto vertę"
+      }
+    }
+  },
+  {
+    "_id":"assertive",
+    "name":"Assertiveness",
+    "description":"to be confident, forceful and self-assured in my actions",
+    "i18n":{
+      "sv":{
+        "name":"Beslutsam",
+        "description":"att vara bestämd och handlingskraftig i mitt agerande"
+      },
+      "fi":{
+        "name":"Itsevarmuus",
+        "description":"itsevarmasti, vakuuttavasti ja määrätietoisesti toimiminen"
+      },
+      "et":{
+        "name":"Kehtestavus",
+        "description":"olla oma tegudes kindel, jõuline ja veenev"
+      },
+      "de":{
+        "name":"Durchsetzungsvermögen",
+        "description":"zuversichtlich, kraftvoll und selbstbewusst in meinen Handlungen sein"
+      },
+      "li":{
+        "name":"Pasipriešinimas",
+        "description":"Būti pasitikinčiu savimi, tvirtu ir užtikrintu dėl savo veiksmų."
+      }
+    }
+  },
+  {
+    "_id":"belonging",
+    "name":"Belonging",
+    "description":"to be part of a group and share a sense of unity ",
+    "i18n":{
+      "sv":{
+        "name":"Gemenskap",
+        "description":"att vara medlem i en grupp och dela en känsla av tillhörighet"
+      },
+      "fi":{
+        "name":"Yhteenkuuluvuus",
+        "description":"ryhmään kuuluminen ja yhteenkuuluvuuden tunteen jakaminen "
+      },
+      "et":{
+        "name":"Kuuluvus",
+        "description":"olla osaks grupist ja jagada ühtekuuluvustunnet"
+      },
+      "de":{
+        "name":"Zugehörigkeit",
+        "description":"Teil einer Gruppe sein und ein Gefühl der Verbindung teilen"
+      },
+      "li":{
+        "name":"Priklausymas",
+        "description":"Būti grupės dalimi ir dalintis vienybės jausmu"
+      }
+    }
+  },
+  {
+    "_id":"careful",
+    "name":"Carefulness",
+    "description":"to be cautious and attentive to the risks of my surroundings",
+    "i18n":{
+      "sv":{
+        "name":"Varsam",
+        "description":"att vara försiktig och uppmärksam på risker i min omgivning"
+      },
+      "fi":{
+        "name":"Huolellisuus",
+        "description":"ympäristön riskien huomioiminen ja niihin varautuminen"
+      },
+      "et":{
+        "name":"Ettevaatlikus",
+        "description":"olla ümbristevate riskide osas ettevaatlik ja tähelepanelik"
+      },
+      "de":{
+        "name":"Vorsicht",
+        "description":"die Risiken in meiner Umgebung bedenken und aufmerksam sein"
+      },
+      "li":{
+        "name":"Atsargumas",
+        "description":"Būti atsargiu ir atkreipti dėmesį į galimą aplinkinį pavojų"
+      }
+    }
+  },
+  {
+    "_id":"comfort",
+    "name":"Comfort",
+    "description":"to give and receive consolation and relief from suffering or worry",
+    "i18n":{
+      "sv":{
+        "name":"Tröst",
+        "description":"att ge och ta emot lindring av bekymmer och oro"
+      },
+      "fi":{
+        "name":"Mukavuus",
+        "description":"lohduttaminen ja lohdutetuksi tuleminen, kärsimyksen tai huolen vähentäminen"
+      },
+      "et":{
+        "name":"Lohutus",
+        "description":"Pakkuda kergendust mures ja kannatustes"
+      },
+      "de":{
+        "name":"Trost",
+        "description":"Zuspruch und Linderung von Leiden und Sorgen geben und emfpangen"
+      },
+      "li":{
+        "name":"Komfortas",
+        "description":"Suteikti ir gauti nusiraminimą ir atsikratyti nerimo ar kančių"
+      }
+    }
+  },
+  {
+    "_id":"dependable",
+    "name":"Dependability",
+    "description":"to be reliable, consistent and trustworthy",
+    "i18n":{
+      "sv":{
+        "name":"Pålitlighet",
+        "description":"att vara tillförlitlig, konsekvent och trovärdig"
+      },
+      "fi":{
+        "name":"Luotettavuus",
+        "description":"luotettavuus, johdonmukaisuus ja luottamuksenarvoisuus"
+      },
+      "et":{
+        "name":"Usaldusväärsus",
+        "description":"olla kindel, järjepidev ja usaldatav millegi suhtes"
+      },
+      "de":{
+        "name":"Zuverlässigkeit",
+        "description":"zuverlässig, konsequent und vertrauenswürdig sein"
+      },
+      "li":{
+        "name":"Patikimimas",
+        "description":"Būti patikimu, nuosekliu ir atsakingu"
+      }
+    }
+  },
+  {
+    "_id":"discipline",
+    "name":"Discipline",
+    "description":"to be able to control and direct myself even in difficult situations",
+    "i18n":{
+      "sv":{
+        "name":"Disciplin",
+        "description":"att behålla självkontroll och riktning även i utmanade situationer"
+      },
+      "fi":{
+        "name":"Itsekuri",
+        "description":"itsehillintä ja käyttäytymisen kontrollointi hankalissakin tilanteissa"
+      },
+      "et":{
+        "name":"Distsipliin",
+        "description":"olla võimeline end kontrollima ja juhtima ka keerulistes situatsioonides"
+      },
+      "de":{
+        "name":"Disziplin",
+        "description":"mich selbst in schwierigen Situationen kontrollieren und steuern können"
+      },
+      "li":{
+        "name":"Disciplina",
+        "description":"Sugebėti visiškai kontroliuoti save net ir sudėtingose situacijose"
+      }
+    }
+  },
+  {
+    "_id":"efficiency",
+    "name":"Efficiency",
+    "description":"to accomplish things with a minimal input of time and effort",
+    "i18n":{
+      "sv":{
+        "name":"Effektivitet",
+        "description":"att genomför saker med minimal tids- och resursåtgång"
+      },
+      "fi":{
+        "name":"Tehokkuus",
+        "description":"asioiden saavuttaminen mahdollisimman nopeasti ja vähällä vaivalla"
+      },
+      "et":{
+        "name":"Tõhusus",
+        "description":"saavutada tulemusi minimaalse aja ja pingutusega"
+      },
+      "de":{
+        "name":"Effizienz",
+        "description":"Dinge mit minimalem Einsatz von Zeit und Mühe erreichen"
+      },
+      "li":{
+        "name":"Efektyvumas",
+        "description":"Atlikti užduotis su minimaliomis laiko ir paslangų sąnaudomis"
+      }
+    }
+  },
+  {
+    "_id":"excitement",
+    "name":"Excitement",
+    "description":"to engage in activities that are stimulating or thrilling",
+    "i18n":{
+      "sv":{
+        "name":"Spänning",
+        "description":"att delta i aktiviteter som är stimulerande och exalterande"
+      },
+      "fi":{
+        "name":"Innostuneisuus",
+        "description":"inspiroivaan tai innostavaan toimintaan osallistuminen"
+      },
+      "et":{
+        "name":"Põnevus",
+        "description":"osaleda tegevustes, mis on põnevad ning innustavad"
+      },
+      "de":{
+        "name":"Spannung",
+        "description":"Dinge tun, die aufregend oder mitreißend sind"
+      },
+      "li":{
+        "name":"Jaudulys",
+        "description":"Užsiimti veikla, kuri skatina ir jaudina"
+      }
+    }
+  },
+  {
+    "_id":"fairness",
+    "name":"Fairness",
+    "description":"to treat all people justly and not allow personal opinions influence my judgment",
+    "i18n":{
+      "sv":{
+        "name":"Rättvisa",
+        "description":"att behandla alla människor lika och inte låta personliga åsikter påverka mitt omdöme "
+      },
+      "fi":{
+        "name":"Reiluus",
+        "description":"kaikkien ihmisten kohteleminen reilusti ja siten, että henkilökohtaiset mielipiteet eivät vaikuta arvostelukykyyn"
+      },
+      "et":{
+        "name":"Õiglus",
+        "description":"kohelda inimesi ausalt ja mitte lasta teiste hoiakutel mõjutada oma otsuseid"
+      },
+      "de":{
+        "name":"Fairness",
+        "description":"alle Menschen gerecht behandeln; meine persönliche Meinung beeinflusst mein Urteil nicht"
+      },
+      "li":{
+        "name":"Teisingumas",
+        "description":"Teisingai su visais elgtis ir neleisti asmenimėns nuostatoms daryti įtakos priimamiems sprendimams"
+      }
+    }
+  },
+  {
+    "_id":"flexibility",
+    "name":"Flexibility",
+    "description":"to be ready and able to adapt to different circumstances",
+    "i18n":{
+      "sv":{
+        "name":"Flexibilitet",
+        "description":"att snabbt kunna anpassa sig till olika omständigheter"
+      },
+      "fi":{
+        "name":"Joustavuus",
+        "description":"valmius ja kyky mukautua erilaisiin tilanteisiin"
+      },
+      "et":{
+        "name":"Paindlikkus",
+        "description":"valmidus ja suutlikkus kohaneda erinevate olukordadega"
+      },
+      "de":{
+        "name":"Anpassungsfähigkeit",
+        "description":"bereit sein, sich an verschiedene oder wechselnden Situationen anzupassen"
+      },
+      "li":{
+        "name":"Lankstumas",
+        "description":"Būti visada pasirengusiam ir gebėti prisitaikyti prie skirtingų situacijų"
+      }
+    }
+  },
+  {
+    "_id":"health",
+    "name":"Health",
+    "description":"to maintain and improve physical wellness, agility and fitness",
+    "i18n":{
+      "sv":{
+        "name":"Hälsa",
+        "description":"att bibehålla och förbättra min fysiska kondition och mitt välbefinnande"
+      },
+      "fi":{
+        "name":"Terveys",
+        "description":"fyysisen hyvinvoinnin, ketteryyden ja kunnon ylläpito ja kehittäminen"
+      },
+      "et":{
+        "name":"Tervis",
+        "description":"hoida ja parendada füüsilist vormi ja tervist"
+      },
+      "de":{
+        "name":"Gesundheit",
+        "description":"das körperliche und seelische Wohlbefinden pflegen und verbessern"
+      },
+      "li":{
+        "name":"Sveikata",
+        "description":"Išlaikyti ir pagerinti savo gerą fizinę būklę ir judrumą"
+      }
+    }
+  },
+  {
+    "_id":"helpfulness",
+    "name":"Helpfulness",
+    "description":"to be useful and to serve and meet the needs of others",
+    "i18n":{
+      "sv":{
+        "name":"Hjälpsam",
+        "description":"att vara tjänstvillig och möta andras behov"
+      },
+      "fi":{
+        "name":"Avuliaisuus",
+        "description":"hyödyllisyys, muiden tarpeisiin tarttuminen ja vastaaminen"
+      },
+      "et":{
+        "name":"Abivalmidus",
+        "description":"olla kasulik ja hoolisteda teiste vajaduste eest"
+      },
+      "de":{
+        "name":"Hilfsbereitschaft",
+        "description":"andere aus eigenen Stücken unterstützen ohne dafür eine Gegenleistung zu erwarten"
+      },
+      "li":{
+        "name":"Paslaugumas",
+        "description":"Būti naudingu kitiems, padėti patenkinti kitų poreikius"
+      }
+    }
+  },
+  {
+    "_id":"honor",
+    "name":"Honor",
+    "description":"to pay courteous regard and give praise to people or events",
+    "i18n":{
+      "sv":{
+        "name":"Hedra",
+        "description":"att ära och visa aktning för människor eller händelser"
+      },
+      "fi":{
+        "name":"Kunnia",
+        "description":"ihmisten tai tapahtumien huomioiminen ja kehuminen"
+      },
+      "et":{
+        "name":"Austus",
+        "description":"lugupidav ja väärtustav suhtumine inimestesse ja sündmustesse"
+      },
+      "de":{
+        "name":"Würdigung",
+        "description":"Menschen oder Ereignisse aktiv wertschätzen und ehren"
+      },
+      "li":{
+        "name":"Garbė",
+        "description":"Atkreipti pagarbų dėmesį ir duoti pagyrimą žmonėms ar įvykiams"
+      }
+    }
+  },
+  {
+    "_id":"hope",
+    "name":"Hope",
+    "description":"to strive for, believe in and be optimistic about a brighter future",
+    "i18n":{
+      "sv":{
+        "name":"Hopp",
+        "description":"att drömma om, tro på och sträva efter en ljusare framtid"
+      },
+      "fi":{
+        "name":"Toivo",
+        "description":"pyrkimys ja usko parempaan huomiseen, optimismi parempaa huomista kohtaan"
+      },
+      "et":{
+        "name":"Lootus",
+        "description":"optimistlikult uskuda helgemasse tulevikku ja püüelda selle poole"
+      },
+      "de":{
+        "name":"Hoffnung",
+        "description":"an eine bessere Zukunft glauben und nach ihr streben"
+      },
+      "li":{
+        "name":"Viltis",
+        "description":"Siekti ir tikėti nepaisant aplinkybių, būti optimistu dėl šviesesnės ateities"
+      }
+    }
+  },
+  {
+    "_id":"humor",
+    "name":"Humor",
+    "description":"to be amusing, funny or comical and to perceive events from that perspective",
+    "i18n":{
+      "sv":{
+        "name":"Humor",
+        "description":"att kunna se och ge uttryck för det roliga eller komiska i livet"
+      },
+      "fi":{
+        "name":"Huumori",
+        "description":"kyky olla hauska, keventää tilannetta ja vitsailla, kyky tarkastella tapahtumia humoristisesta näkökulmasta"
+      },
+      "et":{
+        "name":"Huumorimeel",
+        "description":"olla lõbus, naljakas ja koomiline ning vaadelda sündmusi läbi huumoriprisma"
+      },
+      "de":{
+        "name":"Humor",
+        "description":"lustig, erheiternd oder komisch sein und Ereignisse aus dieser Perspektive wahrnehmen"
+      },
+      "li":{
+        "name":"Humoro jausmas",
+        "description":"Būti juokingu, šmaikščiu ir suvokti įvykius iš šios perspektyvos"
+      }
+    }
+  },
+  {
+    "_id":"influence",
+    "name":"Influence",
+    "description":"to have a great effect on or change the development of people or things",
+    "i18n":{
+      "sv":{
+        "name":"Inflytande",
+        "description":"att ha en stor inverkan på andras eller sakers utveckling "
+      },
+      "fi":{
+        "name":"Vaikutusmahdollisuus",
+        "description":"ihmisiin tai asioihin vaikuttaminen merkittävästi, ihmisten tai asioiden kehityssuunnan muuttaminen"
+      },
+      "et":{
+        "name":"Mõjukus",
+        "description":"omada suut mõju, muuta inimeste või tegevuste arengut"
+      },
+      "de":{
+        "name":"Einfluss",
+        "description":"eine große Wirkung auf die Entwicklung von Menschen oder Dingen haben"
+      },
+      "li":{
+        "name":"Įtaigumas",
+        "description":"Turėti didelę įtaką arba gebėti pakeisti žmones ar dalykus"
+      }
+    }
+  },
+  {
+    "_id":"intimacy",
+    "name":"Intimacy",
+    "description":"to have bodily contact or be in close and personal relationships",
+    "i18n":{
+      "sv":{
+        "name":"Närhet",
+        "description":"att ha kroppskontakt och vara i nära, personliga relationer"
+      },
+      "fi":{
+        "name":"Läheisyys",
+        "description":"fyysinen läheisyys, läheiset ihmissuhteet"
+      },
+      "et":{
+        "name":"Intiimsus",
+        "description":"olla füüsilises kontaktis või lähedastes isiklikes suhetes"
+      },
+      "de":{
+        "name":"Nähe",
+        "description":"in engen und persönlichen Beziehungen sein oder körperlichen Kontakt haben"
+      },
+      "li":{
+        "name":"Artumas",
+        "description":"Turėti artimą kūnišką kontaktą ar turėti asmeninius santykius"
+      }
+    }
+  },
+  {
+    "_id":"joy",
+    "name":"Joy",
+    "description":"to feel happiness, be cheerful or play",
+    "i18n":{
+      "sv":{
+        "name":"Glädje",
+        "description":"att känna lycka, upprymdhet och lekfullhet"
+      },
+      "fi":{
+        "name":"Ilo",
+        "description":"onnellisuudentunteen kokeminen, pirteys tai leikkisyys"
+      },
+      "et":{
+        "name":"Rööm",
+        "description":"olla õnnelik, elurõõmus, mänguline"
+      },
+      "de":{
+        "name":"Freude",
+        "description":"Glück fühlen, fröhlich sein oder spielen"
+      },
+      "li":{
+        "name":"Džiaugsmas",
+        "description":"Jausti laimę, būti linksmu ar žaisti"
+      }
+    }
+  },
+  {
+    "_id":"kindness",
+    "name":"Kindness",
+    "description":"to be friendly to, companionable with and considerate of others",
+    "i18n":{
+      "sv":{
+        "name":"Vänlighet",
+        "description":"att vara tillmötesgående, välvillig och hänsynsfull"
+      },
+      "fi":{
+        "name":"Ystävällisyys",
+        "description":"ystävällisyys, toverillisuus ja huomaavaisuus muita kohtaan"
+      },
+      "et":{
+        "name":"Lahkus",
+        "description":"olla sõbralik, seltskondlik ja teistega arvestav"
+      },
+      "de":{
+        "name":"Liebenswürdigkeit",
+        "description":"freundlich, kameradschaftlich und rücksichtsvoll gegenüber anderen sein"
+      },
+      "li":{
+        "name":"Gerumas",
+        "description":"Būti draugišku ir dėmesingu kitiems"
+      }
+    }
+  },
+  {
+    "_id":"livelihood",
+    "name":"Livelihood",
+    "description":"to have a stable and sufficient source of income to live from",
+    "i18n":{
+      "sv":{
+        "name":"Levebröd",
+        "description":"att ha en stabil och tillräcklig inkomst att leva av"
+      },
+      "fi":{
+        "name":"Toimeentulo",
+        "description":"vakaa ja riittävä toimeentulo"
+      },
+      "et":{
+        "name":"Elatustase",
+        "description":"omada eluks vajalikku ja stabiilset sissetulekut"
+      },
+      "de":{
+        "name":"Lebensunterhalt",
+        "description":"eine stabile und ausreichende Einnahmequelle haben"
+      },
+      "li":{
+        "name":"Pragyvenimo šaltinis",
+        "description":"Turėti stabilų ir pakankamą pajamų šaltinį, iš kurio būtų galima gyventi"
+      }
+    }
+  },
+  {
+    "_id":"loyalty",
+    "name":"Loyalty",
+    "description":"to be faithful and devoted to a person, a group or a cause ",
+    "i18n":{
+      "sv":{
+        "name":"Lojalitet",
+        "description":"att vara trogen och hängiven en person, en grupp eller ett syfte"
+      },
+      "fi":{
+        "name":"Uskollisuus",
+        "description":"uskollisuus ja omistautuneisuus jollekin henkilölle, ryhmälle tai asialle "
+      },
+      "et":{
+        "name":"Lojaalsus",
+        "description":"Olla ustav ja pühendunud mõnele inimesele, grupile või ettevõtmisele"
+      },
+      "de":{
+        "name":"Loyalität",
+        "description":"mich einer Person, Gruppe oder Sache treu widmen"
+      },
+      "li":{
+        "name":"Ištikimybė",
+        "description":"Būti ištikimam ir atsidavusiam vienam asmeniui ar žmonių grupei"
+      }
+    }
+  },
+  {
+    "_id":"moderation",
+    "name":"Moderation",
+    "description":"to avoid excess and extremes of feelings and actions ",
+    "i18n":{
+      "sv":{
+        "name":"Måttlighet",
+        "description":"att undvika överdrifter i mina känslor och handlingar"
+      },
+      "fi":{
+        "name":"Kohtuus",
+        "description":"ylenmääräisten ja äärimmäisten tunteiden ja tekojen välttäminen "
+      },
+      "et":{
+        "name":"Mõõdukus",
+        "description":"vältida liialdusi ja ülemäärasust tunnetes ja tegudes"
+      },
+      "de":{
+        "name":"Mäßigung",
+        "description":"das Übermaß und Extreme von Gefühlen und Handlungen vermeiden"
+      },
+      "li":{
+        "name":"Saikingumas",
+        "description":"Vengti perviršio ir ekstremalių veiksmų ar jausmų"
+      }
+    }
+  },
+  {
+    "_id":"order",
+    "name":"Order",
+    "description":"to arrange things in a precise, correct and accurate manner with reference to its purpose",
+    "i18n":{
+      "sv":{
+        "name":"Ordning",
+        "description":"att upprätthålla en lämplig organisation mellan föremål för ett visst syfte"
+      },
+      "fi":{
+        "name":"Järjestys",
+        "description":"asioiden järjestäminen tarkkaan, täsmällisesti ja oikein kunkin asian tarkoituksen mukaan"
+      },
+      "et":{
+        "name":"Kord",
+        "description":"korraldada asjad täpses, kindlas ja õiges järjekorras vastavalt nende eesmärgile"
+      },
+      "de":{
+        "name":"Ordnung",
+        "description":"die Dinge auf genaue und korrekte Art mit Bezug auf ihren Zweck sortieren"
+      },
+      "li":{
+        "name":"Tvarkingumas",
+        "description":"Tvarkingai sudėti daiktus į jiems skirtas vietas pagal jų paskirtį"
+      }
+    }
+  },
+  {
+    "_id":"persistence",
+    "name":"Persistence",
+    "description":"to be persevering, diligent and committed, despite obstacles or hardships",
+    "i18n":{
+      "sv":{
+        "name":"Uthållighet",
+        "description":"att vara ihärdig, tålig  och outtröttlig trots motstånd eller bakslag"
+      },
+      "fi":{
+        "name":"Sinnikkyys",
+        "description":"Sinnikkyys, uutteruus ja sitoutuneisuus esteistä ja vastoinkäymisistä huolimatta"
+      },
+      "et":{
+        "name":"Sihikindlus",
+        "description":"korraldada asjad täpses, kindlas ja õiges järjekorras vastavalt nende eesmärgile"
+      },
+      "de":{
+        "name":"Beharrlichkeit",
+        "description":"trotz Hindernissen und Herausforderungen hartnäckig, fleißig und engagiert sein"
+      },
+      "li":{
+        "name":"Atkaklumas",
+        "description":"Būti atkakliu, darbščiu ir atsidavusiu,siekiančiu užsibrėžtų tikslų nepaisant iškilusių kliūčių ir sunkumų"
+      }
+    }
+  },
+  {
+    "_id":"pleasure",
+    "name":"Pleasure",
+    "description":"to create, explore and enjoy experiences that stimulate the five senses",
+    "i18n":{
+      "sv":{
+        "name":"Njuta",
+        "description":"att skapa, utforska och njuta av erfarenheter som stimulerar de fem sinnena"
+      },
+      "fi":{
+        "name":"Mielihyvä",
+        "description":"viittä aistia stimuloivien kokemusten saaminen ja hankkiminen ja niistä nauttiminen"
+      },
+      "et":{
+        "name":"Nauding",
+        "description":"luua, uurida ja nautida kogemusi, mis ergutavad meie viite meelt"
+      },
+      "de":{
+        "name":"Genuss",
+        "description":"mich dem widmen, was die fünf Sinne anregt"
+      },
+      "li":{
+        "name":"Malonumas",
+        "description":"Kurti, atrasti ir mėgautis patirtimis, kurios stimuliuoja visus penkis žmogaus pojūčius"
+      }
+    }
+  },
+  {
+    "_id":"recreation",
+    "name":"Recreation",
+    "description":"to relax, rest and rejuvenate myself when needed",
+    "i18n":{
+      "sv":{
+        "name":"Avkoppling",
+        "description":"att rekreera, vila och återhämta mig när det behövs "
+      },
+      "fi":{
+        "name":"Virkistäytyminen",
+        "description":"kyky rentoutua, levätä ja virkistäytyä silloin kun se on tarpeen"
+      },
+      "et":{
+        "name":"Taastumine",
+        "description":"puhata, lõdvestauda ja kosuda kui selleks on vajadus"
+      },
+      "de":{
+        "name":"Erholung",
+        "description":"entspannen und Kraft auftanken, wenn es nötig ist"
+      },
+      "li":{
+        "name":"Poilsis",
+        "description":"Atsipalaiduoti, pailsėti ir palepinti save, kai reikia"
+      }
+    }
+  },
+  {
+    "_id":"realism",
+    "name":"Realism",
+    "description":"to be pragmatic and have reasonable expectations for the future",
+    "i18n":{
+      "sv":{
+        "name":"Realism",
+        "description":"att vara pragmatisk och ha rimliga förväntningar på framtiden"
+      },
+      "fi":{
+        "name":"Realismi",
+        "description":"käytännöllinen suhtautuminen tulevaisuuteen, järkevät tulevaisuutta koskevat odotukset"
+      },
+      "et":{
+        "name":"Realistlikkus",
+        "description":"olla pragmaatiline ja tulevikuootustes mõistlik"
+      },
+      "de":{
+        "name":"Realismus",
+        "description":"pragmatisch sein und vernünftige Erwartungen für die Zukunft haben"
+      },
+      "li":{
+        "name":"Realistiškumas",
+        "description":"Būti pragmatišku ir turėti pagrįstus lūkesčius dėl ateities"
+      }
+    }
+  },
+  {
+    "_id":"respect",
+    "name":"Respect",
+    "description":"to give and receive consideration, high regard and reciprocity",
+    "i18n":{
+      "sv":{
+        "name":"Respekt",
+        "description":"att visa och bli visad hänsyn och aktning i alla relationer"
+      },
+      "fi":{
+        "name":"Kunnioitus",
+        "description":"muiden huomioiminen ja huomioiduksi tuleminen, muiden arvostaminen ja arvostetuksi tuleminen, vastavuoroisuus"
+      },
+      "et":{
+        "name":"Lugupidamine",
+        "description":"pakkuda ja saada vastastikust arvesse võtmist ja tähelepanu"
+      },
+      "de":{
+        "name":"Respekt",
+        "description":"mich mit wechselseitiger Achtung und Rücksichtnahme begegnen"
+      },
+      "li":{
+        "name":"Pagarba",
+        "description":"Žmonių pagarbus tarpusavio abipusis dėmesys "
+      }
+    }
+  },
+  {
+    "_id":"safety",
+    "name":"Safety",
+    "description":"to feel secure and protected from harm or danger ",
+    "i18n":{
+      "sv":{
+        "name":"Trygghet",
+        "description":"att känna mig säker och skyddad från skada eller fara"
+      },
+      "fi":{
+        "name":"Turvallisuus",
+        "description":"olonsa tunteminen turvalliseksi ja kärsimykseltä ja vaaroilta suojatuksi "
+      },
+      "et":{
+        "name":"Turvalisus",
+        "description":"tunda ohu ja halva eest kaitstuna, kindlana"
+      },
+      "de":{
+        "name":"Sicherheit",
+        "description":"das Gefühl haben, vor Schaden oder Gefahr geschützt zu sein"
+      },
+      "li":{
+        "name":"Saugumas",
+        "description":"Jaustis saugiai ir apsisaugoti nuo bėdų ir pavojų"
+      }
+    }
+  },
+  {
+    "_id":"solitude",
+    "name":"Solitude",
+    "description":"to have privacy and to disconnect from my surroundings",
+    "i18n":{
+      "sv":{
+        "name":"Avskildhet",
+        "description":"att få egen tid och kunna koppla bort från omgivningen"
+      },
+      "fi":{
+        "name":"Oma rauha",
+        "description":"kyky rentoutua, levätä ja virkistäytyä silloin kun se on tarpeen"
+      },
+      "et":{
+        "name":"Üksindus",
+        "description":"olla privaatselt ning ümbruskonnast eemaldunud"
+      },
+      "de":{
+        "name":"Abgeschiedenheit",
+        "description":"Privatspähre haben und sich von seiner Umgebung abtrennen können"
+      },
+      "li":{
+        "name":"Vienatvė",
+        "description":"Išlaikyti privatumą ir atsiriboti nuo aplinkos"
+      }
+    }
+  },
+  {
+    "_id":"stability",
+    "name":"Stability",
+    "description":"to strive for predictability and to endure unexpected changes",
+    "i18n":{
+      "sv":{
+        "name":"Stabilitet",
+        "description":"att sträva efter förutsägbarhet och bestå trots oväntade förändringar"
+      },
+      "fi":{
+        "name":"Vakaus",
+        "description":"ennustettavuuteen pyrkiminen, yllättävien muutosten sietokyky"
+      },
+      "et":{
+        "name":"Stabiilsus",
+        "description":"püüelda ennustatavuse poole ning saada hakkama ootamatute muutustega"
+      },
+      "de":{
+        "name":"Stabilität",
+        "description":"nach Vorhersehbarkeit streben und unerwartete Veränderungen aushalten können"
+      },
+      "li":{
+        "name":"Stabilumas",
+        "description":"Siekti nuspėjamumo ir ištverti netikėtus pasikeitimus"
+      }
+    }
+  },
+  {
+    "_id":"tradition",
+    "name":"Tradition",
+    "description":"to share, honor and uphold customs, rituals and beliefs",
+    "i18n":{
+      "sv":{
+        "name":"Tradition",
+        "description":"att dela, ära och upprätthålla ritualer, seder och trossatser"
+      },
+      "fi":{
+        "name":"Perinteet",
+        "description":"tapojen, rituaalien ja vakaumusten jakaminen, kunnioittaminen ja säilyttäminen"
+      },
+      "et":{
+        "name":"Traditsioonid",
+        "description":"jagada, hoida au sees ja kinni pidada tavadest, rituaalised ja uskumustest"
+      },
+      "de":{
+        "name":"Tadition",
+        "description":"Bräuche, Glauben und Rituale teilen, ehren und wahren"
+      },
+      "li":{
+        "name":"Tradicijos",
+        "description":"Dalintis, gerbti ir palaikyti papročius, ritualus ir įsitikinimus"
+      }
+    }
+  },
+  {
+    "_id":"trust",
+    "name":"Trust",
+    "description":"to believe in the honesty, goodness and abilities of others",
+    "i18n":{
+      "sv":{
+        "name":"Tillit",
+        "description":"att tro och lita på andras förmågor, ärlighet och godhet"
+      },
+      "fi":{
+        "name":"Luottamus",
+        "description":"rehellisyyteen, hyvyyteen ja muiden kykyihin uskominen"
+      },
+      "et":{
+        "name":"Usaldus",
+        "description":"uskuda teiste inimeste headusesse, aususesse ja võimekusse"
+      },
+      "de":{
+        "name":"Vertrauen",
+        "description":"an die Ehrlichkeit, Güte und Fähigkeiten anderer glauben"
+      },
+      "li":{
+        "name":"Pasitikėjimas",
+        "description":"Tikėti sąžiningumu, gerumu ir kitų žmonių gebėjimais"
+      }
+    }
+  },
+  {
+    "_id":"variety",
+    "name":"Variety",
+    "description":"to have diverse experiences and strive for constant change",
+    "i18n":{
+      "sv":{
+        "name":"Variation",
+        "description":"att uppleva omväxling och sträva efter konstant förändring"
+      },
+      "fi":{
+        "name":"Vaihtelu",
+        "description":"monipuolisten kokemusten hankkiminen, jatkuvaan muutokseen pyrkiminen"
+      },
+      "et":{
+        "name":"Mitmekesisus",
+        "description":"saada erinevaid kogemusi ja taotleda pidevat muutumist"
+      },
+      "de":{
+        "name":"Abwechslung",
+        "description":"unterschiedlichste Erfahrungen sammeln und nach ständigem Wandel streben"
+      },
+      "li":{
+        "name":"Įvairovė",
+        "description":"Turėti įvairios patirties ir nuolat siekti pokyčio gyvenime"
+      }
+    }
+  },
+  {
+    "_id":"vulnerability",
+    "name":"Vulnerability",
+    "description":"to expose my feelings, making myself dependent and reliant on others",
+    "i18n":{
+      "sv":{
+        "name":"Sårbarhet",
+        "description":"att våga visa mina känslor och tillåta mig att vara beroende"
+      },
+      "fi":{
+        "name":"Haavoittuvuus",
+        "description":"tunteiden näyttäminen, sen salliminen, että on riippuvainen muista"
+      },
+      "et":{
+        "name":"Haavatavus",
+        "description":"näidata välja oma tundeid, muutes end sellega teistest sõltuvaks"
+      },
+      "de":{
+        "name":"Verletzlichkeit",
+        "description":"meine Gefühle zeigen und mich auf andere verlassen"
+      },
+      "li":{
+        "name":"Pažeidžiamumas",
+        "description":"Atskleisti savo jausmus, priklausyti nuo kitų"
+      }
+    }
+  },
+  {
+    "_id":"welcome",
+    "name":"Welcome",
+    "description":"to willingly greet and receive guests with pleasure and kind courtesy",
+    "i18n":{
+      "sv":{
+        "name":"Välkomna",
+        "description":"att ta emot gäster med glädje och ett varmt mottagande"
+      },
+      "fi":{
+        "name":"Tervetulleeksi toivottaminen",
+        "description":"halu tervehtiä ja vastaanottaa vieraita mielellään ja kohteliaasti"
+      },
+      "et":{
+        "name":"Külalislahkus",
+        "description":"võtta heal meelel, lahkelt ja rõõmuga vastu külalisi"
+      },
+      "de":{
+        "name":"Gastfreundschaft",
+        "description":"Gäste bereitwillig und freudvoll empfangen und begrüßen"
+      },
+      "li":{
+        "name":"Svetingumas",
+        "description":"Noriai sutikti ir su malonumu priimti svečius "
+      }
+    }
+  },
+  {
+    "_id":"work",
+    "name":"Work",
+    "description":"to endeavor, have ambitions and put in effort into something",
+    "i18n":{
+      "sv":{
+        "name":"Arbeta",
+        "description":"att anstränga sig, verka för och sträva efter något"
+      },
+      "fi":{
+        "name":"Työ",
+        "description":"ponnistelu, kunnianhimoisuus, johonkin panostaminen"
+      },
+      "et":{
+        "name":"Töökus",
+        "description":"püüelda, omada ambitsiooni ja panustada millegi saavutamisse"
+      },
+      "de":{
+        "name":"Arbeit",
+        "description":"mich anstrengen, Ehrgeiz haben und etwas erreichen wollen"
+      },
+      "li":{
+        "name":"Darbas",
+        "description":"Stengtis, turėti ambicijų ir dėti visas pastangas siekiant tikslo"
+      }
+    }
+  }
+]

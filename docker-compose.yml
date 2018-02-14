@@ -1,0 +1,35 @@
+# Base compose file for Values Match backend
+# Only defines stuff that is the same, both in development and production.
+#
+# For development it will automatically be use together with docker-compose.override.yml which defines
+# volumes to be mounted.
+# cmd: docker-compose up -d --build
+#
+# For production it will be used together with docker-compose.production.yml which defines environment variables
+# and extra logging services.
+# cmd: docker-compose -f docker-compose.yml -f docker-compose.production.yml
+
+
+version: '3'
+services:
+  api:
+    image: rebus/api
+    build: ./api/.
+    environment:
+      - MONGO_URL=mongodb://mongo/rebus
+    ports:
+      - 3000:3000
+
+
+  client:
+    image: rebus/client
+    build: ./client/.
+    environment:
+      - GRAPHQL_ENDPOINT=http://api:3000/graphql
+    ports:
+      - 80:3000 # maybe this should be on another port?
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
