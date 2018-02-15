@@ -1,6 +1,10 @@
 const express = require('express');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const bodyParser = require('body-parser');
+const { execute, subscribe } = require('graphql');
+const { createServer } = require('http');
+const { SubscriptionServer } = require('subscriptions-transport-ws');
+
 const schema = require('./schema');
 const { middlewares } = require('./auth/authentication');
 
@@ -31,11 +35,23 @@ app.use(
   })),
 );
 
-app.get('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
+app.get('/graphiql', graphiqlExpress({
+  endpointURL: '/graphql',
+  subscriptionsEndpoint: `ws://localhost:${PORT || 3000}/subscriptions`,
+}));
 
 
-app.listen(PORT || 3000, () => {
-  console.log(`Listening on port ${PORT || 3000}`);
+const ws = createServer(app);
+ws.listen(PORT || 3000, () => {
+  console.log(`Apollo Server is now running on http://localhost:${PORT}`);
+  // Set up the WebSocket for handling GraphQL subscriptions
+  new SubscriptionServer({
+    execute,
+    subscribe,
+    schema,
+  }, {
+    server: ws,
+    path: '/subscriptions',
+  });
 });
-
 module.exports = app;
