@@ -9,9 +9,4 @@ const fetchPictures = token => Promise.all([
 }));
 
 
-// eslint-disable-next-line
-// fetchPictures('EAACEdEose0cBAPxdNmKOiPmAZAoZAl38ZAvkqupIFK0mxmEebkqtXeaEYv96sGsiUtn9HdvbKVljZA2M7RwmZCOATQOrcONbJ8YbVnIJOgZBgYswmPTS2PNEjyq7BdNZBqLyllTEp1KEHqRUgnoIMnhIhiUP8vXwWCS99UymlaFNC68kXq8IdgtEitCZCGWTpT8ZD')
-//   .then(console.log)
-//   .catch(console.error);
-
 module.exports = fetchPictures;

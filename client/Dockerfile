@@ -1,16 +1,15 @@
 FROM node:8-alpine
 
-RUN mkdir /app
+ADD package.json /package.json
 
-RUN npm install nodemon -g
+ENV NODE_PATH=/node_modules
+ENV PATH=$PATH:/node_modules/.bin
+RUN yarn
 
 WORKDIR /app
-ADD package.json /app/package.json
-RUN npm install --production
-
-ADD src /app/src
+ADD . /app
 
 EXPOSE 3000
+EXPOSE 35729
 
-
-CMD npm start
+CMD yarn start

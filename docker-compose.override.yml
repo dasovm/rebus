@@ -18,6 +18,5 @@ services:
       - "./api/src:/app/src"
 
   client:
-    command: "npm run dev"
     volumes:
-      - "./client/src:/app/src"
+      - "./client:/app"
