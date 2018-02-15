@@ -1,8 +1,6 @@
 const User = `
   extend type Query {
-    user(
-      userId: ID!
-    ): User
+    channels: [Channel]!
   }
 `;
 module.exports = () => [

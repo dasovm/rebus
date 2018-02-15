@@ -76,13 +76,4 @@ module.exports = {
         }
       }),
 
-
-  setValues: (_, { categories }, ctx) => {
-    const userId = extractUserIdFromContext(ctx);
-    const valueSlugs = parseValueSlugs(categories);
-
-    return setValueFormData(userId, categories)
-      .then(() => setValuesFromSlugs(userId, valueSlugs))
-      .then(() => getUser(userId));
-  },
 };

@@ -10,7 +10,7 @@ setInterval(() => {
 }, 1000);
 
 module.exports = {
-  messages: {
-    subscribe: () => pubsub.asyncIterator(SOMETHING_CHANGED_TOPIC),
-  },
+  // messages: {
+  //   subscribe: () => pubsub.asyncIterator(SOMETHING_CHANGED_TOPIC),
+  // },
 };

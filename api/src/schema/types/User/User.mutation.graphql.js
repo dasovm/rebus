@@ -1,3 +1,17 @@
+const MessageInputType = `
+  enum MessageInputType {
+    TEXT
+    REBUS
+  }
+`;
+
+const MessageInput = `
+  input MessageInput {
+    text: String!
+    type: MessageInputType!
+  }
+`;
+
 const User = `
   extend type Mutation {
 
@@ -6,23 +20,25 @@ const User = `
       token: String!
     ): Viewer
 
-    # Register your selected values.
-    setValues(
-      categories: [InputValueCategory!]!
-    ): User
+    sendMessage(
+      channelId: ID!
+      message: MessageInput!
+    ): Message!
 
-    # Match with a user.
-    matchWithUser(
-      userId: ID!
-    ): User
+    createChannel(
+      name: String!
+    ): Channel!
 
-    setNotificationToken(
-      token: String!
-    ): User
+    joinChannel(
+      channelId: ID!
+    ): Channel!
+
   }
 `;
 module.exports = () => [
   User,
+  MessageInput,
+  MessageInputType,
   require('./../Value/InputValueCategory.graphql'),
   require('./User.graphql.js'),
   require('../Viewer/Viewer.graphql'),

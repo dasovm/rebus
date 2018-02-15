@@ -1,6 +1,8 @@
 const User = `
   extend type Subscription {
-    messages: Int
+    message(
+      channelId: ID!
+    ): Message!
   }
 `;
 module.exports = () => [
