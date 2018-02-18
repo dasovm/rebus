@@ -12,4 +12,18 @@ const getUser = userId => new Promise((resolve, reject) => {
 });
 
 
-module.exports = getUser;
+const getUserByFacebookId = facebookId => new Promise((resolve, reject) => {
+  User.findOne({ facebookId }, (findError, user) => {
+    if (findError) {
+      reject(findError);
+      return;
+    }
+
+    resolve(user);
+  });
+});
+
+module.exports = {
+  getUser,
+  getUserByFacebookId,
+};

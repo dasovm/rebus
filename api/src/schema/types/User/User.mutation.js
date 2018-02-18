@@ -1,36 +1,54 @@
-const { createUser, getUser } = require('./../../../data/user');
-const { fetchProfile, fetchPictures, errors: { FacebookAuthError } } = require('./../../../lib/facebook');
+const UserData = require('./../../../data/user');
+const Facebook = require('./../../../lib/facebook');
 const { generateUserToken } = require('./../../../auth/authentication');
-const { extractUserIdFromContext } = require('./../../../auth/authorization');
 
-const _fetchProfile = ({ fbToken, ...rest }) => fetchProfile(fbToken)
+// Fetches profile (FacebookId, name) from Facebook API,
+const fetchFacebookProfile = ({ fbToken, ...rest }) => Facebook.fetchProfile(fbToken)
   .then(profile => ({ fbToken, profile, ...rest }));
 
-const _fetchPictures = ({ fbToken, ...rest }) => fetchPictures(fbToken)
-  .then(images => ({ fbToken, images, ...rest }));
+// Fetches a medium sized user image from Facebook API.
+const fetchFacebookPicture = ({ fbToken, ...rest }) => Facebook.fetchPicture(fbToken)
+  .then(({ url }) => ({ fbToken, picture: url, ...rest }));
 
-const _createUser = ({ fbToken, profile, ...rest }) => createUser({
+// Stores user object.
+const createUser = ({
+  fbToken, profile: { id, ...profileRest }, picture, ...rest
+}) => UserData.createUser({
   facebookToken: fbToken,
-  ...profile,
-}).then(user => ({ user, fbToken, ...rest }));
+  picture,
+  facebookId: id,
+  ...profileRest,
+}).then(user => ({ ...rest, user, fbToken }));
 
 
-const _generateToken = ({ user, ...rest }) => ({ user, ...rest, jwtToken: generateUserToken(user) });
+// Generates JWT token for user.
+const generateToken = ({ user, ...rest }) => ({ user, ...rest, jwtToken: generateUserToken(user) });
 
+
+const getExistingUser = ({ profile, ...rest }) => {
+  const { id } = profile;
+  return UserData.getUserByFacebookId(id)
+    .then(user => ({ user, profile, ...rest }));
+};
+
+const skipIfExistingUser = method => ({ user, ...rest }) => {
+  if (!user) {
+    return method({ user, ...rest });
+  }
+  return { user, ...rest };
+};
 
 module.exports = {
-  // todo: This should also log the user in and connect
-  // to correct user if the user has already registered (on this endpoint)
-
-  login: (_, { token }, ctx) =>
+  login: (_, { token }) =>
     Promise.resolve({ fbToken: token })
-      .then(_fetchProfile)
-      .then(_fetchPictures)
-      .then(_createUser)
-      .then(_generateToken)
+      .then(fetchFacebookProfile)
+      .then(getExistingUser)
+      .then(skipIfExistingUser(fetchFacebookPicture))
+      .then(skipIfExistingUser(createUser))
+      .then(generateToken)
       .then(({ user, jwtToken }) => ({ user, token: jwtToken }))
       .catch(err => {
-        if (err instanceof FacebookAuthError) {
+        if (err instanceof Facebook.errors.FacebookAuthError) {
           throw err;
         } else {
           console.error(err);
