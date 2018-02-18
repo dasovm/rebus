@@ -39,7 +39,6 @@ module.exports = () => [
   User,
   MessageInput,
   MessageInputType,
-  require('./../Value/InputValueCategory.graphql'),
   require('./User.graphql.js'),
   require('../Viewer/Viewer.graphql'),
 ];

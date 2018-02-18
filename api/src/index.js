@@ -12,8 +12,8 @@ const { PORT } = process.env;
 
 const app = express();
 
-require('./mongo/connect')();
-require('./mongo/startup')();
+require('./data/persistance/connect')();
+require('./data/persistance/startup')();
 
 const formatAuthErrors = (err, req, res, next) => {
   console.log('formatAuth', err);
@@ -43,7 +43,7 @@ app.get('/graphiql', graphiqlExpress({
 
 const ws = createServer(app);
 ws.listen(PORT || 3000, () => {
-  console.log(`Apollo Server is now running on http://localhost:${PORT}`);
+  console.log(`Apollo Server is now running on http://localhost:${PORT || 3000}`);
   // Set up the WebSocket for handling GraphQL subscriptions
   new SubscriptionServer({
     execute,

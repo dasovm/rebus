@@ -1,4 +1,4 @@
-const { getUser } = require('./../../../mongo/user');
+const { getUser } = require('./../../../data/user');
 
 module.exports = {
 };

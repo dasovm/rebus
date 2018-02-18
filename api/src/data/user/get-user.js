@@ -1,4 +1,4 @@
-const { User } = require('./../schema');
+const { User } = require('./../persistance/schema');
 
 const getUser = userId => new Promise((resolve, reject) => {
   User.findOne({ _id: userId }, (findError, user) => {

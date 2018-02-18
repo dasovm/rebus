@@ -1,4 +1,4 @@
-const { getUser } = require('./../../../mongo/user');
+const { getUser } = require('./../../../data/user');
 const { extractTokenFromContext, extractUserIdFromContext } = require('./../../../auth/authorization');
 
 module.exports = {

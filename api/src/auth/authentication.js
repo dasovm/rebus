@@ -1,6 +1,6 @@
 const expressjwt = require('express-jwt');
 const jwt = require('jsonwebtoken');
-const getUser = require('./../mongo/user/get-user');
+const getUser = require('./../data/user/get-user');
 const crypto = require('crypto');
 
 

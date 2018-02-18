@@ -1,20 +1,3 @@
-const UserPicture = `
-  type UserPicture {
-    # Url to a picture.
-    width: Int!
-    height: Int!
-    url: String!
-  }
-`;
-
-
-const UserPictures = `
-  type UserPictures {
-    # Url to a picture.
-    small: UserPicture!
-    large: UserPicture!
-  }
-`;
 
 const Gif = `
   type Gif {
@@ -79,7 +62,8 @@ const User = `
 
     name: String!
 
-    pictures: UserPictures
+    # Url to picture
+    picture: String
 
     channels: [Channel]!
     
@@ -88,12 +72,10 @@ const User = `
 
 module.exports = () => [
   User,
-  UserPictures,
-  UserPicture,
   Gif,
   Content,
   Message,
   MessageConnection,
   Channel,
-  require('./../Value/ValueCategory.graphql'),
+  require('./../scalars/Date.graphql'),
 ];
