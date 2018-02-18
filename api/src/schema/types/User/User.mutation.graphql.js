@@ -1,16 +1,3 @@
-const MessageInputType = `
-  enum MessageInputType {
-    TEXT
-    REBUS
-  }
-`;
-
-const MessageInput = `
-  input MessageInput {
-    text: String!
-    type: MessageInputType!
-  }
-`;
 
 const User = `
   extend type Mutation {
@@ -37,8 +24,6 @@ const User = `
 `;
 module.exports = () => [
   User,
-  MessageInput,
-  MessageInputType,
   require('./User.graphql.js'),
   require('../Viewer/Viewer.graphql'),
 ];

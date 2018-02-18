@@ -1,7 +1,7 @@
 const Subscription = require('./Subscription');
-const User = require('./../User/User.subscription');
+const Channel = require('./../Channel/Channel.subscription');
 
 module.exports = {
   ...Subscription,
-  ...User,
+  ...Channel,
 };

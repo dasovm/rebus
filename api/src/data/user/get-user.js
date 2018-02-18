@@ -8,7 +8,7 @@ const getUser = userId => new Promise((resolve, reject) => {
     }
 
     resolve(user);
-  })
+  });
 });
 
 

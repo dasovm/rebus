@@ -1,9 +1,9 @@
-const Query = `
+const Subscription = `
   type Subscription {
     version: Int
   }
 `;
 
 module.exports = () => [
-  Query,
+  Subscription,
 ];
