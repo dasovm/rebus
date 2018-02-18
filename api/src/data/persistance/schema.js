@@ -12,6 +12,11 @@ const usersSchema = new Schema({
 });
 
 
+const channelSchema = new Schema({
+  name: String,
+  createdAt: Date,
+});
+
 //
 //
 //
