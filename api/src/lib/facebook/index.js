@@ -1,5 +1,5 @@
 module.exports = {
   fetchProfile: require('./fetch-profile'),
-  fetchPictures: require('./fetch-pictures'),
+  fetchPicture: require('./fetch-picture'),
   errors: require('./errors'),
 };
