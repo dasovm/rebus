@@ -35,6 +35,7 @@ const createUser = user => new Promise((resolve, reject) => {
 
   const userModel = new User({
     ...user,
+    createdAt: new Date(),
     tokenSecret,
   });
 
