@@ -3,7 +3,6 @@ const { extractTokenFromContext, extractUserIdFromContext } = require('./../../.
 
 module.exports = {
   viewer: (_, __, ctx) => {
-    // todo: use userid from context
     const userId = extractUserIdFromContext(ctx);
     const token = extractTokenFromContext(ctx);
 
