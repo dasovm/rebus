@@ -1,5 +1,5 @@
-const { Channel, UserChannelConnection } = require('./../persistance/schema');
-
+const { Channel } = require('./../persistance/schema');
+const getChannelConnections = require('./get-channel-connections');
 
 const getChannel = channelId => new Promise((resolve, reject) => {
   Channel.findOne({ _id: channelId }, (findError, channel) => {
@@ -35,19 +35,7 @@ const getAllChannels = () => new Promise((resolve, reject) => {
 });
 
 
-const getChannelConnections = userId => new Promise((resolve, reject) => {
-  UserChannelConnection.find({ userId }, (findError, connections) => {
-    if (findError) {
-      reject(findError);
-      return;
-    }
-
-    resolve(connections);
-  });
-});
-
-
-const getUsersChannels = userId => getChannelConnections(userId)
+const getUsersChannels = userId => getChannelConnections({ userId })
   .then(connections => getChannels(connections.map(({ channelId }) => channelId)));
 
 

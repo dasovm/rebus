@@ -23,7 +23,20 @@ const getUserByFacebookId = facebookId => new Promise((resolve, reject) => {
   });
 });
 
+
+const getUsers = userIds => new Promise((resolve, reject) => {
+  User.find({ _id: { $in: userIds } }, (findError, users) => {
+    if (findError) {
+      reject(findError);
+      return;
+    }
+
+    resolve(users);
+  });
+});
+
 module.exports = {
   getUser,
+  getUsers,
   getUserByFacebookId,
 };
