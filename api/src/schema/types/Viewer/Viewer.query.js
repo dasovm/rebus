@@ -1,7 +1,6 @@
 const { getUser } = require('./../../../data/user');
 const { extractTokenFromContext, extractUserIdFromContext } = require('./../../../auth/authorization');
 
-console.log(getUser);
 module.exports = {
   viewer: (_, __, ctx) => {
     // todo: use userid from context
