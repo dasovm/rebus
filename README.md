@@ -8,4 +8,4 @@ Project in course DAT076
 * David Söderberg - dasovm
 
 ## Contact
-ericwenn@gmail.com
+dasovm@gmail.com
