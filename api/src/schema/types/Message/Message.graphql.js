@@ -1,26 +1,3 @@
-const Gif = `
-  type Gif {
-    url: String!
-  }
-`;
-
-
-const Content = `
-  interface Content {
-    type: String
-  }
-
-  type Text implements Content {
-    type: String
-    text: String!
-  }
-
-  type Rebus implements Content {
-    type: String
-    gifs: [Gif]!
-  }
-`;
-
 const Message = `
   type Message {
     _id: ID!
@@ -38,9 +15,8 @@ const Message = `
 
 
 module.exports = () => [
-  Gif,
-  Content,
   Message,
+  require('./Content.graphql'),
   require('./../Channel/Channel.graphql'),
   require('./../scalars/Date.graphql'),
 ];
