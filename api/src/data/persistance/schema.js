@@ -8,7 +8,7 @@ const usersSchema = new Schema({
   facebookId: String,
   createdAt: Date,
   tokenSecret: String,
-  pictureUrl: String,
+  picture: String,
 });
 
 

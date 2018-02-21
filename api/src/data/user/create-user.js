@@ -1,16 +1,26 @@
 const { User } = require('./../persistance/schema');
 const { generateSecret } = require('./../../auth/authentication');
 
-// todo: validate user object.
-// should throw error if invalid
-const validateUser = user => null;
+const validateUser = ({ facebookId, name, picture }) => {
+  if (!facebookId) {
+    throw new Error('Facebook ID not provided.');
+  }
+
+  if (!name) {
+    throw new Error('Name not provided');
+  }
+
+  if (!picture) {
+    throw new Error('Picture not provided');
+  }
+};
 
 /**
  *
  * @param {Object} user - The user to create
  * @param {String} user.facebookId
  * @param {String} user.name
- * @param {String} user.pictureUrl
+ * @param {String} user.picture
  * @returns {Promise<User>}
  */
 const createUser = user => new Promise((resolve, reject) => {
@@ -25,6 +35,7 @@ const createUser = user => new Promise((resolve, reject) => {
 
   const userModel = new User({
     ...user,
+    createdAt: new Date(),
     tokenSecret,
   });
 
