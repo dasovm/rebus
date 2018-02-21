@@ -12,6 +12,17 @@ const usersSchema = new Schema({
 });
 
 
+const channelSchema = new Schema({
+  name: String,
+  createdAt: Date,
+});
+
+
+const userChannelConnection = new Schema({
+  userId: Schema.Types.ObjectId,
+  channelId: Schema.Types.ObjectId
+});
+
 //
 //
 //
@@ -86,7 +97,8 @@ const toPOJO = doc => doc.toObject();
 
 module.exports = {
   User: mongoose.model('Users', usersSchema),
-  // UserPicture: mongoose.model('UserPictures', userPicturesSchema),
+  Channel: mongoose.model('Channels', channelSchema),
+  UserChannelConnection: mongoose.model('UserChannelConnections', userChannelConnection),
   // Value: mongoose.model('Values', valuesSchema),
   // ValueCategory: mongoose.model('ValuesCategories', valueCategoriesSchema),
   // UserValueConnection: mongoose.model('UserValueConnection', userValuesConnectionsSchema),

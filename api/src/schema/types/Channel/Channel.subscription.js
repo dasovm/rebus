@@ -1,16 +1,21 @@
-const { PubSub } = require('graphql-subscriptions');
+const { subscribeToMessages, publishMessage } = require('./../../../data/channel');
+const randomText = require('random-text-faces');
 
-const pubsub = new PubSub();
-const SOMETHING_CHANGED_TOPIC = 'something_changed';
-
-let i = 0;
 setInterval(() => {
-  pubsub.publish(SOMETHING_CHANGED_TOPIC, { messages: i });
-  i += 1;
-}, 1000);
+  publishMessage(1, {
+    message: {
+      _id: 1,
+      content: {
+        type: 'Text',
+        text: randomText.get(),
+      },
+    },
+  });
+}, 1500);
+
 
 module.exports = {
-  // messages: {
-  //   subscribe: () => pubsub.asyncIterator(SOMETHING_CHANGED_TOPIC),
-  // },
+  message: {
+    subscribe: (_, { channelId }) => subscribeToMessages(channelId),
+  },
 };
