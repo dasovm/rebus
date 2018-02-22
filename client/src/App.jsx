@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Rebus chat app. Is really nice.</h1>
+          <h1 className="App-title">Welcome to Rebus chat app. Is nice.</h1>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.jsx</code> and save to reload.
