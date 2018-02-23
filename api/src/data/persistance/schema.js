@@ -20,75 +20,18 @@ const channelSchema = new Schema({
 
 const userChannelConnection = new Schema({
   userId: Schema.Types.ObjectId,
-  channelId: Schema.Types.ObjectId
+  channelId: Schema.Types.ObjectId,
 });
 
-//
-//
-//
-// const valueCategoriesSchema = new Schema({
-//   slug: String,
-//   name: String,
-// });
-//
-// const valuesSchema = new Schema({
-//   slug: String,
-//   name: String,
-//   categoryId: Schema.Types.ObjectId,
-//   description: String,
-//   i18n: {
-//     sv: {
-//       name: String,
-//       description: String,
-//     },
-//     fi: {
-//       name: String,
-//       description: String,
-//     },
-//     et: {
-//       name: String,
-//       description: String,
-//     },
-//     de: {
-//       name: String,
-//       description: String,
-//     },
-//     li: {
-//       name: String,
-//       description: String,
-//     },
-//   },
-// });
-//
-// const userValuesConnectionsSchema = new Schema({
-//   userId: Schema.Types.ObjectId,
-//   valueId: Schema.Types.ObjectId,
-// });
-//
 
-//
-//
-// const valueFormData = new Schema({
-//   userId: Schema.Types.ObjectId,
-//   categories: [
-//     {
-//       name: String,
-//       values: [{
-//         _id: String,
-//         selected: {
-//           active: Boolean,
-//           changed: Date,
-//           added: Date,
-//         },
-//         prioritized: {
-//           active: Boolean,
-//           changed: Date,
-//           added: Date,
-//         },
-//       }],
-//     },
-//   ],
-// });
+const messageSchema = new Schema({
+  userId: Schema.Types.ObjectId,
+  channelId: Schema.Types.ObjectId,
+  text: String,
+  gifs: [String],
+  sentAt: Date,
+});
+
 
 // eslint-disable-next-line new-cap
 const toObjectId = id => mongoose.Types.ObjectId(id);
@@ -99,10 +42,7 @@ module.exports = {
   User: mongoose.model('Users', usersSchema),
   Channel: mongoose.model('Channels', channelSchema),
   UserChannelConnection: mongoose.model('UserChannelConnections', userChannelConnection),
-  // Value: mongoose.model('Values', valuesSchema),
-  // ValueCategory: mongoose.model('ValuesCategories', valueCategoriesSchema),
-  // UserValueConnection: mongoose.model('UserValueConnection', userValuesConnectionsSchema),
-  // ValueFormData: mongoose.model('ValueFormData', valueFormData),
+  Message: mongoose.model('Message', messageSchema),
   toObjectId,
   createObjectId,
   toPOJO,

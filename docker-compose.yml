@@ -17,6 +17,9 @@ services:
     build: ./api/.
     environment:
       - MONGO_URL=mongodb://mongo/rebus
+      - PORT=3000
+      - EXTERNAL_PORT=3000
+      - EXTERNAL_HOST=localhost
     ports:
       - 3000:3000
 
