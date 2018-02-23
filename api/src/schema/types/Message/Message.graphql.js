@@ -6,7 +6,7 @@ const Message = `
 
     channel: Channel!
 
-    date: Date!
+    sentAt: Date!
 
     content: Content
     
