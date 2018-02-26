@@ -4,7 +4,7 @@ const gphApiClient = require('giphy-js-sdk-core');
 const client = gphApiClient('9X6cjVQ00kOzDF9nxvCh27qNu9azT9vQ');
 
 // Gif search by text
-function requestGifs(text, limit) {
+const requestGifs = (text, limit) => {
   const gifArray = [];
   client.search('gifs', { q: text, limit })
     .then(response => {
@@ -17,4 +17,6 @@ function requestGifs(text, limit) {
       console.log(err.message);
     });
   return gifArray;
-}
+};
+
+requestGifs('Cat', 1);
