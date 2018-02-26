@@ -18,5 +18,3 @@ const requestGifs = (text, limit) => {
     });
   return gifArray;
 };
-
-requestGifs('Cat', 1);
