@@ -7,19 +7,35 @@
 }
 
 .chatList {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
   width: 90%;
 }
 
 .chatCard {
+  border-radius: 12px;
   font-size: 1.25em;
   background-color: #1DE9B6;
-  width: 70px;
-  height: 70px;
+  width: calc(1/4);
+  height: 100px;
   padding: 20px;
   margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+@media (max-width: 580px) {
+  .chatList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chatCard {
+    width: calc(1/2);
+  }
+}
+
+.chatCardText {
 }
 
 .addNew {

@@ -6,20 +6,19 @@ const iconStyle = {
   icon: {
     width: 48,
     height: 48,
-    color: "#2f3542",
+    color: "#2f3542"
   },
   button: {
-    float: "left",
-    position: "fixed",
     width: 96,
     height: 96,
+    padding: 24,
   }
 }
 
 class HomeButton extends Component {
   render() {
     return (
-      <IconButton href="/" tooltip="Home" iconStyle={iconStyle.icon} styles={iconStyle.button}>
+      <IconButton href="/" tooltip="Home" iconStyle={iconStyle.icon} style={iconStyle.button}>
         <ActionHome />
       </IconButton>
     );

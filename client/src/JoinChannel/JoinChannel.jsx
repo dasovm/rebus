@@ -21,7 +21,7 @@ class JoinChannel extends Component {
           <div className={styles.joinBlock}>
             <h3>Join existing channel:</h3>
             <div className={styles.textField}>
-              <TextField hintText="#id" />
+              <TextField hintText="id" />
               <FlatButton label="Join" backgroundColor="#2ed573" hoverColor="#7bed9f" className={styles.submitButton} />
             </div>
           </div>
