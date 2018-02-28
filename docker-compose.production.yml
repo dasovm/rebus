@@ -1,0 +1,18 @@
+version: '3'
+services:
+  api:
+    image: rebus/api
+    build: ./api/.
+    environment:
+      - MONGO_URL=mongodb://mongo/rebus
+      - PORT=3000
+      - EXTERNAL_PORT=80
+      - EXTERNAL_HOST=api.rebus.vaquita.se
+
+  client:
+    image: rebus/client
+    build: client/.
+    environment:
+      - GRAPHQL_HTTP_ENDPOINT=http://api.rebus.vaquita.se/graphql
+      - GRAPHQL_WS_ENDPOINT=ws://api.rebus.vaquita.se/subscriptions
+

@@ -8,7 +8,7 @@ const { SubscriptionServer } = require('subscriptions-transport-ws');
 const schema = require('./schema');
 const { middlewares } = require('./auth/authentication');
 
-const { PORT } = process.env;
+const { PORT = 3000, EXTERNAL_PORT = 3000, EXTERNAL_HOST = 'localhost' } = process.env;
 
 const app = express();
 
@@ -16,7 +16,6 @@ require('./data/persistance/connect')();
 require('./data/persistance/startup')();
 
 const formatAuthErrors = (err, req, res, next) => {
-  console.log('formatAuth', err);
   if (err) {
     return res.send({ data: null, errors: [{ message: err }] });
   }
@@ -37,13 +36,13 @@ app.use(
 
 app.get('/graphiql', graphiqlExpress({
   endpointURL: '/graphql',
-  subscriptionsEndpoint: `ws://localhost:${PORT || 3000}/subscriptions`,
+  subscriptionsEndpoint: `ws://${EXTERNAL_HOST}:${EXTERNAL_PORT}/subscriptions`,
 }));
 
 
 const ws = createServer(app);
-ws.listen(PORT || 3000, () => {
-  console.log(`Apollo Server is now running on http://localhost:${PORT || 3000}`);
+ws.listen(PORT, () => {
+  console.log(`Apollo Server is now running on http://${EXTERNAL_HOST}:${EXTERNAL_PORT}`);
   // Set up the WebSocket for handling GraphQL subscriptions
   const subserver = new SubscriptionServer({
     execute,
