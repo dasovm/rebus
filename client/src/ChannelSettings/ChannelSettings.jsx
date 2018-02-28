@@ -3,9 +3,10 @@ import styles from './ChannelSettings.module.css';
 
 class ChannelSettings extends Component {
   render() {
+    const {id} = this.props;
     return (
       <div className={styles.ChannelSettings}>
-        <input type="text" name="channelName" placeholder="Channel name" />
+        <input type="text" name="channelName" placeholder={id} />
         <div className={styles.colorGrid}>
           <div className={styles.colorCard}>Colour 1</div>
           <div className={styles.colorCard}>Colour 2</div>
