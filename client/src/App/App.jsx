@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import styles from './App.module.css';
+import { Link, Switch, Route } from 'react-router-dom';
+import Home from '../Home/Home';
+import Chat from '../Chat/Chat';
+import Login from '../Login/Login';
+import JoinChannel from '../JoinChannel/JoinChannel';
 
 class App extends Component {
   render() {
     return (
-      <div className={styles.App}>
-        <header className={styles.header}>
-          <img src={logo} className={styles.logo} alt="logo" />
-          <h1 className={styles.title}>Welcome to Rebus chat app. Is nice.</h1>
-        </header>
-        <p className={styles.intro}>
-          To get started, edit <code>src/App.jsx</code> and save to reload.
-        </p>
-      </div>
+      <main>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/login' component={Login}/>
+          <Route path='/join' component={JoinChannel}/>
+          <Route path='/chat/:id' component={Chat}/>
+        </Switch>
+      </main>
     );
   }
 }
