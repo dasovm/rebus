@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ChannelSettings from './ChannelSettings/ChannelSettings';
+import App from './App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<ChannelSettings />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
