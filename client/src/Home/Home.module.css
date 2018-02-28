@@ -7,14 +7,24 @@
 }
 
 .chatList {
-  
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .chatCard {
   font-size: 1.25em;
+  background-color: #1DE9B6;
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  margin: 20px;
 }
 
 .addNew {
-  /* Insert FAB here pls */
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
   font-size: large;
 }
