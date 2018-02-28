@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './Home.module.css';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
 
 class Home extends Component {
   render() {
@@ -18,7 +19,9 @@ class Home extends Component {
           <div className={styles.chatCard}>Chatt #8</div>
           <div className={styles.chatCard}>Chatt #9</div>
         </div>
-        <FloatingActionButton className={styles.addNew} />
+        <FloatingActionButton href="/join" className={styles.addNew}>
+          <ContentAdd />
+        </FloatingActionButton>
       </div>
     );
   }

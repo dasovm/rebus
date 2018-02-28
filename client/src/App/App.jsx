@@ -3,7 +3,6 @@ import styles from './App.module.css';
 import { Link, Switch, Route } from 'react-router-dom';
 import Home from '../Home/Home';
 import Chat from '../Chat/Chat';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Login from '../Login/Login';
 import JoinChannel from '../JoinChannel/JoinChannel';
 
@@ -11,7 +10,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MuiThemeProvider>
           <header>
             <nav>
               <ul>
@@ -30,7 +28,6 @@ class App extends Component {
             <Route path='/chat/:id' component={Chat}/>
           </Switch>
         </main>
-      </MuiThemeProvider>
       </div>
     );
   }
