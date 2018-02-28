@@ -9,11 +9,6 @@ class Chat extends Component {
     const { match } = this.props;
     return (
       <div className={styles.Chat}>
-        <h1 className={styles.title}>Chat id: {match.params.id}</h1>
-        
-        <Link to={match.url}>ChatView</Link>
-        <Link to={match.url + '/settings'} >Channel Settings</Link>
-        
         <Route exact path={`${match.url}/settings`} render={() => <ChannelSettings id={match.params.id}/>} />
         <Route
           exact
