@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './ChatView.module.css';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
@@ -19,7 +20,7 @@ class ChatView extends Component {
             <div className={styles.chatCard}>#6</div>
             <div className={styles.chatCard}>#7</div>
             <div className={styles.chatCard}>#8</div>
-            <div className={styles.chatCard}><ContentAdd /></div>
+            <Link to="/join"><div className={styles.chatCard}><ContentAdd /></div></Link>
           </div>
         </div>
         <div className={styles.header}>
@@ -29,7 +30,7 @@ class ChatView extends Component {
           </div>
           <div>
             <FlatButton label="Leave Channel" backgroundColor="#ff4757" hoverColor="#ff6b81" className={styles.leaveChannel} />
-            <FlatButton label="Settings" backgroundColor="#1e90ff" hoverColor="#70a1ff" className={styles.settings} />
+            <FlatButton label="Settings" backgroundColor="#1e90ff" hoverColor="#70a1ff" className={styles.settings} href={'/chat/' + id + '/settings'} />
           </div>
         </div>
         <div className={styles.content}>
