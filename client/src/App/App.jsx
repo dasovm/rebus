@@ -1,30 +1,37 @@
 import React, { Component } from 'react';
 import styles from './App.module.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link, Switch, Route } from 'react-router-dom';
 import Home from '../Home/Home';
 import Chat from '../Chat/Chat';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Login from '../Login/Login';
+import JoinChannel from '../JoinChannel/JoinChannel';
 
 class App extends Component {
   render() {
     return (
-      <Router>
+      <div>
         <MuiThemeProvider>
-          <div className={styles.App}>
-            <div>
-              <h1>Test link</h1>
+          <header>
+            <nav>
               <ul>
-                <li>
-                  <Link to="/home">Home</Link>
-                  <Link to="/chat">Chat</Link>
-                </li>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/login'>Login</Link></li>
+                <li><Link to='/join'>Join</Link></li>
+                <li><Link to='/chat/1'>Chat #1 typ</Link></li>
               </ul>
-            </div>
-          </div>
-          <Route path="/home" component={Home} />
-          <Route path="/chat" component={Chat} />
-        </MuiThemeProvider>
-      </Router>
+            </nav>
+          </header>
+        <main>
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route path='/login' component={Login}/>
+            <Route path='/join' component={JoinChannel}/>
+            <Route path='/chat/:id' component={Chat}/>
+          </Switch>
+        </main>
+      </MuiThemeProvider>
+      </div>
     );
   }
 }

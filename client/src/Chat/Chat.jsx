@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
+import { Link, Route } from 'react-router-dom';
+import ChatView from '../ChatView/ChatView';
+import ChannelSettings from '../ChannelSettings/ChannelSettings';
 import styles from './Chat.module.css';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 
 class Chat extends Component {
   render() {
+    const { match } = this.props;
     return (
       <div className={styles.Chat}>
-        <div className={styles.chats}>
-          chats
-        </div>
-        <div className={styles.header}>
-          <div className={styles.headerContainer}>
-            <h1 className={styles.h1}>ChatName</h1>
-            <h2 className={styles.h2}>id #12351</h2>
-          </div>
-          <FlatButton label="Leave Channel" backgroundColor="#ff4757" hoverColor="#ff6b81" className={styles.leaveChannel} />
-        </div>
-        <div className={styles.content}>
-          content
-        </div>
-        <div className={styles.input}>
-          <TextField hintText="Write message here..." className={styles.textField} />
-        </div>
+        <h1 className={styles.title}>Chat id: {match.params.id}</h1>
+        
+        <Link to={match.url}>ChatView</Link>
+        <Link to={match.url + '/settings'} >Channel Settings</Link>
+        
+        <Route exact path={`${match.url}/settings`} render={() => <ChannelSettings id={match.params.id}/>} />
+        <Route
+          exact
+          path={match.url}
+          render={() => <ChatView id={match.params.id}/>} 
+        />
       </div>
     );
   }
