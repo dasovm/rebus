@@ -6,9 +6,9 @@ class Home extends Component {
     return (
       <div className={styles.Home}>
         <h1 className={styles.title}>Rebus</h1>
-        <div className={styles.chattList}>
-          <div className={styles.chattCard}>Chatt #1</div>
-          <div className={styles.chattCard}>Chatt #2</div>
+        <div className={styles.chatList}>
+          <div className={styles.chatCard}>Chatt #1</div>
+          <div className={styles.chatCard}>Chatt #2</div>
         </div>
         <button className={styles.addNew}>Add new chatt</button>
       </div>
