@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
 import styles from './App.module.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link, Switch, Route } from 'react-router-dom'
 import Home from '../Home/Home';
+import Login from '../Login/Login';
 
 class App extends Component {
   render() {
     return (
-      <Router>
-      <div className={styles.App}>
-        <div>
-          <h1>Test link</h1>
-          <ul>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-          </ul>
-        </div>
+      <div>
+        <header>
+          <nav>
+            <ul>
+              <li><Link to='/'>Home</Link></li>
+              <li><Link to='/login'>Login</Link></li>
+            </ul>
+          </nav>
+        </header>
+      <main>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/login' component={Login}/>
+        </Switch>
+      </main>
       </div>
-      <Route path="/home" component={Home} />
-      </Router>
     );
   }
 }
