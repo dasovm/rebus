@@ -3,8 +3,6 @@ import { Link, Route } from 'react-router-dom';
 import ChatView from '../ChatView/ChatView';
 import ChannelSettings from '../ChannelSettings/ChannelSettings';
 import styles from './Chat.module.css';
-import TextField from 'material-ui/TextField';
-import FlatButton from 'material-ui/FlatButton';
 
 class Chat extends Component {
   render() {
