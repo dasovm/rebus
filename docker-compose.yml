@@ -23,7 +23,7 @@ services:
     image: rebus/client
     build: client/.
     ports:
-      - 3000:3000 # maybe this should be on another port?
+      - 8080:3000 # maybe this should be on another port?
       - 35729:35729
 
   mongo:
