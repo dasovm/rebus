@@ -36,13 +36,13 @@ app.use(
 
 app.get('/graphiql', graphiqlExpress({
   endpointURL: '/graphql',
-  subscriptionsEndpoint: `ws://${EXTERNAL_HOST}/subscriptions`,
+  subscriptionsEndpoint: `ws://${EXTERNAL_HOST}:${PORT}/subscriptions`,
 }));
 
 
 const ws = createServer(app);
 ws.listen(PORT, () => {
-  console.log(`Apollo Server is now running on http://${EXTERNAL_HOST}:${EXTERNAL_PORT}`);
+  console.log(`Apollo Server is now running on http://localhost:${PORT} -> http://${EXTERNAL_HOST}:${EXTERNAL_PORT}`);
   // Set up the WebSocket for handling GraphQL subscriptions
   const subserver = new SubscriptionServer({
     execute,
