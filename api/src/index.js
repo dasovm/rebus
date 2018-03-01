@@ -36,7 +36,7 @@ app.use(
 
 app.get('/graphiql', graphiqlExpress({
   endpointURL: '/graphql',
-  subscriptionsEndpoint: `ws://${EXTERNAL_HOST}:${PORT}/subscriptions`,
+  subscriptionsEndpoint: `ws://${EXTERNAL_HOST}:${EXTERNAL_PORT}/subscriptions`,
 }));
 
 
