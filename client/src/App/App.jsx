@@ -5,7 +5,7 @@ import Chat from '../Chat/Chat';
 import Login from '../Login/Login';
 import JoinChannel from '../JoinChannel/JoinChannel';
 
-const isLoggedIn = true;
+const isLoggedIn = false;
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route

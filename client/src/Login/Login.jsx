@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import FacebookLogin from 'react-facebook-login';
 import Snackbar from 'material-ui/Snackbar';
 import CircularProgress from 'material-ui/CircularProgress';
-import styles from './Login.module.css';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
+import styles from './Login.module.css';
+import { AUTH_TOKEN } from '../constants';
 
 class Login extends Component {
   constructor(props) {
@@ -12,25 +13,17 @@ class Login extends Component {
     this.state = {
       snackbarOpen: false,
       fbLoading: false,
+      fbToken: '',
     };
   }
 
   responseFacebook = (response) => {
     // Skicka response till server och få JWT token tillbaka
     this.setState({
-      fbLoading: true,
+      fbToken: response.accessToken,
+      fbLoading: true
     });
-    const { accessToken } = response.accessToken;
-    const GET_TOKEN = gql`
-    mutation {
-      login(token: "${accessToken}") {
-        token
-      }
-    }`;
-
-    const res = graphql(GET_TOKEN);
-    console.log(res);
-
+    this.confirmToken();
   }
 
   onFailure = () => {
@@ -53,8 +46,6 @@ class Login extends Component {
         <FacebookLogin
           appId="148998895776893"
           autoLoad={true}
-          cookie={true}
-          xfbml={true}
           fields="name,email,picture"
           callback={this.responseFacebook}
           onFailure={this.onFailure} />
@@ -73,9 +64,33 @@ class Login extends Component {
       </div>
     );
 
-    if (this.fbLoading) return loadingBlock;
+    if (this.state.fbLoading) return loadingBlock;
     else return loginBlock;
+  }
+
+  confirmToken = async () => {
+    const {fbToken} = this.state;
+    const result = await this.props.getTokenMutation({
+      variables: {
+        fbToken
+      }
+    });
+    const { token } = result.data.login;
+    this.saveUserData(token);
+    this.props.history.push(`/`);
+  }
+
+  saveUserData = token => {
+    localStorage.setItem(AUTH_TOKEN, token);
   }
 }
 
-export default Login;
+const GET_TOKEN_MUTATION = gql`
+  mutation GetTokenMutation($token: String!) {
+    login(token: $token) {
+      token
+    }
+  }
+`
+
+export default graphql(GET_TOKEN_MUTATION, {name: 'getTokenMutation'})(Login);
