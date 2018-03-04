@@ -14,3 +14,7 @@ const requestGifs = (text, limit) => client.search('gifs', { q: text, limit })
   .catch(err => {
     console.log(err.message);
   });
+
+module.exports = {
+  requestGifs,
+};
