@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import styles from './Home.module.css';
+import { gql } from 'apollo-boost';
+import { graphql } from 'react-apollo'
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
+import styles from './Home.module.css';
 
 class Home extends Component {
   render() {
@@ -27,4 +29,13 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const GET_CHANNELS_QUERY = gql`
+  query {
+    channels {
+      name
+      _id
+    }
+  }
+`
+
+export default graphql(GET_CHANNELS_QUERY, {name: 'getChannelsQuery'})(Home);
