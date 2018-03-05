@@ -6,14 +6,14 @@
   font-size: 1.5em;
 }
 
-.chatList {
+.channelList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
   width: 90%;
 }
 
-.chatCard {
+.channelCard {
   border-radius: 12px;
   font-size: 1.25em;
   background-color: #1DE9B6;
@@ -27,15 +27,15 @@
 }
 
 @media (max-width: 580px) {
-  .chatList {
+  .channelList {
     grid-template-columns: repeat(2, 1fr);
   }
-  .chatCard {
+  .channelCard {
     width: calc(1/2);
   }
 }
 
-.chatCardText {
+.channelCardText {
 }
 
 .addNew {

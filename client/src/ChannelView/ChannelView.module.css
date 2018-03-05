@@ -1,27 +1,27 @@
-.Chat {
+.Channel {
   display: grid;
   grid-template-columns: 80px auto;
   grid-template-rows: 40px calc(100% - 90px) 50px; 
   grid-template-areas: 
-        "chats header"
-        "chats content"
-        "chats input";
+        "channels header"
+        "channels content"
+        "channels input";
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.chats {
-  grid-area: chats;
+.channels {
+  grid-area: channels;
   height: 100%;
   background-color:#2f3542;
 }
-.chatList {
+.channelList {
   padding: 12px;
   height: 100%;
   box-sizing: border-box;
 }
-.chatCard {
+.channelCard {
   font-size: 1.25em;
   background-color: #ECF0F1;
   width: calc(80px - 24px);
@@ -30,7 +30,7 @@
   border-radius: 8px;
   color: #000000;
 }
-.chatCard:first-child {
+.channelCard:first-child {
   margin-top: 60px;
 }
 
@@ -92,21 +92,21 @@
   color: #ffffff;
   margin: 0;
 }
-.chatBubbleLeft, .chatBubbleRight {
+.channelBubbleLeft, .channelBubbleRight {
   width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
   display: flex;
   align-items: center;
 }
-.chatBubbleRight {
+.channelBubbleRight {
   justify-content: flex-end;
 }
-.chatBubbleLeft p {
+.channelBubbleLeft p {
   background-color: #ff6348;
   margin-left: 10px;
 }
-.chatBubbleRight p {
+.channelBubbleRight p {
   background-color: #ff7f50;
   margin-right: 10px;
 }
@@ -137,6 +137,6 @@
   font-size: 1.5em;
 }
 
-.chatView {
+.channelView {
   
 }
