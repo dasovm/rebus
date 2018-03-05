@@ -7,12 +7,17 @@ import JoinChannel from '../JoinChannel/JoinChannel';
 import { AUTH_TOKEN } from '../constants';
 
 
+function isLoggedIn() {
+  return localStorage.getItem(AUTH_TOKEN) != null;
+}
+
+
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
   {...rest}
   render={props =>
       // Check if we are signed in
-      localStorage.getItem(AUTH_TOKEN) != null ? (
+      isLoggedIn() ? (
         <Component {...props} />
       ) : (
         <Redirect
@@ -36,7 +41,7 @@ class App extends Component {
           <PrivateRoute path='/chat/:id' component={Chat} availablePublic={false}/>
           <Route path='/login' render={props => (
             // Check if we not are signed in
-            localStorage.getItem(AUTH_TOKEN) == null ? (
+            !isLoggedIn() ? (
               <Login {...props} />
             ) : (
               <Redirect
