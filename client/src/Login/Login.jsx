@@ -19,7 +19,6 @@ class Login extends Component {
   }
 
   responseFacebook = (response) => {
-    // Skicka response till server och få JWT token tillbaka
     this.setState({
       fbToken: response.accessToken,
       fbLoading: true
