@@ -3,7 +3,8 @@ import FacebookLogin from 'react-facebook-login';
 import Snackbar from 'material-ui/Snackbar';
 import CircularProgress from 'material-ui/CircularProgress';
 import { gql } from 'apollo-boost';
-import { graphql } from 'react-apollo';
+import { graphql, compose } from 'react-apollo'
+import { withRouter } from "react-router-dom";
 import styles from './Login.module.css';
 import { AUTH_TOKEN } from '../constants';
 
@@ -23,7 +24,9 @@ class Login extends Component {
       fbToken: response.accessToken,
       fbLoading: true
     });
-    this.confirmToken();
+    this.confirmToken().then(() => {
+      this.props.history.push('/');
+    });
   }
 
   onFailure = () => {
@@ -70,14 +73,14 @@ class Login extends Component {
 
   confirmToken = async () => {
     const {fbToken} = this.state;
-    const result = await this.props.getTokenMutation({
+    await this.props.getTokenMutation({
       variables: {
-        fbToken
+        token: fbToken
       }
+    }).then(result => {
+      const { token } = result.data.login;
+      this.saveUserData(token);
     });
-    const { token } = result.data.login;
-    this.saveUserData(token);
-    this.props.history.push(`/`);
   }
 
   saveUserData = token => {
@@ -93,4 +96,4 @@ const GET_TOKEN_MUTATION = gql`
   }
 `
 
-export default graphql(GET_TOKEN_MUTATION, {name: 'getTokenMutation'})(Login);
+export default withRouter(compose(graphql(GET_TOKEN_MUTATION, {name: 'getTokenMutation'}))(Login));
