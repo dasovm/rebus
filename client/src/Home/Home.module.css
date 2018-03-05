@@ -6,35 +6,6 @@
   font-size: 1.5em;
 }
 
-.channelList {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 0 auto;
-  width: 90%;
-}
-
-.channelCard {
-  border-radius: 12px;
-  font-size: 1.25em;
-  background-color: #1DE9B6;
-  width: calc(1/4);
-  height: 100px;
-  padding: 20px;
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-
-@media (max-width: 580px) {
-  .channelList {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .channelCard {
-    width: calc(1/2);
-  }
-}
-
 .channelCardText {
 }
 

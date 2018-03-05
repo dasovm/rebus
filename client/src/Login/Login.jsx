@@ -6,6 +6,7 @@ import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo'
 import { withRouter } from "react-router-dom";
 import styles from './Login.module.css';
+import Loading from '../Loading/Loading';
 import { AUTH_TOKEN } from '../constants';
 
 class Login extends Component {
@@ -59,14 +60,7 @@ class Login extends Component {
       </div>
     );
 
-    const loadingBlock = (
-      <div className={styles.Login}>
-        <h3 className={styles.subtitle}>Loading...</h3>
-        <CircularProgress size={80} thickness={5} />
-      </div>
-    );
-
-    if (this.state.fbLoading) return loadingBlock;
+    if (this.state.fbLoading) return <Loading />;
     else return loginBlock;
   }
 
