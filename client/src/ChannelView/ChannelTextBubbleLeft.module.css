@@ -1,0 +1,16 @@
+.channelBubbleLeft {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .channelBubbleLeft p {
+    background-color: #ff6348;
+    margin-left: 10px;
+  }
+  .img {
+    height: 34px;
+    width: auto;
+    border-radius: 50px;
+  }

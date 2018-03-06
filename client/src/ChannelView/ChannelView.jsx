@@ -4,6 +4,8 @@ import styles from './ChannelView.module.css';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
+import ChannelTextBubbleLeft from './ChannelTextBubbleLeft';
+import ChannelTextBubbleRight from './ChannelTextBubbleRight';
 
 class ChannelView extends Component {
   render() {
@@ -35,86 +37,8 @@ class ChannelView extends Component {
         </div>
         <div className={styles.content}>
           <div className={styles.contentWrapper}>
-            <div className={styles.channelBubbleLeft}>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016" className={styles.img} alt="" />
-              <p>Hello world!</p>
-            </div>
-            <div className={styles.channelBubbleRight}>
-              <p>Hey there!</p>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17" className={styles.img} alt="" />
-            </div>
-            <div className={styles.channelBubbleLeft}>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016" className={styles.img} alt="" />
-              <p>So, what are your plans for tonight?</p>
-            </div>
-            <div className={styles.channelBubbleRight}>
-              <p>Drinkin'</p>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17" className={styles.img} alt="" />
-            </div>
-            <div className={styles.channelBubbleLeft}>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016" className={styles.img} alt="" />
-              <p>Hello world!</p>
-            </div>
-            <div className={styles.channelBubbleRight}>
-              <p>Hey there!</p>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17" className={styles.img} alt="" />
-            </div>
-            <div className={styles.channelBubbleLeft}>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016" className={styles.img} alt="" />
-              <p>So, what are your plans for tonight?</p>
-            </div>
-            <div className={styles.channelBubbleRight}>
-              <p>Drinkin'</p>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17" className={styles.img} alt="" />
-            </div>
-            <div className={styles.channelBubbleLeft}>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016" className={styles.img} alt="" />
-              <p>Hello world!</p>
-            </div>
-            <div className={styles.channelBubbleRight}>
-              <p>Hey there!</p>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17" className={styles.img} alt="" />
-            </div>
-            <div className={styles.channelBubbleLeft}>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016" className={styles.img} alt="" />
-              <p>So, what are your plans for tonight?</p>
-            </div>
-            <div className={styles.channelBubbleRight}>
-              <p>Drinkin'</p>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17" className={styles.img} alt="" />
-            </div>
-            <div className={styles.channelBubbleLeft}>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016" className={styles.img} alt="" />
-              <p>Hello world!</p>
-            </div>
-            <div className={styles.channelBubbleRight}>
-              <p>Hey there!</p>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17" className={styles.img} alt="" />
-            </div>
-            <div className={styles.channelBubbleLeft}>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016" className={styles.img} alt="" />
-              <p>So, what are your plans for tonight?</p>
-            </div>
-            <div className={styles.channelBubbleRight}>
-              <p>Drinkin'</p>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17" className={styles.img} alt="" />
-            </div>
-            <div className={styles.channelBubbleLeft}>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016" className={styles.img} alt="" />
-              <p>Hello world!</p>
-            </div>
-            <div className={styles.channelBubbleRight}>
-              <p>Hey there!</p>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17" className={styles.img} alt="" />
-            </div>
-            <div className={styles.channelBubbleLeft}>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016" className={styles.img} alt="" />
-              <p>So, what are your plans for tonight?</p>
-            </div>
-            <div className={styles.channelBubbleRight}>
-              <p>Drinkin'</p>
-              <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17" className={styles.img} alt="" />
-            </div>
+            <ChannelTextBubbleLeft imgPath={"https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016"} textString={"Hej"} />
+            <ChannelTextBubbleRight imgPath={"https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-1/p320x320/21032788_10208135022812358_125653935638769038_n.jpg?oh=ffebe15e58374191be718980c1c4468a&oe=5B0BAA17"} textString={"Hejdå"} />
           </div>
         </div>
         <div className={styles.input}>
