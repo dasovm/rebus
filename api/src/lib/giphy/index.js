@@ -1,9 +1,9 @@
 const gphApiClient = require('giphy-js-sdk-core');
+const Promise = require('promise');
 
 const client = gphApiClient('9X6cjVQ00kOzDF9nxvCh27qNu9azT9vQ');
 
-// Gif fetch by input text
-const requestGifs = (text, limit) => client.search('gifs', { q: text, limit })
+const requestGif = text => client.search('gifs', { q: text, limit: 1 })
   .then(response => {
     const gifArray = [];
     response.data.forEach(gifObject => {
@@ -15,6 +15,60 @@ const requestGifs = (text, limit) => client.search('gifs', { q: text, limit })
     console.log(err.message);
   });
 
+// Split text by space
+const checkSplit = text => {
+  const textArray = [];
+  const words = text.split(' ');
+
+  if (words.length > 0) {
+    words.forEach(word => {
+      textArray.push(word);
+    });
+  } else {
+    textArray.push(text);
+  }
+  return textArray;
+};
+
+// Split text by uppercase
+const checkCase = text => {
+  const textArray = [];
+  const words = text.split(/(?=[A-Z])/);
+
+  if (words.length > 0) {
+    words.forEach(word => {
+      textArray.push(word);
+    });
+  } else {
+    textArray.push(text);
+  }
+  return textArray;
+};
+
+// Analyze the input text
+const analyzeInput = text => {
+  // Check for spacing
+  let words = checkSplit(text);
+  if (words.length < 2) {
+    // Check for casing
+    words = checkCase(text);
+  }
+  return words;
+};
+
+// Build a rebus given an input text
+const buildRebus = text => {
+  const words = analyzeInput(text);
+  const promises = [];
+
+  words.forEach(word => {
+    promises.push(requestGif(word).then(gif => {
+      return gif;
+    }));
+  });
+  return Promise.all(promises);
+};
+
 module.exports = {
-  requestGifs,
+  buildRebus,
 };
