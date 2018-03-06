@@ -1,11 +1,18 @@
 const { isLoggedIn, extractUserIdFromContext, notAuthorizedError } = require('./../../../auth/authorization');
 const { sendMessage } = require('./../../../data/message');
 const { publishMessage } = require('./../../../data/channel');
+const { requestGifs } = require('./../../../lib/giphy');
 
 
 const handleRebusMessage = (message) => {
+  console.log(message);
   if (message.type === 'REBUS') {
-    // todo implement giphy
+    // TODO fix proper text input from user
+    return requestGifs(message.text, 1).then(gifs => ({ ...message, gifs}))
+    .then(args => {
+      console.log(args);
+      return args;
+    })
   }
   return message;
 };

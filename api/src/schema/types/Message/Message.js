@@ -8,7 +8,7 @@ module.exports = {
     if (gifs && gifs.length > 0) {
       return {
         type: 'REBUS',
-        gifs,
+        gifs: gifs.map(gif => ({url: gif})),
       };
     }
     return {
