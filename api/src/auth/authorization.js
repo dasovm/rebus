@@ -5,7 +5,7 @@ const extractUserIdFromContext = ctx => extractUserFromContext(ctx).userId;
 
 const notAuthorizedError = () => new Error('NotAuthorized');
 
-const isLoggedIn = ctx => !!extractUserFromContext(ctx);
+const isLoggedIn = ctx => !!ctx.bearer;
 
 
 module.exports = {
