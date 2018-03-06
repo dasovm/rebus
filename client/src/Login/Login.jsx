@@ -55,7 +55,7 @@ class Login extends Component {
         <Snackbar
           open={this.state.snackbarOpen}
           message="Facebook login failed"
-          autoHideDuration={4000}
+          autoHideDuration={5000}
           onRequestClose={this.snackbarClose} />
       </div>
     );

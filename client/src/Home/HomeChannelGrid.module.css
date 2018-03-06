@@ -23,11 +23,20 @@
   text-decoration-line: none;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 580px) and (min-width: 451px) {
   .channelList {
     grid-template-columns: repeat(2, 1fr);
   }
   .channelCard {
     width: calc(1/2);
+  }
+}
+
+@media (max-width: 450px) {
+  .channelList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .channelCard {
+    width: calc(1);
   }
 }

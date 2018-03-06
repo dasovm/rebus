@@ -18,7 +18,7 @@ const iconStyle = {
 class HomeButton extends Component {
   render() {
     return (
-      <IconButton href="/" tooltip="Home" iconStyle={iconStyle.icon} style={iconStyle.button}>
+      <IconButton href="/" iconStyle={iconStyle.icon} style={iconStyle.button}>
         <ActionHome />
       </IconButton>
     );
