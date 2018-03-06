@@ -30,6 +30,17 @@ const checkSplit = text => {
   return textArray;
 };
 
+// Trim text to remove very short words
+const trim = words => {
+  const trimmedWords = words;
+  for (let i = 0; i < words.length; i += 1) {
+    if (words[i].length <= 2) {
+      trimmedWords.splice(i, 1);
+    }
+  }
+  return trimmedWords;
+};
+
 // Split text by uppercase
 const checkCase = text => {
   const textArray = [];
@@ -53,7 +64,7 @@ const analyzeInput = text => {
     // Check for casing
     words = checkCase(text);
   }
-  return words;
+  return trim(words);
 };
 
 // Build a rebus given an input text
