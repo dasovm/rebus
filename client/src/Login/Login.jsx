@@ -3,7 +3,7 @@ import FacebookLogin from 'react-facebook-login';
 import Snackbar from 'material-ui/Snackbar';
 import CircularProgress from 'material-ui/CircularProgress';
 import { gql } from 'apollo-boost';
-import { graphql } from 'react-apollo'
+import { graphql } from 'react-apollo';
 import { withRouter } from "react-router-dom";
 import styles from './Login.module.css';
 import Loading from '../Loading/Loading';
