@@ -13,7 +13,7 @@ class Channel extends Component {
         <Route
           exact
           path={match.url}
-          render={() => <ChannelView id={match.params.id}/>} 
+          render={() => <ChannelView channelId={match.params.id}/>} 
         />
       </div>
     );

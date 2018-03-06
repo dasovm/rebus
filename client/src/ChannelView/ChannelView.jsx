@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './ChannelView.module.css';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
+import gql from 'graphql-tag';
+import { graphql, compose } from 'react-apollo';
+import styles from './ChannelView.module.css';
+import ChannelName from './ChannelName';
 
 class ChannelView extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      channelId: props.channelId,
+      channelNameLoading: true,
+      channelName: ''
+    }
+  }
+
+  componentDidMount() {
+    
+  }
+
+
   render() {
-    const {id} = this.props;
     return (
       <div className={styles.Channel}>
         <div className={styles.channels}>
@@ -25,12 +41,12 @@ class ChannelView extends Component {
         </div>
         <div className={styles.header}>
           <div className={styles.headerContainer}>
-            <h1 className={styles.h1}>ChannelName</h1>
-            <h2 className={styles.h2}>id #12351</h2>
+            <ChannelName channelId={this.state.channelId} />
+            <h2 className={styles.h2}>id {this.state.channelId}</h2>
           </div>
           <div>
             <FlatButton label="Leave Channel" backgroundColor="#ff4757" hoverColor="#ff6b81" className={styles.leaveChannel} />
-            <FlatButton label="Settings" backgroundColor="#1e90ff" hoverColor="#70a1ff" className={styles.settings} href={'/channel/' + id + '/settings'} />
+            <FlatButton label="Settings" backgroundColor="#1e90ff" hoverColor="#70a1ff" className={styles.settings} href={'/channel/' + this.state.channelId + '/settings'} />
           </div>
         </div>
         <div className={styles.content}>
