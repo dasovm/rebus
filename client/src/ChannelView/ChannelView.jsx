@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
+import ChannelTextBubbleLeft from './ChannelTextBubbleLeft';
+import ChannelTextBubbleRight from './ChannelTextBubbleRight';
 import gql from 'graphql-tag';
 import { graphql, compose } from 'react-apollo';
 import styles from './ChannelView.module.css';

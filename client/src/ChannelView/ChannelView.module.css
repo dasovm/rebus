@@ -92,7 +92,7 @@
   color: #ffffff;
   margin: 0;
 }
-.channelBubbleLeft, .channelBubbleRight {
+/* .channelBubbleLeft, .channelBubbleRight {
   width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -114,7 +114,7 @@
   height: 34px;
   width: auto;
   border-radius: 50px;
-}
+} */
 
 .input {
   grid-area: input;
