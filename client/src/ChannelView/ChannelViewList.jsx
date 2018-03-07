@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
-import ContentAdd from 'material-ui/svg-icons/content/add';
+import Icon from 'material-ui/Icon';
 import styles from './ChannelView.module.css';
 
 function ChannelName({loading, channels}) {
@@ -19,7 +19,7 @@ function ChannelName({loading, channels}) {
           </Link>
         ))
       }
-      <Link to="/join"><div className={styles.channelCard}><ContentAdd /></div></Link>
+      <Link to="/join"><div className={styles.channelCard}><Icon>add</Icon></div></Link>
       </div>
     </div>
   )

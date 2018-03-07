@@ -5,6 +5,7 @@ import Channel from '../Channel/Channel';
 import Login from '../Login/Login';
 import JoinChannel from '../JoinChannel/JoinChannel';
 import { AUTH_TOKEN } from '../constants';
+import Reboot from 'material-ui/Reboot';
 
 
 function isLoggedIn() {
@@ -34,6 +35,7 @@ class App extends Component {
   render() {
     return (
       <main>
+        <Reboot />
         <Switch>
           <PrivateRoute exact path='/' component={Home} availablePublic={false}/>
           <PrivateRoute path='/join' component={JoinChannel} availablePublic={false}/>

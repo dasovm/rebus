@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FacebookLogin from 'react-facebook-login';
 import Snackbar from 'material-ui/Snackbar';
-import CircularProgress from 'material-ui/CircularProgress';
+import { CircularProgress } from 'material-ui/Progress';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
 import { withRouter } from "react-router-dom";
@@ -35,7 +35,7 @@ class Login extends Component {
     });
   }
 
-  snackbarClose = () => {
+  snackbarClose = (event, reason) => {
     this.setState({
       snackbarOpen: false,
     });
@@ -53,10 +53,14 @@ class Login extends Component {
           callback={this.responseFacebook}
           onFailure={this.onFailure} />
         <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
           open={this.state.snackbarOpen}
           message="Facebook login failed"
           autoHideDuration={5000}
-          onRequestClose={this.snackbarClose} />
+          onClose={this.snackbarClose} />
       </div>
     );
 

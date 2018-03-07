@@ -61,7 +61,6 @@
 .leaveChannel, .settings {
   height: 26px          !important;
   line-height:  26px    !important;
-  color: #ffffff      !important;
   margin-left: 10px     !important;
   margin-right: 10px    !important;
 }
@@ -127,9 +126,8 @@
 }
 .send {
   width: 100px          !important;
-  height: 26px          !important;
+  height: 100%          !important;
   line-height:  26px    !important;
-  color: #ffffff      !important;
   margin-left: 20px     !important;
 }
 

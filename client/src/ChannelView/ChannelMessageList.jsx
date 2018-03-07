@@ -6,16 +6,26 @@ import ChannelTextBubbleLeft from './ChannelTextBubbleLeft';
 import ChannelTextBubbleRight from './ChannelTextBubbleRight';
 import Loading from '../Loading/Loading';
 
-function ChannelMessageList({loading, channel}) {
+function ChannelMessageList({loading, viewer, channel}) {
   if (loading) return <Loading />
   else {
+    const viewerUserId = viewer.user._id;
     const { messages } = channel.messages;
-    console.log(messages);
+    
     return (
       <div className={styles.contentWrapper}>
-      {messages.map(message => (
-        <ChannelTextBubbleLeft key={`msg-${message._id}`} imgPath={"https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20229820_10211670744017796_2273206541262228120_o.jpg?oh=ae2637a711bce226d810c7da7308f881&oe=5B0D4016"} textString={message.content.text} />
-      ))}
+      {messages.map(message => {
+        // Check if message are from viewer
+        if (message.sender._id === viewerUserId) {
+          return <ChannelTextBubbleRight key={`msg-${message._id}`} 
+            imgPath={message.sender.picture} 
+            textString={message.content.text} 
+            sentAt={message.sentAt}
+            userName={message.sender.name} />
+        } else {
+          return <ChannelTextBubbleLeft key={`msg-${message._id}`} imgPath={message.sender.picture} textString={message.content.text} />
+        }
+      })}
       </div>
     )
   }
@@ -23,17 +33,27 @@ function ChannelMessageList({loading, channel}) {
 
 const GET_CHANNEL_NAME = gql`
   query GetChannelName($channelId: ID!) {
+    viewer {
+      user {
+        _id
+      }
+    }
     channel(channelId: $channelId) {
       messages {
         messages {
+          _id
+          sentAt
+          sender {
+            _id
+            name
+            picture
+          }
           content {
             type
             ... on Text {
               text
             }
           }
-          sentAt
-          _id
         }
       }
     }
@@ -47,8 +67,9 @@ export default graphql(GET_CHANNEL_NAME, {
       channelId: props.channelId
     }
   }),
-  props: ({ data: { loading, channel } }) => ({
+  props: ({ data: { loading, viewer, channel } }) => ({
     loading,
+    viewer,
     channel,
   }),
 })(ChannelMessageList);

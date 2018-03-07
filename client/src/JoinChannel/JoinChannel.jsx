@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
-import FlatButton from 'material-ui/FlatButton';
+import Button from 'material-ui/Button';
 import Snackbar from 'material-ui/Snackbar';
 import gql from 'graphql-tag';
 import { graphql, compose } from 'react-apollo';
 import styles from './JoinChannel.module.css';
 import HomeButton from '../HomeButton';
 import Loading from '../Loading/Loading';
+
 
 class JoinChannel extends Component {
   constructor(props) {
@@ -115,7 +116,7 @@ class JoinChannel extends Component {
     });
   }
 
-  snackbarClose = () => {
+  snackbarClose = (event, reason) => {
     this.setState({
       snackbarOpen: false,
     });
@@ -131,24 +132,32 @@ class JoinChannel extends Component {
             <div className={styles.newBlock}>
               <h3>Create new channel:</h3>
               <div className={styles.textField}>
-                <TextField hintText="name" className={styles.testTextField} value={this.state.createNewTextValue} onChange={this.handleCreateNewTextChange} />
-                <FlatButton label="Create" backgroundColor="#2ed573" hoverColor="#7bed9f" className={styles.submitButton} onClick={this.onCreateNewClick} />
+                <TextField placeholder="name" className={styles.testTextField} value={this.state.createNewTextValue} onChange={this.handleCreateNewTextChange} />
+                <Button variant="raised" color="primary" className={styles.submitButton} onClick={this.onCreateNewClick}>
+                  Create
+                </Button>
               </div>
             </div>
             <p>or</p>
             <div className={styles.joinBlock}>
               <h3>Join existing channel:</h3>
               <div className={styles.textField}>
-                <TextField hintText="id" value={this.state.joinChannelTextValue} onChange={this.handleJoinChannelTextChange} />
-                <FlatButton label="Join" backgroundColor="#2ed573" hoverColor="#7bed9f" className={styles.submitButton} onClick={this.onJoinChannelClick} />
+                <TextField placeholder="id" value={this.state.joinChannelTextValue} onChange={this.handleJoinChannelTextChange} />
+                <Button variant="raised" color="primary" className={styles.submitButton} onClick={this.onJoinChannelClick}>
+                  Join
+                </Button>
               </div>
             </div>
           </div>
           <Snackbar
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
             open={this.state.snackbarOpen}
             message={this.state.snackbarMessage}
             autoHideDuration={5000}
-            onRequestClose={this.snackbarClose} />
+            onClose={this.snackbarClose} />
         </div>
       )
     }

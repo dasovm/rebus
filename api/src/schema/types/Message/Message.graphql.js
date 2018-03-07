@@ -9,7 +9,6 @@ const Message = `
     sentAt: Date!
 
     content: Content
-    
   }
 `;
 
