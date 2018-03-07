@@ -3,11 +3,108 @@ const Promise = require('promise');
 
 const client = gphApiClient('9X6cjVQ00kOzDF9nxvCh27qNu9azT9vQ');
 
-const requestGif = text => client.search('gifs', { q: text, limit: 1 })
+// Search for a gif given an input
+const requestGif = (text, preferredFormat) => client.search('gifs', { q: text, limit: 1 })
   .then(response => {
     const gifArray = [];
     response.data.forEach(gifObject => {
-      gifArray.push(gifObject.images.original.gif_url);
+      let url;
+      if (preferredFormat === 'original') {
+        url = gifObject.images.original.gif_url;
+      } else if (preferredFormat === 'webp') {
+        if (gifObject.images.original.webp_url != null) {
+          url = gifObject.images.original.webp_url;
+        } else {
+          url = gifObject.images.original.gif_url;
+        }
+      } else if (preferredFormat === 'mp4') {
+        if (gifObject.images.original.mp4_url != null) {
+          url = gifObject.images.original.mp4_url;
+        } else {
+          url = gifObject.images.original.gif_url;
+        }
+      } else {
+        url = gifObject.images.original.gif_url;
+      }
+      gifArray.push(url);
+    });
+    return gifArray;
+  })
+  .catch(err => {
+    console.log(err.message);
+  });
+
+// Translate input to find matching gif
+const translateTextToGif = (text, preferredFormat) => client.translate('gifs', { s: text })
+  .then(response => {
+    if (preferredFormat === 'webp') {
+      if (response.data.images.original.webp_url != null) {
+        return response.data.images.original.webp_url;
+      } else {
+        return response.data.images.original.gif_url;
+      }
+    } else if (preferredFormat === 'mp4') {
+      if (response.data.images.original.mp4_url != null) {
+        return response.data.images.original.mp4_url;
+      } else {
+        return response.data.images.original.gif_url;
+      }
+    }
+    // No special format requested
+    return response.data.images.original.gif_url;
+  })
+  .catch(err => {
+    console.log(err.message);
+  });
+
+// Request a random gif
+const requestRandomGif = preferredFormat => client.random('gifs', {})
+  .then(response => {
+    if (preferredFormat === 'webp') {
+      if (response.data.images.original.webp_url != null) {
+        return response.data.images.original.webp_url;
+      } else {
+        return response.data.images.original.gif_url;
+      }
+    } else if (preferredFormat === 'mp4') {
+      if (response.data.images.original.mp4_url != null) {
+        return response.data.images.original.mp4_url;
+      } else {
+        return response.data.images.original.gif_url;
+      }
+    }
+    // No special format requested
+    return response.data.images.original.gif_url;
+  })
+  .catch(err => {
+    console.log(err.message);
+  });
+
+// Request trending gifs
+const requestTrendingGifs = (text, preferredFormat, limit) => client.trending('gifs', { limit })
+  .then(response => {
+    const gifArray = [];
+    response.data.forEach(gifObject => {
+      let url;
+      if (preferredFormat === 'original') {
+        url = gifObject.images.original.gif_url;
+      } else if (preferredFormat === 'webp') {
+        if (gifObject.images.original.webp_url != null) {
+          url = gifObject.images.original.webp_url;
+        } else {
+          url = gifObject.images.original.gif_url;
+        }
+      } else if (preferredFormat === 'mp4') {
+        if (gifObject.images.original.mp4_url != null) {
+          url = gifObject.images.original.mp4_url;
+        } else {
+          url = gifObject.images.original.gif_url;
+        }
+      } else {
+        url = gifObject.images.original.gif_url;
+      }
+      // Add gif url to array
+      gifArray.push(url);
     });
     return gifArray;
   })
@@ -68,14 +165,12 @@ const analyzeInput = text => {
 };
 
 // Build a rebus given an input text
-const buildRebus = text => {
+const buildRebus = (text, preferredFormat) => {
   const words = analyzeInput(text);
   const promises = [];
 
   words.forEach(word => {
-    promises.push(requestGif(word).then(gif => {
-      return gif;
-    }));
+    promises.push(requestGif(word, preferredFormat.toLowerCase()).then(gif => gif));
   });
   return Promise.all(promises);
 };

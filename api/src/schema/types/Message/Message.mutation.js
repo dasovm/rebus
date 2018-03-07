@@ -8,7 +8,7 @@ const handleRebusMessage = (message) => {
   console.log(message);
   if (message.type === 'REBUS') {
     // TODO fix proper text input from user
-    return buildRebus(message.text).then(gifs => ({ ...message, gifs}))
+    return buildRebus(message.text, 'original').then(gifs => ({ ...message, gifs}))
     .then(args => {
       console.log(args);
       return args;
