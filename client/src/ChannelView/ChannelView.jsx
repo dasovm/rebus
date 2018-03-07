@@ -14,6 +14,7 @@ class ChannelView extends Component {
     super(props);
     this.state = {
       sendDisabled: true,
+      sendingMessage: false,
       messageTextValue: '',
     }
   }
@@ -27,7 +28,25 @@ class ChannelView extends Component {
   }
 
   onSendClick = (event) => {
-    
+    this.setState({
+      sendingMessage: true,
+    });
+    this.sendMessage().then(() => {
+      this.setState({
+        sendingMessage: false,
+        messageTextValue: ''
+      });
+    });
+  }
+
+  sendMessage = async () => {
+    const { messageTextValue } = this.state;
+    await this.props.sendTextMessageMutation({
+      variables: {
+        channelId: this.props.channelId,
+        textContent: messageTextValue
+      }
+    });
   }
 
   render() {
@@ -51,9 +70,9 @@ class ChannelView extends Component {
         </div>
         <div className={styles.input}>
           <TextField placeholder="Write message here..." className={styles.textField} value={this.state.messageTextValue} onChange={this.handleMessageTextChange} />
-          <Button color="primary" className={styles.send} disabled={this.state.sendDisabled}>
+          <Button color="primary" className={styles.send} disabled={this.state.sendDisabled} onClick={this.onSendClick}>
             {/* backgroundColor="#1e90ff" hoverColor="#70a1ff" */}
-            Send
+            {this.state.sendingMessage ? "Loading..." : "Send"}
           </Button>
         </div>
       </div>
@@ -61,4 +80,18 @@ class ChannelView extends Component {
   }
 }
 
-export default ChannelView;
+const SEND_TEXT_MESSAGE_MUTATION = gql`
+  mutation SendTextMessage($channelId: ID!, $textContent: String!) {
+    sendMessage(
+      channelId: $channelId, 
+      message: {
+        type: TEXT
+        text: $textContent
+      }
+    ) {
+      _id
+    }
+  }
+`;
+
+export default graphql(SEND_TEXT_MESSAGE_MUTATION, {name: 'sendTextMessageMutation'})(ChannelView);
