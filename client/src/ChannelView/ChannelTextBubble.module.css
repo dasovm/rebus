@@ -9,6 +9,20 @@
     background-color: #ff6348;
     margin-left: 10px;
   }
+  .channelBubbleRight {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .channelBubbleRight {
+    justify-content: flex-end;
+  }
+  .channelBubbleRight p {
+    background-color: #ff7f50;
+    margin-right: 10px;
+  }
   .img {
     height: 34px;
     width: auto;

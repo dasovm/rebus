@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import styles from './ChannelView.module.css';
-import ChannelTextBubbleLeft from './ChannelTextBubbleLeft';
-import ChannelTextBubbleRight from './ChannelTextBubbleRight';
+import ChannelTextBubble from './ChannelTextBubble';
 import Loading from '../Loading/Loading';
 
 class ChannelMessageList extends Component {
@@ -25,15 +24,12 @@ class ChannelMessageList extends Component {
         <div className={styles.contentWrapper}>
         {messages.map(message => {
           // Check if message are from viewer
-          if (message.sender._id === viewerUserId) {
-            return <ChannelTextBubbleRight key={`msg-${message._id}`}
+          return <ChannelTextBubble key={`msg-${message._id}`}
               imgPath={message.sender.picture}
               textString={message.content.text}
               sentAt={message.sentAt}
-              userName={message.sender.name} />
-          } else {
-            return <ChannelTextBubbleLeft key={`msg-${message._id}`} imgPath={message.sender.picture} textString={message.content.text} />
-          }
+              userName={message.sender.name}
+              isMe={message.sender._id === viewerUserId} />
         })}
           <div style={{ float:"left", clear: "both" }}
             ref={(el) => { this.messagesEnd = el; }}>
