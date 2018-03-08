@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
+import IconButton from 'material-ui/Button';
 import gql from 'graphql-tag';
 import { graphql, compose } from 'react-apollo';
 import styles from './ChannelView.module.css';
 import ChannelName from './ChannelName';
 import ChannelViewList from './ChannelViewList';
 import ChannelMessageList from './ChannelMessageList';
+import Menu, { MenuItem } from 'material-ui/Menu';
+import Icon from 'material-ui/Icon';
+import Grow from 'material-ui/transitions/Grow';
 
 class ChannelView extends Component {
   constructor (props) {
@@ -49,7 +53,21 @@ class ChannelView extends Component {
     });
   }
 
+  state = {
+    anchorEl: null,
+  };
+
+  handleClick = event => {
+    this.setState({ anchorEl: event.currentTarget });
+  };
+
+  handleClose = () => {
+    this.setState({ anchorEl: null });
+  };
+
   render() {
+    const { anchorEl } = this.state;
+
     return (
       <div className={styles.Channel}>
         <ChannelViewList />
@@ -59,10 +77,25 @@ class ChannelView extends Component {
             <h2 className={styles.h2}>id {this.props.channelId}</h2>
           </div>
           <div>
-            <Button color="primary" className={styles.settings} component={Link} to={`/channel/${this.props.channelId}/settings`}>
+            <IconButton
+              aria-owns={anchorEl ? 'simple-menu' : null}
+              aria-haspopup="true"
+              onClick={this.handleClick}
+            >
+              <Icon>more_vert</Icon>
+            </IconButton>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={this.handleClose}
+            >
+              <MenuItem component={Link} to={`/channel/${this.props.channelId}/settings`} onClick={this.handleClose}>Settings</MenuItem>
+              <MenuItem onClick={this.handleClose}>Leave channel</MenuItem>
+          </Menu>
+            {/*<Button color="primary" className={styles.settings} component={Link} to={`/channel/${this.props.channelId}/settings`}>*/}
               {/* backgroundColor="#1e90ff" hoverColor="#70a1ff" */}
-              Settings
-            </Button>
+           {/*</Button>*/}
           </div>
         </div>
         <div className={styles.content}>
