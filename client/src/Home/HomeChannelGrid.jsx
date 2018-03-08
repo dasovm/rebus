@@ -12,7 +12,7 @@ function HomeChannelGrid({ loading, channels }) {
     return (
       <div className={styles.channelList}>
         {channels.map((channel, index) => 
-          <Grow in={!loading} {...(!loading ? { timeout: (index + 1) * 500 } : {})}>
+          <Grow key={`grow-${channel._id}`} in={!loading} {...(!loading ? { timeout: (index + 1) * 500 } : {})}>
             <Link key={`link-${channel._id}`} to={`/channel/${channel._id}`} className={styles.channelLink}>
               <div key={`grid-${channel._id}`} className={styles.channelCard}>{channel.name}</div>
             </Link>
