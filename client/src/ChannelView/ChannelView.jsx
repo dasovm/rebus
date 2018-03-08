@@ -83,7 +83,7 @@ class ChannelView extends Component {
         <div className={styles.header}>
           <div className={styles.headerContainer}>
             <ChannelName channelId={this.props.channelId} />
-            <h2 className={styles.h2}>id {this.props.channelId}</h2>
+            <h2 className={styles.h2}><strong>id</strong> {this.props.channelId}</h2>
           </div>
           <div>
             <IconButton
@@ -102,9 +102,6 @@ class ChannelView extends Component {
               <MenuItem component={Link} to={`/channel/${this.props.channelId}/settings`} onClick={this.handleClose}>Settings</MenuItem>
               <MenuItem onClick={this.handleClose}>Leave channel</MenuItem>
           </Menu>
-            {/*<Button color="primary" className={styles.settings} component={Link} to={`/channel/${this.props.channelId}/settings`}>*/}
-              {/* backgroundColor="#1e90ff" hoverColor="#70a1ff" */}
-           {/*</Button>*/}
           </div>
         </div>
         <div className={styles.content}>

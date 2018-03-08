@@ -14,12 +14,15 @@
 .channels {
   grid-area: channels;
   height: 100%;
-  background-color:#2f3542;
+  background-color:#2ecc71;
 }
 .channelList {
   padding: 12px;
   height: 100%;
   box-sizing: border-box;
+}
+.channelList a {
+  text-decoration: none;
 }
 .channelCard {
   font-size: 1.25em;
@@ -27,11 +30,15 @@
   width: calc(80px - 24px);
   height: calc(80px - 24px);
   margin-top: 12px;
-  border-radius: 8px;
+  border-radius: 50px;
   color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.channelCard:first-child {
-  margin-top: 60px;
+.channelCard p {
+  font-weight: bold;
+  margin: 0;
 }
 
 .header {
@@ -75,8 +82,8 @@
   padding: 20px;
   overflow-y: scroll;
   box-shadow: 
-    inset 0px 11px 8px -10px #CCC,
-    inset 0px -11px 8px -10px #CCC;
+    inset 10px 11px 8px -10px #CCC,
+    inset 10px -11px 8px -10px #CCC;
 }
 .contentWrapper {
   height: 100%;
@@ -91,29 +98,6 @@
   color: #ffffff;
   margin: 0;
 }
-/* .channelBubbleLeft, .channelBubbleRight {
-  width: 100%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-}
-.channelBubbleRight {
-  justify-content: flex-end;
-}
-.channelBubbleLeft p {
-  background-color: #ff6348;
-  margin-left: 10px;
-}
-.channelBubbleRight p {
-  background-color: #ff7f50;
-  margin-right: 10px;
-}
-.img {
-  height: 34px;
-  width: auto;
-  border-radius: 50px;
-} */
 
 .input {
   grid-area: input;
