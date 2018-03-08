@@ -27,6 +27,14 @@ class ChannelView extends Component {
     });
   }
 
+  onKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      if (!this.state.sendDisabled) {
+        this.onSendClick(event);
+      }
+    }
+  }
+
   onSendClick = (event) => {
     this.setState({
       sendingMessage: true,
@@ -34,7 +42,8 @@ class ChannelView extends Component {
     this.sendMessage().then(() => {
       this.setState({
         sendingMessage: false,
-        messageTextValue: ''
+        messageTextValue: '',
+        sendDisabled: true,
       });
     });
   }
@@ -69,7 +78,7 @@ class ChannelView extends Component {
           <ChannelMessageList channelId={this.props.channelId} />
         </div>
         <div className={styles.input}>
-          <TextField placeholder="Write message here..." className={styles.textField} value={this.state.messageTextValue} onChange={this.handleMessageTextChange} />
+          <TextField placeholder="Write message here..." className={styles.textField} value={this.state.messageTextValue} onChange={this.handleMessageTextChange} onKeyPress={this.onKeyPress} />
           <Button color="primary" className={styles.send} disabled={this.state.sendDisabled} onClick={this.onSendClick}>
             {/* backgroundColor="#1e90ff" hoverColor="#70a1ff" */}
             {this.state.sendingMessage ? "Loading..." : "Send"}
