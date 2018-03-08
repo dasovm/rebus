@@ -11,6 +11,10 @@ class ChannelMessageList extends Component {
     this.subscribeToNewMessages();
   }
 
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+
   render() {
     if (this.props.getMessageList.loading) return <Loading />
     else {
@@ -31,8 +35,17 @@ class ChannelMessageList extends Component {
             return <ChannelTextBubbleLeft key={`msg-${message._id}`} imgPath={message.sender.picture} textString={message.content.text} />
           }
         })}
+          <div style={{ float:"left", clear: "both" }}
+            ref={(el) => { this.messagesEnd = el; }}>
+          </div>
         </div>
       )
+    }
+  }
+
+  scrollToBottom() {
+    if (this.messagesEnd) {
+      this.messagesEnd.scrollIntoView({ behavior: 'smooth' });
     }
   }
 
@@ -43,8 +56,6 @@ class ChannelMessageList extends Component {
         channelId: this.props.channelId,
       },
       updateQuery: (previous, { subscriptionData }) => {
-        console.log(previous);
-        console.log(subscriptionData);
         const newAllMessages = [
           ...previous.channel.messages.messages,
           subscriptionData.data.message,
@@ -53,8 +64,10 @@ class ChannelMessageList extends Component {
           ...previous,
           channel: {
             messages: {
-              messages: newAllMessages
-            }
+              messages: newAllMessages,
+              __typename: 'MessageConnection'
+            },
+            __typename: 'Channel'
           }
         }
         return result;
