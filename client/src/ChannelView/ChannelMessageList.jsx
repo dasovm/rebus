@@ -7,9 +7,20 @@ import Loading from '../Loading/Loading';
 
 class ChannelMessageList extends Component {
   componentDidMount() {
-    this.subscribeToNewMessages();
+    this.subscribeToNewMessages(this.props.channelId);
   }
 
+  componentWillReceiveProps({channelId}) {
+    if (this.props.channelId !== channelId) {
+      if (this.unsubscribe) this.unsubscribe();
+      this.subscribeToNewMessages(channelId);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.unsubscribe) this.unsubscribe();
+  }
+  
   componentDidUpdate() {
     this.scrollToBottom();
   }
@@ -45,11 +56,12 @@ class ChannelMessageList extends Component {
     }
   }
 
-  subscribeToNewMessages = () => {
-    this.props.getMessageList.subscribeToMore({
+  subscribeToNewMessages = channelId => {
+    console.log('Subscribing to ', channelId);
+    this.unsubscribe = this.props.getMessageList.subscribeToMore({
       document: MESSAGE_SUBSCRIPTION,
       variables: {
-        channelId: this.props.channelId,
+        channelId: channelId,
       },
       updateQuery: (previous, { subscriptionData }) => {
         const newAllMessages = [
@@ -126,6 +138,9 @@ export default graphql(GET_MESSAGE_LIST, {
   options: ownProps => {
     const { channelId } = ownProps;
     return {
+      options: {
+        fetchPolicy: 'network-only',
+      },
       variables: { channelId },
     }
   }
