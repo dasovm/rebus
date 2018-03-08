@@ -16,7 +16,6 @@ const app = express();
 require('./data/persistance/connect')();
 require('./data/persistance/startup')();
 
-const whitelist = ['*'];
 const corsOptions = {
   origin: '*',
   credentials: true,
