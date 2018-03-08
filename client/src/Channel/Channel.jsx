@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import ChannelView from '../ChannelView/ChannelView';
 import ChannelSettings from '../ChannelSettings/ChannelSettings';
 import styles from './Channel.module.css';
