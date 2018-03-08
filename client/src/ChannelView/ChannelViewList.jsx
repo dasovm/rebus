@@ -5,7 +5,7 @@ import { graphql } from 'react-apollo';
 import Icon from 'material-ui/Icon';
 import styles from './ChannelView.module.css';
 
-function ChannelName({loading, channels}) {
+function ChannelViewList({loading, channels}) {
   return (
     <div className={styles.channels}>
       <div className={styles.channelList}>
@@ -42,4 +42,4 @@ export default graphql(GET_CHANNELS, {
     loading,
     channels,
   }),
-})(ChannelName);
+})(ChannelViewList);

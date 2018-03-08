@@ -64,9 +64,9 @@ class JoinChannel extends Component {
     }
   }
 
-  createNewChannel = async () => {
+  createNewChannel = () => {
     const {createNewTextValue} = this.state;
-    await this.props.createNewChannelMutation({
+    return this.props.createNewChannelMutation({
       variables: {
         name: createNewTextValue
       }

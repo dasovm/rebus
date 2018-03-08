@@ -20,6 +20,7 @@ class ChannelView extends Component {
       sendDisabled: true,
       sendingMessage: false,
       messageTextValue: '',
+      anchorEl: null,
     }
   }
 
@@ -52,19 +53,15 @@ class ChannelView extends Component {
     });
   }
 
-  sendMessage = async () => {
+  sendMessage = () => {
     const { messageTextValue } = this.state;
-    await this.props.sendTextMessageMutation({
+    return this.props.sendTextMessageMutation({
       variables: {
         channelId: this.props.channelId,
         textContent: messageTextValue
       }
     });
   }
-
-  state = {
-    anchorEl: null,
-  };
 
   handleClick = event => {
     this.setState({ anchorEl: event.currentTarget });

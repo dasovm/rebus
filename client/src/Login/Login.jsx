@@ -68,9 +68,9 @@ class Login extends Component {
     else return loginBlock;
   }
 
-  confirmToken = async () => {
+  confirmToken = () => {
     const {fbToken} = this.state;
-    await this.props.getTokenMutation({
+    return this.props.getTokenMutation({
       variables: {
         token: fbToken
       }
