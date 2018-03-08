@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import FacebookLogin from 'react-facebook-login';
 import Snackbar from 'material-ui/Snackbar';
-import { CircularProgress } from 'material-ui/Progress';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
 import { withRouter } from "react-router-dom";

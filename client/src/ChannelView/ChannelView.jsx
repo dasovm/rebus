@@ -4,14 +4,13 @@ import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/Button';
 import gql from 'graphql-tag';
-import { graphql, compose } from 'react-apollo';
+import { graphql} from 'react-apollo';
 import styles from './ChannelView.module.css';
 import ChannelName from './ChannelName';
 import ChannelViewList from './ChannelViewList';
 import ChannelMessageList from './ChannelMessageList';
 import Menu, { MenuItem } from 'material-ui/Menu';
 import Icon from 'material-ui/Icon';
-import Grow from 'material-ui/transitions/Grow';
 
 class ChannelView extends Component {
   constructor (props) {
