@@ -2,6 +2,7 @@ const express = require('express');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const bodyParser = require('body-parser');
 const { execute, subscribe } = require('graphql');
+const cors = require('cors');
 const { createServer } = require('http');
 const { SubscriptionServer } = require('subscriptions-transport-ws');
 
@@ -15,12 +16,21 @@ const app = express();
 require('./data/persistance/connect')();
 require('./data/persistance/startup')();
 
+const corsOptions = {
+  origin: '*',
+  credentials: true,
+};
+
+app.use('*', cors(corsOptions));
+app.options('*', cors(corsOptions));
+
 const formatAuthErrors = (err, req, res, next) => {
   if (err) {
     return res.send({ data: null, errors: [{ message: err }] });
   }
   return next();
 };
+
 
 app.use(
   '/graphql',

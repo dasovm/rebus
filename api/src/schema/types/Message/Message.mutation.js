@@ -4,7 +4,7 @@ const { publishMessage } = require('./../../../data/channel');
 const { buildRebus } = require('./../../../lib/giphy');
 
 
-const handleRebusMessage = (message) => {
+const handleRebusMessage = message => {
   console.log(message);
   if (message.type === 'REBUS') {
     // TODO fix proper text input from user

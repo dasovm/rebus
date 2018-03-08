@@ -21,10 +21,6 @@
   position: fixed;
 }
 
-.textField {
-  /* width: 100%; */
-}
-
 .testTextField {
   height: 60px;
 }
@@ -32,12 +28,4 @@
 .submitButton {
   color: white !important;
   margin: 16px !important;
-}
-
-.newBlock {
-  
-}
-
-.joinBlock {
-  
 }

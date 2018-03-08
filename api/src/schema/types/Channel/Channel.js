@@ -6,11 +6,9 @@ module.exports = {
   members: ({ _id: channelId }) => getUsersInChannel(channelId)
     .then(getUsers),
 
-  messages: ({ _id: channelId }, { skip, limit }) => {
-    return getMessages(channelId, skip, limit + 1)
-      .then(messages => ({
-        messages: messages.slice(0, -1),
-        hasMore: messages.length > limit,
-      }));
-  },
+  messages: ({ _id: channelId }, { skip, limit }) => getMessages(channelId, skip, limit + 1)
+    .then(messages => ({
+      messages: messages.length > limit ? messages.slice(1) : messages,
+      hasMore: messages.length > limit,
+    })),
 };

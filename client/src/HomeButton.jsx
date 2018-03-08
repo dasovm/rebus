@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import IconButton from 'material-ui/IconButton';
-import ActionHome from 'material-ui/svg-icons/action/home';
+import Icon from 'material-ui/Icon';
+import { Link } from 'react-router-dom';
 
 const iconStyle = {
   icon: {
@@ -18,8 +19,8 @@ const iconStyle = {
 class HomeButton extends Component {
   render() {
     return (
-      <IconButton href="/" tooltip="Home" iconStyle={iconStyle.icon} style={iconStyle.button}>
-        <ActionHome />
+      <IconButton component={Link} to="/" style={iconStyle.button}>
+        <Icon>home</Icon>
       </IconButton>
     );
   }
