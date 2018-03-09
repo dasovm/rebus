@@ -4,6 +4,9 @@
 
 .title {
   font-size: 1.5em;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 .addNew {
@@ -11,4 +14,18 @@
   bottom: 50px;
   right: 50px;
   font-size: large;
+}
+
+.headWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moreIconWrapper {
+  position: absolute;
+  right: 0;
+  margin-top: 7px;
+  margin-right: 34px;
 }
