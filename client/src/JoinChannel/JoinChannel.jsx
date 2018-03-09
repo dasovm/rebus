@@ -49,9 +49,8 @@ class JoinChannel extends Component {
       .then(res => {
         this.setState({
           isLoading: false,
-          snackbarMessage: 'Channel created',
-          snackbarOpen: true
         });
+        this.props.history.push(`/channel/${res.data.createChannel._id}`);
       })
       .catch(err => {
         this.setState({
@@ -87,9 +86,8 @@ class JoinChannel extends Component {
       .then(res => {
         this.setState({
           isLoading: false,
-          snackbarMessage: `Succesfully joined "${res}"`,
-          snackbarOpen: true
         });
+        this.props.history.push(`/channel/${this.state.joinChannelTextValue}`);
       })
       .catch(err => {
         this.setState({

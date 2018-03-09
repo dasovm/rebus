@@ -47,7 +47,7 @@ class Login extends Component {
         <h3 className={styles.subtitle}>Login/create account</h3>
         <FacebookLogin
           appId="148998895776893"
-          autoLoad={true}
+          autoLoad={false}
           fields="name,email,picture"
           callback={this.responseFacebook}
           onFailure={this.onFailure} />
