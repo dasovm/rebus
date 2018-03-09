@@ -47,7 +47,6 @@ class JoinChannel extends Component {
       });
       this.createNewChannel()
       .then(res => {
-        console.log(res);
         this.setState({
           isLoading: false,
           snackbarMessage: 'Channel created',
@@ -86,7 +85,6 @@ class JoinChannel extends Component {
       });
       this.joinChannel()
       .then(res => {
-        console.log(res);
         this.setState({
           isLoading: false,
           snackbarMessage: `Succesfully joined "${res}"`,
@@ -94,7 +92,6 @@ class JoinChannel extends Component {
         });
       })
       .catch(err => {
-        console.log(err);
         this.setState({
           isLoading: false,
           snackbarMessage: `Could not find a channel with id: ${this.state.joinChannelTextValue}`,
@@ -111,7 +108,6 @@ class JoinChannel extends Component {
         channelId: joinChannelTextValue
       }
     }).then(res => {
-      console.log(res.data.joinChannel.name);
       return res.data.joinChannel.name;
     });
   }

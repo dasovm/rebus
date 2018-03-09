@@ -57,7 +57,6 @@ class ChannelMessageList extends Component {
   }
 
   subscribeToNewMessages = channelId => {
-    console.log('Subscribing to ', channelId);
     this.unsubscribe = this.props.getMessageList.subscribeToMore({
       document: MESSAGE_SUBSCRIPTION,
       variables: {
@@ -106,6 +105,9 @@ const GET_MESSAGE_LIST = gql`
             ... on Text {
               text
             }
+            ... on Rebus {
+              type
+            }
           }
         }
       }
@@ -127,6 +129,11 @@ const MESSAGE_SUBSCRIPTION = gql`
         type
         ... on Text {
           text
+        }
+        ... on Rebus {
+          gifs {
+            url
+          }
         }
       }
     }
