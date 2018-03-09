@@ -6,4 +6,5 @@ module.exports = {
   subscribeToMessages: require('./subscribe-to-messages'),
   publishMessage: require('./publish-message'),
   getUsersInChannel: require('./get-users-in-channel'),
+  leaveChannel: require('./leave-channel'),
 };

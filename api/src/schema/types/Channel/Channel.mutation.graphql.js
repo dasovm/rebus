@@ -8,6 +8,9 @@ const Channel = `
       channelId: ID!
     ): Channel!
 
+    leaveChannel(
+      channelId: ID!
+    ): Channel!
   }
 `;
 module.exports = () => [
