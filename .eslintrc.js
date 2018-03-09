@@ -28,6 +28,7 @@ module.exports = {
     // 'import/no-extraneous-dependencies': 0,
     'forbid-prop-types': [0, { forbid: [] }],
 
+    'no-underscore-dangle': ["error", { "allow": ["_id"] }],
     'prop-types': [
       0,
       {
