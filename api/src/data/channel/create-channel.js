@@ -1,25 +1,16 @@
 const { Channel } = require('./../persistance/schema');
-const { ChannelNameError } = require('./errors');
-
-
-const validateChannelName = name => {
-  if (name.length < 2) {
-    throw new ChannelNameError(`Channel name too short. Must be longer than two characters, was ${name.length}.`);
-  }
-
-  if (name.length > 63) {
-    throw new ChannelNameError(`Channel name too long. Must not be longer than 63 characters, was ${name.length}`);
-  }
-};
+const { validateChannelColor, validateChannelName } = require('./validation-rules');
 
 /**
  * Creates a channel
  * @param {String} channelName
+ * @param {String} channelColor
  * @returns {Promise<Channel>}
  */
-const createChannel = channelName => new Promise((resolve, reject) => {
+const createChannel = (channelName, channelColor) => new Promise((resolve, reject) => {
   try {
     validateChannelName(channelName);
+    validateChannelColor(channelColor);
   } catch (validationError) {
     reject(validationError);
     return;
@@ -28,6 +19,7 @@ const createChannel = channelName => new Promise((resolve, reject) => {
 
   const channel = new Channel({
     name: channelName,
+    color: channelColor,
     createdAt: new Date(),
   });
 
