@@ -5,12 +5,13 @@ import Button from 'material-ui/Button';
 import IconButton from 'material-ui/Button';
 import gql from 'graphql-tag';
 import { graphql} from 'react-apollo';
+import Menu, { MenuItem } from 'material-ui/Menu';
+import Icon from 'material-ui/Icon';
 import styles from './ChannelView.module.css';
 import ChannelName from './ChannelName';
 import ChannelViewList from './ChannelViewList';
 import ChannelMessageList from './ChannelMessageList';
-import Menu, { MenuItem } from 'material-ui/Menu';
-import Icon from 'material-ui/Icon';
+
 
 class ChannelView extends Component {
   constructor (props) {
@@ -109,7 +110,6 @@ class ChannelView extends Component {
         <div className={styles.input}>
           <TextField placeholder="Write message here..." className={styles.textField} value={this.state.messageTextValue} onChange={this.handleMessageTextChange} onKeyPress={this.onKeyPress} />
           <Button color="primary" className={styles.send} disabled={this.state.sendDisabled} onClick={this.onSendClick}>
-            {/* backgroundColor="#1e90ff" hoverColor="#70a1ff" */}
             {this.state.sendingMessage ? "Loading..." : "Send"}
           </Button>
         </div>
