@@ -5,7 +5,7 @@ import { ApolloLink, split } from 'apollo-client-preset';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { InMemoryCache, IntrospectionFragmentMatcher } from 'apollo-cache-inmemory';
 import { WebSocketLink } from 'apollo-link-ws';
 import { getMainDefinition } from 'apollo-utilities';
 
@@ -13,6 +13,7 @@ import './index.css';
 import App from './App/App';
 import registerServiceWorker from './registerServiceWorker';
 import { AUTH_TOKEN } from './constants';
+import introspectionQueryResultData from './fragmentTypes.json';
 import { graphQLEndpoint, wsEndpoint } from './globals.js';
 
 const httpLink = new HttpLink({ uri: graphQLEndpoint });
@@ -49,9 +50,15 @@ const link = split(
   httpLinkWithAuthToken,
 )
 
+const fragmentMatcher = new IntrospectionFragmentMatcher({
+  introspectionQueryResultData
+});
+
+const cache = new InMemoryCache({ fragmentMatcher });
+
 const client = new ApolloClient({
   link,
-  cache: new InMemoryCache(),
+  cache,
 });
 
 ReactDOM.render(

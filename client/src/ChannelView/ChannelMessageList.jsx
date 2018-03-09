@@ -37,7 +37,7 @@ class ChannelMessageList extends Component {
           // Check if message are from viewer
           return <ChannelTextBubble key={`msg-${message._id}`}
               imgPath={message.sender.picture}
-              textString={message.content.text}
+              content={message.content}
               sentAt={message.sentAt}
               userName={message.sender.name}
               isMe={message.sender._id === viewerUserId} />
@@ -57,7 +57,6 @@ class ChannelMessageList extends Component {
   }
 
   subscribeToNewMessages = channelId => {
-    console.log('Subscribing to ', channelId);
     this.unsubscribe = this.props.getMessageList.subscribeToMore({
       document: MESSAGE_SUBSCRIPTION,
       variables: {
@@ -106,6 +105,11 @@ const GET_MESSAGE_LIST = gql`
             ... on Text {
               text
             }
+            ... on Rebus {
+              gifs {
+                url
+              }
+            }
           }
         }
       }
@@ -127,6 +131,11 @@ const MESSAGE_SUBSCRIPTION = gql`
         type
         ... on Text {
           text
+        }
+        ... on Rebus {
+          gifs {
+            url
+          }
         }
       }
     }
