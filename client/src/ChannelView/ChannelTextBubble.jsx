@@ -8,7 +8,6 @@ export default class ChannelTextBubble extends Component {
         const contentBlock = content.type === 'TEXT' 
             ? <p>{content.text}</p> 
             : <p>
-            {/* :    <img key={`img-a`} src="https://media0.giphy.com/media/l3V0megwbBeETMgZa/giphy.gif" alt="Test gif" /> */} 
             {content.gifs.map((gif, index) => {
                 return <img key={`img-${index+1}`} src={gif.url} alt={`Gif ${index+1}`}></img>;
             })}</p>;

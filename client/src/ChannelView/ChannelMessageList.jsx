@@ -63,7 +63,6 @@ class ChannelMessageList extends Component {
         channelId: channelId,
       },
       updateQuery: (previous, { subscriptionData }) => {
-        console.log(subscriptionData);
         const newAllMessages = [
           ...previous.channel.messages.messages,
           subscriptionData.data.message,
