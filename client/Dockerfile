@@ -1,5 +1,7 @@
 FROM node:9.5-alpine
 
+RUN apk update && apk add git
+
 ADD package.json /package.json
 
 ENV NODE_PATH=/node_modules

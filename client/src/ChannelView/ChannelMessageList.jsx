@@ -37,7 +37,7 @@ class ChannelMessageList extends Component {
           // Check if message are from viewer
           return <ChannelTextBubble key={`msg-${message._id}`}
               imgPath={message.sender.picture}
-              textString={message.content.text}
+              content={message.content}
               sentAt={message.sentAt}
               userName={message.sender.name}
               isMe={message.sender._id === viewerUserId} />
@@ -63,6 +63,7 @@ class ChannelMessageList extends Component {
         channelId: channelId,
       },
       updateQuery: (previous, { subscriptionData }) => {
+        console.log(subscriptionData);
         const newAllMessages = [
           ...previous.channel.messages.messages,
           subscriptionData.data.message,
@@ -106,7 +107,9 @@ const GET_MESSAGE_LIST = gql`
               text
             }
             ... on Rebus {
-              type
+              gifs {
+                url
+              }
             }
           }
         }

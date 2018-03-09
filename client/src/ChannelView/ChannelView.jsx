@@ -54,10 +54,13 @@ class ChannelView extends Component {
 
   sendMessage = () => {
     const { messageTextValue } = this.state;
+    const messageType = messageTextValue.substring(0, 7) === '/rebus ' ? 'REBUS' : 'TEXT';
+    const textContent = messageType === 'REBUS' ? messageTextValue.substring(7) : messageTextValue;
     return this.props.sendTextMessageMutation({
       variables: {
         channelId: this.props.channelId,
-        textContent: messageTextValue
+        textContent,
+        messageType,
       }
     });
   }
@@ -116,11 +119,11 @@ class ChannelView extends Component {
 }
 
 const SEND_TEXT_MESSAGE_MUTATION = gql`
-  mutation SendTextMessage($channelId: ID!, $textContent: String!) {
+  mutation SendTextMessage($channelId: ID!, $textContent: String!, $messageType: MessageInputType!) {
     sendMessage(
-      channelId: $channelId, 
+      channelId: $channelId,
       message: {
-        type: TEXT
+        type: $messageType
         text: $textContent
       }
     ) {
