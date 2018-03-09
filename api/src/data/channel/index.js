@@ -7,4 +7,5 @@ module.exports = {
   publishMessage: require('./publish-message'),
   getUsersInChannel: require('./get-users-in-channel'),
   leaveChannel: require('./leave-channel'),
+  updateChannel: require('./update-channel'),
 };

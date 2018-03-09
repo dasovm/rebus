@@ -11,6 +11,8 @@ const Channel = `
 
     name: String!
 
+    color: String
+
     members: [User]!
 
     messages(skip: Int = 0, limit: Int = 20): MessageConnection!
