@@ -209,19 +209,16 @@ const interpretWord = text => {
 
 // Build a rebus given an input text
 const buildRebus = (text, preferredFormat) => {
-  /*
-  let words = [];
-  getDictionary.then(dictionary => {
-    words = getWords('summerday', trim(dictionary));
-  });
-  */
-  const words = analyzeInput(text);
   const promises = [];
+  let words = [];
 
-  words.forEach(word => {
-    promises.push(requestGif(word, preferredFormat.toLowerCase()).then(gif => gif));
+  return getDictionary.then(dictionary => {
+    words = getWords(text, trim(dictionary));
+    words.forEach(word => {
+      promises.push(requestGif(word, preferredFormat.toLowerCase()).then(gif => gif));
+    });
+    return Promise.all(promises);
   });
-  return Promise.all(promises);
 };
 
 module.exports = {
