@@ -15,9 +15,10 @@ function getBackgroundColor(color) {
   }
 }
 
-function HomeChannelGrid({ loading, channels }) {
+function HomeChannelGrid({ loading, viewer }) {
   if (loading) return <Loading />
   else {
+    const {channels} = viewer.user;
     return (
       <div className={styles.channelList}>
         {channels.map((channel, index) => 
@@ -34,10 +35,14 @@ function HomeChannelGrid({ loading, channels }) {
 
 const GET_CHANNELS_QUERY = gql`
   query {
-    channels {
-      name
-      _id
-      color
+    viewer {
+      user {
+        channels {
+          name
+          _id
+          color
+        }
+      }
     }
   }
 `;
@@ -46,8 +51,8 @@ export default graphql(GET_CHANNELS_QUERY, {
   options: {
     fetchPolicy: 'cache-and-network',
   },
-  props: ({ data: { loading, channels } }) => ({
+  props: ({ data: { loading, viewer } }) => ({
     loading,
-    channels,
+    viewer,
   }),
 })(HomeChannelGrid);

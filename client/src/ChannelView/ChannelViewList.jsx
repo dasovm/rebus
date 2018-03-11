@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import gql from 'graphql-tag';
-import { graphql, compose } from 'react-apollo';
+import { graphql } from 'react-apollo';
 import Icon from 'material-ui/Icon';
 import styles from './ChannelView.module.css';
 import HomeButton from '../HomeButton';
