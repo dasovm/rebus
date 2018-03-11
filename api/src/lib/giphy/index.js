@@ -197,11 +197,11 @@ const interpretWord = text => {
   wordnet.lookup(text, (err, definitions) => {
     if (definitions != null) {
       definitions.forEach(definition => {
-        let words = [];
+        const words = [];
         definition.meta.words.forEach(word => {
           words.push(word.word);
         });
-        console.log(definition.glossary + ' ' + words);
+        console.log(`${definition.glossary} ${words}`);
       });
     }
   });
@@ -210,10 +210,14 @@ const interpretWord = text => {
 // Build a rebus given an input text
 const buildRebus = (text, preferredFormat) => {
   const promises = [];
+  let parsedWords = [];
   let words = [];
 
   return getDictionary.then(dictionary => {
-    words = getWords(text, trim(dictionary));
+    parsedWords = analyzeInput(text);
+    parsedWords.forEach(word => {
+      words = words.concat(getWords(word, trim(dictionary)));
+    });
     words.forEach(word => {
       promises.push(requestGif(word, preferredFormat.toLowerCase()).then(gif => gif));
     });
