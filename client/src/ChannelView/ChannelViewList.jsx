@@ -4,11 +4,15 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import Icon from 'material-ui/Icon';
 import styles from './ChannelView.module.css';
+import HomeButton from '../HomeButton';
 
 function ChannelViewList({loading, channels}) {
   return (
     <div className={styles.channels}>
       <div className={styles.channelList}>
+        <div className={styles.channelCard}>
+          <HomeButton />
+        </div>
         {loading ? 
         <div className={styles.channelCard}>...</div> :
         channels.map(channel => (

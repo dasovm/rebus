@@ -23,6 +23,10 @@
 }
 .channelList a {
   text-decoration: none;
+  padding: 0 !important;
+}
+.channelList a span {
+  color: #000000 !important;
 }
 .channelCard {
   font-size: 1.25em;

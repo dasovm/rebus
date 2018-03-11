@@ -7,6 +7,7 @@ import { graphql, compose } from 'react-apollo';
 import styles from './JoinChannel.module.css';
 import HomeButton from '../HomeButton';
 import Loading from '../Loading/Loading';
+import { randomColor } from '../colors.js'
 
 
 class JoinChannel extends Component {
@@ -66,7 +67,8 @@ class JoinChannel extends Component {
     const {createNewTextValue} = this.state;
     return this.props.createNewChannelMutation({
       variables: {
-        name: createNewTextValue
+        name: createNewTextValue,
+        color: randomColor
       }
     });
   }
@@ -159,8 +161,8 @@ class JoinChannel extends Component {
 }
 
 const CREATE_NEW_CHANNEL = gql`
-  mutation CreateNewChannel($name: String!) {
-    createChannel(name: $name) {
+  mutation CreateNewChannel($name: String!, $color: String) {
+    createChannel(name: $name, color: $color) {
       _id
     }
   }
