@@ -231,15 +231,26 @@ const buildRebus = (text, preferredFormat) => {
   let parsedWords = [];
   let words = [];
 
+  // Perform simple checks
   if (text.length < 4) {
-    // Input too small, skip text analysis
+    // Input too small, fetch gif by clear input
     promises.push(requestGif(text, preferredFormat.toLowerCase()).then(gif => gif));
     return Promise.all(promises);
   }
-  // Input sufficiently large, perform text analysis
-  return getDictionary.then(dictionary => {
-    parsedWords = analyzeInput(text);
 
+  // Input sufficiently large
+  // Try split by space and case
+  parsedWords = analyzeInput(text);
+  if (parsedWords.length > 1) {
+    parsedWords.forEach(word => {
+      promises.push(requestGif(word, preferredFormat.toLowerCase()).then(gif => gif));
+    });
+    return Promise.all(promises);
+  }
+
+  // We did not found any words by simple checks
+  // Perform text analysis
+  return getDictionary.then(dictionary => {
     parsedWords.forEach(word => {
       const readWords = getWords(word, trim(dictionary));
       words = words.concat(readWords);
