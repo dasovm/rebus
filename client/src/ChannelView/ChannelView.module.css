@@ -14,12 +14,18 @@
 .channels {
   grid-area: channels;
   height: 100%;
+  overflow: hidden;
 }
 .channelList {
   padding: 12px;
   height: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
+.channelList::-webkit-scrollbar {
+  display: none;
+ }
 .channelList a {
   text-decoration: none;
   padding: 0 !important;
