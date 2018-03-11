@@ -1,4 +1,5 @@
 const gphApiClient = require('giphy-js-sdk-core');
+const wordnet = require('wordnet');
 const Promise = require('promise');
 
 const client = gphApiClient('9X6cjVQ00kOzDF9nxvCh27qNu9azT9vQ');
@@ -9,6 +10,7 @@ const requestGif = (text, preferredFormat) => client.search('gifs', { q: text, l
     const gifArray = [];
     response.data.forEach(gifObject => {
       let url;
+
       if (preferredFormat === 'original') {
         url = gifObject.images.original.gif_url;
       } else if (preferredFormat === 'webp') {
@@ -40,15 +42,13 @@ const translateTextToGif = (text, preferredFormat) => client.translate('gifs', {
     if (preferredFormat === 'webp') {
       if (response.data.images.original.webp_url != null) {
         return response.data.images.original.webp_url;
-      } else {
-        return response.data.images.original.gif_url;
       }
+      return response.data.images.original.gif_url;
     } else if (preferredFormat === 'mp4') {
       if (response.data.images.original.mp4_url != null) {
         return response.data.images.original.mp4_url;
-      } else {
-        return response.data.images.original.gif_url;
       }
+      return response.data.images.original.gif_url;
     }
     // No special format requested
     return response.data.images.original.gif_url;
@@ -63,15 +63,13 @@ const requestRandomGif = preferredFormat => client.random('gifs', {})
     if (preferredFormat === 'webp') {
       if (response.data.images.original.webp_url != null) {
         return response.data.images.original.webp_url;
-      } else {
-        return response.data.images.original.gif_url;
       }
+      return response.data.images.original.gif_url;
     } else if (preferredFormat === 'mp4') {
       if (response.data.images.original.mp4_url != null) {
         return response.data.images.original.mp4_url;
-      } else {
-        return response.data.images.original.gif_url;
       }
+      return response.data.images.original.gif_url;
     }
     // No special format requested
     return response.data.images.original.gif_url;
@@ -84,6 +82,7 @@ const requestRandomGif = preferredFormat => client.random('gifs', {})
 const requestTrendingGifs = (text, preferredFormat, limit) => client.trending('gifs', { limit })
   .then(response => {
     const gifArray = [];
+
     response.data.forEach(gifObject => {
       let url;
       if (preferredFormat === 'original') {
@@ -130,6 +129,7 @@ const checkSplit = text => {
 // Trim text to remove very short words
 const trim = words => {
   const trimmedWords = words;
+
   for (let i = 0; i < words.length; i += 1) {
     if (words[i].length <= 2) {
       trimmedWords.splice(i, 1);
@@ -157,6 +157,7 @@ const checkCase = text => {
 const analyzeInput = text => {
   // Check for spacing
   let words = checkSplit(text);
+
   if (words.length < 2) {
     // Check for casing
     words = checkCase(text);
@@ -164,8 +165,56 @@ const analyzeInput = text => {
   return trim(words);
 };
 
+const getDictionary = new Promise((resolve, reject) => {
+  wordnet.list((err, list) => {
+    if (err) {
+      reject(err);
+    } else {
+      resolve(list);
+    }
+  });
+}).then(dictionary => dictionary).catch(err => {
+  console.log('An error occurred: %s', err);
+});
+
+const getWords = (input, list) => {
+  const matches = [];
+  let result = [];
+  let regex;
+
+  list.forEach(word => {
+    regex = new RegExp(`^${word}`, 'i');
+    result = input.match(regex);
+    if (result != null) {
+      // Only save word
+      matches.push(result[0].toLowerCase());
+    }
+  });
+  return matches;
+};
+
+const interpretWord = text => {
+  wordnet.lookup(text, (err, definitions) => {
+    if (definitions != null) {
+      definitions.forEach(definition => {
+        let words = [];
+        definition.meta.words.forEach(word => {
+          words.push(word.word);
+        });
+        console.log(definition.glossary + ' ' + words);
+      });
+    }
+  });
+};
+
 // Build a rebus given an input text
 const buildRebus = (text, preferredFormat) => {
+  /*
+  let words = [];
+  getDictionary.then(dictionary => {
+    words = getWords('summerday', trim(dictionary));
+  });
+  */
   const words = analyzeInput(text);
   const promises = [];
 

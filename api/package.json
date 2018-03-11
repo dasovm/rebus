@@ -33,6 +33,7 @@
     "promise": "^8.0.1",
     "random-text-faces": "~1.0.7",
     "request": "~2.83.0",
-    "subscriptions-transport-ws": "0.9.5"
+    "subscriptions-transport-ws": "0.9.5",
+    "wordnet": "^0.1.2"
   }
 }
