@@ -5,7 +5,32 @@ import styles from './ChannelSettings.module.css';
 import TextField from 'material-ui/TextField';
 import Snackbar from 'material-ui/Snackbar';
 import Button from 'material-ui/Button';
-import { colors, randomColor } from '../colors.js';
+import IconButton from 'material-ui/IconButton';
+import Icon from 'material-ui/Icon';
+import { Link } from 'react-router-dom';
+import { colors } from '../colors.js';
+import { firstNames, lastNames } from '../names.js';
+
+const iconStyle = {
+  icon: {
+    width: 48,
+    height: 48,
+    color: "#2f3542"
+  },
+  button: {
+    width: 96,
+    height: 96,
+    padding: 24,
+  }
+}
+
+function capFirst(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 class ChannelSettings extends Component {
   constructor(props) {
@@ -32,6 +57,12 @@ class ChannelSettings extends Component {
         });
       }
     }
+  }
+  
+  generateName = (event) => {
+    this.setState({
+      updateTextValue: capFirst(firstNames[getRandomInt(0, firstNames.length)]) + ' ' + capFirst(lastNames[getRandomInt(0, lastNames.length)]),
+    });
   }
 
   snackbarClose = (event, reason) => {
@@ -79,10 +110,16 @@ class ChannelSettings extends Component {
       variables: {
         channelId: this.props.id,
         name: this.state.updateTextValue,
-        color: randomColor
+        color: this.state.color
       }
     }).then(res => {
       return res.data.updateChannel.color;
+    });
+  }
+
+  selectColor = (color) => {
+    this.setState({
+      color,
     });
   }
 
@@ -90,19 +127,24 @@ class ChannelSettings extends Component {
     const {id} = this.props;
     return (
       <div className={styles.ChannelSettings}>
+        <IconButton component={Link} to={`/channel/${id}`} style={iconStyle.button}>
+          <Icon>arrow_back</Icon>
+        </IconButton>
         {this.state.updateTextValue === null ?
           <p>Loading...</p> :
-          <TextField placeholder="name" value={this.state.updateTextValue} onChange={this.handleUpdateTextChange} />
+          <TextField placeholder="name" value={this.state.updateTextValue} onChange={this.handleUpdateTextChange} className={styles.textField} />
         }
+        <Button className={styles.generateNameButton} onClick={this.generateName}>Randomize a name!</Button>
+
         {this.props.loading ? 
           <p>Loading...</p> :
           <div className={styles.colorGrid}>
           {colors.map(color => {
             const channelColor = this.state.color;
-            return <div style={{fontWeight: color === channelColor ? 'bold' : 'normal'}} className={styles.colorCard}>{color}</div>
+            return <div style={{transform: color === channelColor ? 'scale(0.9)' : 'scale(1)', backgroundColor: color}} key={color} className={styles.colorCard} onClick={() => this.selectColor(color)}>{color}</div>
           })}
         </div>}
-        <Button variant="raised" color="primary" className={styles.submitButton} onClick={this.onUpdateChannelClick}>
+        <Button variant="raised" color="primary" className={styles.saveButton} onClick={this.onUpdateChannelClick}>
           {this.state.isLoading ? 'Loading...' : 'Save'}
         </Button>
         <Snackbar
