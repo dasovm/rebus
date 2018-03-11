@@ -244,7 +244,7 @@ const buildRebus = (text, preferredFormat) => {
       const readWords = getWords(word, trim(dictionary));
       words = words.concat(readWords);
     });
-    console.log(words);
+
     words.forEach(word => {
       promises.push(requestGif(word, preferredFormat.toLowerCase()).then(gif => gif));
     });
