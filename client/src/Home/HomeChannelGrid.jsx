@@ -60,9 +60,6 @@ const GET_CHANNELS_QUERY = gql`
 `;
 
 export default graphql(GET_CHANNELS_QUERY, {
-  options: {
-    fetchPolicy: 'cache-and-network',
-  },
   props: ({ data: { loading, viewer } }) => ({
     loading,
     viewer,
