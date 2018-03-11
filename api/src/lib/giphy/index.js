@@ -241,7 +241,6 @@ const buildRebus = (text, preferredFormat) => {
     parsedWords.forEach(word => {
       const readWords = getWords(word, trim(dictionary));
       words = words.concat(readWords);
-      console.log(readWords);
     });
 
     words.forEach(word => {
