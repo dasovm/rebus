@@ -8,23 +8,25 @@ import HomeButton from '../HomeButton';
 import { standardColor } from '../colors.js';
 
 function getBackgroundColor(color) {
-  if(color){
+  console.log(color);
+  
+  if (color) {
     return color;
   } else {
     return standardColor;
   }
 }
 
-function ChannelViewList({loading, channels, channel}) {
+function ChannelViewList({loading, viewer, channel}) {
   return (
-    <div className={styles.channels} style={{backgroundColor: loading ? '#fff' : getBackgroundColor(channel.color)}}>
+    <div className={styles.channels} style={{backgroundColor: loading || typeof channel === "undefined" ? '#fff' : getBackgroundColor(channel.color)}}>
       <div className={styles.channelList}>
         <div className={styles.channelCard} style={{marginTop: '0'}}>
           <HomeButton />
         </div>
-        {loading ? 
+        {loading || typeof viewer === "undefined" ? 
         <div className={styles.channelCard}>...</div> :
-        channels.map(channel => (
+        viewer.user.channels.map(channel => (
           <Link key={`link-${channel._id}`} to={`/channel/${channel._id}`}>
             <div key={`channel-${channel._id}`} className={styles.channelCard}>
               {channel.name.charAt(0)}
@@ -43,9 +45,14 @@ const GET_CHANNELS = gql`
     channel (channelId: $channelId) {
       color
     }
-    channels {
-      _id
-      name
+    viewer {
+      user {
+        _id
+        channels {
+          name
+          _id
+        }
+      }
     }
   }
 `;
@@ -58,9 +65,9 @@ export default
         channelId: props.channelId
       }
     }),
-    props: ({ data: { loading, channels, channel } }) => ({
+    props: ({ data: { loading, viewer, channel } }) => ({
       loading,
-      channels,
+      viewer,
       channel,
     }),
   })(ChannelViewList);

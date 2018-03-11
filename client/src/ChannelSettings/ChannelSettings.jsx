@@ -8,7 +8,7 @@ import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import Icon from 'material-ui/Icon';
 import { Link } from 'react-router-dom';
-import { colors } from '../colors.js';
+import { colors, standardColor } from '../colors.js';
 import { firstNames, lastNames } from '../names.js';
 
 const iconStyle = {
@@ -48,7 +48,7 @@ class ChannelSettings extends Component {
     if (!this.props.loading) {
       if (this.state.color === null) {
         this.setState({
-          color: this.props.channel.color,
+          color: this.props.channel.color ? this.props.channel.color : standardColor,
         });
       }
       if (this.state.updateTextValue === null) {
@@ -183,7 +183,6 @@ export default compose(
   graphql(UPDATE_CHANNEL, {name: 'updateChannelMutation'}),
   graphql(GET_CHANNEL_NAME, {
     options: (props) => ({
-      fetchPolicy: 'cache-and-network',
       variables: {
         channelId: props.id
       }

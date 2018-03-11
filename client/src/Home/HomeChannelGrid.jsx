@@ -28,7 +28,7 @@ function getContrastYIQ(hexcolor) {
 }
 
 function HomeChannelGrid({ loading, viewer }) {
-  if (loading) return <Loading />
+  if (loading || typeof viewer === "undefined") return <Loading />
   else {
     const {channels} = viewer.user;
     return (
@@ -49,6 +49,7 @@ const GET_CHANNELS_QUERY = gql`
   query {
     viewer {
       user {
+        _id
         channels {
           name
           _id
