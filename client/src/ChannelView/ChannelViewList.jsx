@@ -16,7 +16,6 @@ function getBackgroundColor(color) {
 }
 
 function ChannelViewList({loading, channels, channel}) {
-  console.log(channel);
   return (
     <div className={styles.channels} style={{backgroundColor: loading ? '#fff' : getBackgroundColor(channel.color)}}>
       <div className={styles.channelList}>
