@@ -147,9 +147,6 @@ export default graphql(GET_MESSAGE_LIST, {
   options: ownProps => {
     const { channelId } = ownProps;
     return {
-      options: {
-        fetchPolicy: 'network-only',
-      },
       variables: { channelId },
     }
   }
