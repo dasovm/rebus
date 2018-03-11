@@ -178,18 +178,34 @@ const getDictionary = new Promise((resolve, reject) => {
 });
 
 const getWords = (input, list) => {
-  const matches = [];
+  let matches = [];
   let result = [];
   let regex;
+  const indexes = [];
+  const orderedMatches = [];
 
   list.forEach(word => {
-    regex = new RegExp(`^${word}`, 'i');
+    regex = new RegExp(`${word}`, 'i');
     result = input.match(regex);
     if (result != null) {
       // Only save word
       matches.push(result[0].toLowerCase());
     }
   });
+
+  // Restore order of found words with respect to input
+  matches.forEach(word => {
+    indexes.push(input.indexOf(word));
+  });
+
+  let minIndex = 0;
+  for (let i = 0; i < matches.length; i++) {
+    const min = Math.min.apply(0, indexes);
+    minIndex = indexes.indexOf(min);
+    indexes[minIndex] = Number.POSITIVE_INFINITY;
+    orderedMatches.push(matches[minIndex]);
+  }
+  matches = orderedMatches;
   return matches;
 };
 
@@ -213,11 +229,21 @@ const buildRebus = (text, preferredFormat) => {
   let parsedWords = [];
   let words = [];
 
+  if (text.length < 4) {
+    // Input too small, skip text analysis
+    promises.push(requestGif(text, preferredFormat.toLowerCase()).then(gif => gif));
+    return Promise.all(promises);
+  }
+  // Input sufficiently large, perform text analysis
   return getDictionary.then(dictionary => {
     parsedWords = analyzeInput(text);
+
     parsedWords.forEach(word => {
-      words = words.concat(getWords(word, trim(dictionary)));
+      const readWords = getWords(word, trim(dictionary));
+      words = words.concat(readWords);
+      console.log(readWords);
     });
+
     words.forEach(word => {
       promises.push(requestGif(word, preferredFormat.toLowerCase()).then(gif => gif));
     });
