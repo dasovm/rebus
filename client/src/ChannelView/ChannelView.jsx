@@ -4,7 +4,7 @@ import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/Button';
 import gql from 'graphql-tag';
-import { graphql} from 'react-apollo';
+import { graphql, compose } from 'react-apollo';
 import Menu, { MenuItem } from 'material-ui/Menu';
 import Icon from 'material-ui/Icon';
 import styles from './ChannelView.module.css';
@@ -66,6 +66,21 @@ class ChannelView extends Component {
     });
   }
 
+  leaveChannelClick = (event) => {
+    this.setState({ anchorEl: null });
+    this.leaveChannel().then(() => {
+      this.props.history.push('/login');
+    }).bind(this);
+  }
+
+  leaveChannel = async () => {
+    return this.props.leaveChannelMutation({
+      variables: {
+        channelId: this.props.channelId,
+      }
+    });
+  }
+
   handleClick = event => {
     this.setState({ anchorEl: event.currentTarget });
   };
@@ -79,7 +94,7 @@ class ChannelView extends Component {
 
     return (
       <div className={styles.Channel}>
-        <ChannelViewList />
+        <ChannelViewList channelId={this.props.channelId} />
         <div className={styles.header}>
           <div className={styles.headerContainer}>
             <ChannelName channelId={this.props.channelId} />
@@ -100,7 +115,7 @@ class ChannelView extends Component {
               onClose={this.handleClose}
             >
               <MenuItem component={Link} to={`/channel/${this.props.channelId}/settings`} onClick={this.handleClose}>Settings</MenuItem>
-              <MenuItem onClick={this.handleClose}>Leave channel</MenuItem>
+              <MenuItem component={Link} to='/' onClick={this.leaveChannelClick}>Leave channel</MenuItem>
           </Menu>
           </div>
         </div>
@@ -132,4 +147,17 @@ const SEND_TEXT_MESSAGE_MUTATION = gql`
   }
 `;
 
-export default graphql(SEND_TEXT_MESSAGE_MUTATION, {name: 'sendTextMessageMutation'})(ChannelView);
+const LEAVE_CHANNEL_MUTATION = gql`
+  mutation LeaveChannel($channelId: ID!) {
+    leaveChannel(
+      channelId: $channelId,
+    ) {
+      _id
+    }
+  }
+`;
+
+export default compose(
+  graphql(SEND_TEXT_MESSAGE_MUTATION, {name: 'sendTextMessageMutation'}),
+  graphql(LEAVE_CHANNEL_MUTATION, {name: 'leaveChannelMutation'}),
+)(ChannelView);
