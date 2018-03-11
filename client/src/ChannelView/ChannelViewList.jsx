@@ -8,8 +8,6 @@ import HomeButton from '../HomeButton';
 import { standardColor } from '../colors.js';
 
 function getBackgroundColor(color) {
-  console.log(color);
-  
   if (color) {
     return color;
   } else {
