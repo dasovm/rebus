@@ -5,31 +5,33 @@ const Promise = require('promise');
 const client = gphApiClient('9X6cjVQ00kOzDF9nxvCh27qNu9azT9vQ');
 
 // Search for a gif given an input
-const requestGif = (text, preferredFormat) => client.search('gifs', { q: text, limit: 1 })
+const requestGif = (text, preferredFormat) => client.search('gifs', { q: text, limit: 20 })
   .then(response => {
     const gifArray = [];
-    response.data.forEach(gifObject => {
-      let url;
+    // Choose a random gif to prevent same gifs for specific input
+    const nbrOfGifs = response.data.length;
+    const randomGifIndex = Math.floor(Math.random() * nbrOfGifs);
+    const gifObject = response.data[randomGifIndex];
+    let url;
 
-      if (preferredFormat === 'original') {
-        url = gifObject.images.original.gif_url;
-      } else if (preferredFormat === 'webp') {
-        if (gifObject.images.original.webp_url != null) {
-          url = gifObject.images.original.webp_url;
-        } else {
-          url = gifObject.images.original.gif_url;
-        }
-      } else if (preferredFormat === 'mp4') {
-        if (gifObject.images.original.mp4_url != null) {
-          url = gifObject.images.original.mp4_url;
-        } else {
-          url = gifObject.images.original.gif_url;
-        }
+    if (preferredFormat === 'original') {
+      url = gifObject.images.original.gif_url;
+    } else if (preferredFormat === 'webp') {
+      if (gifObject.images.original.webp_url != null) {
+        url = gifObject.images.original.webp_url;
       } else {
         url = gifObject.images.original.gif_url;
       }
-      gifArray.push(url);
-    });
+    } else if (preferredFormat === 'mp4') {
+      if (gifObject.images.original.mp4_url != null) {
+        url = gifObject.images.original.mp4_url;
+      } else {
+        url = gifObject.images.original.gif_url;
+      }
+    } else {
+      url = gifObject.images.original.gif_url;
+    }
+    gifArray.push(url);
     return gifArray;
   })
   .catch(err => {
@@ -242,7 +244,7 @@ const buildRebus = (text, preferredFormat) => {
       const readWords = getWords(word, trim(dictionary));
       words = words.concat(readWords);
     });
-
+    console.log(words);
     words.forEach(word => {
       promises.push(requestGif(word, preferredFormat.toLowerCase()).then(gif => gif));
     });
