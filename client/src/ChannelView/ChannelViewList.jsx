@@ -19,7 +19,7 @@ function ChannelViewList({loading, channels, channel}) {
   return (
     <div className={styles.channels} style={{backgroundColor: loading ? '#fff' : getBackgroundColor(channel.color)}}>
       <div className={styles.channelList}>
-        <div className={styles.channelCard}>
+        <div className={styles.channelCard} style={{marginTop: '0'}}>
           <HomeButton />
         </div>
         {loading ? 
