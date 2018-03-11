@@ -79,7 +79,7 @@ class ChannelView extends Component {
 
     return (
       <div className={styles.Channel}>
-        <ChannelViewList />
+        <ChannelViewList channelId={this.props.channelId} />
         <div className={styles.header}>
           <div className={styles.headerContainer}>
             <ChannelName channelId={this.props.channelId} />

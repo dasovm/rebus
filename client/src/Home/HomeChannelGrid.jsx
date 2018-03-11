@@ -5,6 +5,15 @@ import { graphql } from 'react-apollo';
 import Grow from 'material-ui/transitions/Grow';
 import styles from './HomeChannelGrid.module.css';
 import Loading from '../Loading/Loading';
+import { standardColor } from '../colors.js';
+
+function getBackgroundColor(color) {
+  if(color){
+    return color;
+  } else {
+    return standardColor;
+  }
+}
 
 function HomeChannelGrid({ loading, channels }) {
   if (loading) return <Loading />
@@ -12,14 +21,14 @@ function HomeChannelGrid({ loading, channels }) {
     return (
       <div className={styles.channelList}>
         {channels.map((channel, index) => 
-          <Grow key={`grow-${channel._id}`} in={!loading} {...(!loading ? { timeout: (index + 1) * 500 } : {})}>
+          <Grow key={`grow-${channel._id}`} in={!loading} {...(!loading ? { timeout: (index + 1) * 200 } : {})}>
             <Link key={`link-${channel._id}`} to={`/channel/${channel._id}`} className={styles.channelLink}>
-              <div key={`grid-${channel._id}`} className={styles.channelCard}>{channel.name}</div>
+              <div key={`grid-${channel._id}`} style={{backgroundColor: getBackgroundColor(channel.color)}} className={styles.channelCard}>{channel.name}</div>
             </Link>
           </Grow>
         )}
       </div>
-    );
+    );  
   }
 }
 
@@ -28,6 +37,7 @@ const GET_CHANNELS_QUERY = gql`
     channels {
       name
       _id
+      color
     }
   }
 `;

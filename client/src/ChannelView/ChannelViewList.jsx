@@ -1,14 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import gql from 'graphql-tag';
-import { graphql } from 'react-apollo';
+import { graphql, compose } from 'react-apollo';
 import Icon from 'material-ui/Icon';
 import styles from './ChannelView.module.css';
 import HomeButton from '../HomeButton';
+import { standardColor } from '../colors.js';
 
-function ChannelViewList({loading, channels}) {
+function getBackgroundColor(color) {
+  if(color){
+    return color;
+  } else {
+    return standardColor;
+  }
+}
+
+function ChannelViewList({loading, channels, channel}) {
+  console.log(channel);
   return (
-    <div className={styles.channels}>
+    <div className={styles.channels} style={{backgroundColor: loading ? '#fff' : getBackgroundColor(channel.color)}}>
       <div className={styles.channelList}>
         <div className={styles.channelCard}>
           <HomeButton />
@@ -30,7 +40,10 @@ function ChannelViewList({loading, channels}) {
 }
 
 const GET_CHANNELS = gql`
-  query {
+  query GetChannelAndColor($channelId: ID!) {
+    channel (channelId: $channelId) {
+      color
+    }
     channels {
       _id
       name
@@ -38,12 +51,17 @@ const GET_CHANNELS = gql`
   }
 `;
 
-export default graphql(GET_CHANNELS, {
-  options: {
-    fetchPolicy: 'cache-and-network',
-  },
-  props: ({ data: { loading, channels } }) => ({
-    loading,
-    channels,
-  }),
-})(ChannelViewList);
+export default 
+  graphql(GET_CHANNELS, {
+    options: (props) => ({
+      fetchPolicy: 'cache-and-network',
+      variables: {
+        channelId: props.channelId
+      }
+    }),
+    props: ({ data: { loading, channels, channel } }) => ({
+      loading,
+      channels,
+      channel,
+    }),
+  })(ChannelViewList);
