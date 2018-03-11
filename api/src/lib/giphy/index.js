@@ -172,7 +172,7 @@ const getDictionary = new Promise((resolve, reject) => {
     if (err) {
       reject(err);
     } else {
-      resolve(list);
+      resolve(trim(list));
     }
   });
 }).then(dictionary => dictionary).catch(err => {
@@ -248,14 +248,25 @@ const buildRebus = (text, preferredFormat) => {
     return Promise.all(promises);
   }
 
+  // We don't need super detailed analysis
+  const maxWords = Math.floor(text.length / 3);
+
   // We did not found any words by simple checks
   // Perform text analysis
   return getDictionary.then(dictionary => {
     parsedWords.forEach(word => {
-      const readWords = getWords(word, trim(dictionary));
+      const readWords = getWords(word, dictionary);
       words = words.concat(readWords);
     });
-
+    // Remove words if necessary
+    if (words.length > maxWords) {
+      // Trim away shortest words
+      const wordsToRemove = words.length - maxWords;
+      for (let i = 0; i < wordsToRemove; i++) {
+        const w = words.slice().sort((a, b) => b.length - a.length).pop();
+        words.splice(words.indexOf(w), 1);
+      }
+    }
     words.forEach(word => {
       promises.push(requestGif(word, preferredFormat.toLowerCase()).then(gif => gif));
     });
