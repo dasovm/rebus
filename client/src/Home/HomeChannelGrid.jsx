@@ -15,6 +15,18 @@ function getBackgroundColor(color) {
   }
 }
 
+function getContrastYIQ(hexcolor) {
+  if(hexcolor === null) { return 'black' }
+  if (hexcolor.indexOf('#') === 0) {
+    hexcolor = hexcolor.slice(1);
+  }
+  const r = parseInt(hexcolor.substr(0, 2), 16);
+  const g = parseInt(hexcolor.substr(2, 2), 16);
+  const b = parseInt(hexcolor.substr(4, 2), 16);
+  const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+  return (yiq >= 128) ? 'black' : 'white';
+}
+
 function HomeChannelGrid({ loading, viewer }) {
   if (loading) return <Loading />
   else {
@@ -24,7 +36,7 @@ function HomeChannelGrid({ loading, viewer }) {
         {channels.map((channel, index) => 
           <Grow key={`grow-${channel._id}`} in={!loading} {...(!loading ? { timeout: (index + 1) * 200 } : {})}>
             <Link key={`link-${channel._id}`} to={`/channel/${channel._id}`} className={styles.channelLink}>
-              <div key={`grid-${channel._id}`} style={{backgroundColor: getBackgroundColor(channel.color)}} className={styles.channelCard}>{channel.name}</div>
+              <div key={`grid-${channel._id}`} style={{backgroundColor: getBackgroundColor(channel.color), color: getContrastYIQ(channel.color)}} className={styles.channelCard}>{channel.name}</div>
             </Link>
           </Grow>
         )}
