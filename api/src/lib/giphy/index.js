@@ -15,9 +15,8 @@ const requestGif = (text, preferredFormat) => client.search('gifs', { q: text, l
       return null;
     }
 
-    console.log('found', nbrOfGifs);
-    const randomGifIndex = Math.floor(Math.random() * nbrOfGifs);
-    const gifObject = response.data[randomGifIndex];
+    // const randomGifIndex = Math.floor(Math.random() * nbrOfGifs);
+    const gifObject = response.data[0];
     let url;
 
     if (preferredFormat === 'original') {
