@@ -10,6 +10,12 @@ const requestGif = (text, preferredFormat) => client.search('gifs', { q: text, l
     const gifArray = [];
     // Choose a random gif to prevent same gifs for specific input
     const nbrOfGifs = response.data.length;
+
+    if (nbrOfGifs === 0) {
+      return null;
+    }
+
+    console.log('found', nbrOfGifs);
     const randomGifIndex = Math.floor(Math.random() * nbrOfGifs);
     const gifObject = response.data[randomGifIndex];
     let url;
@@ -233,6 +239,7 @@ const buildRebus = (text, preferredFormat) => {
 
   // Perform simple checks
   if (text.length < 4) {
+    console.info('Simple check');
     // Input too small, fetch gif by clear input
     promises.push(requestGif(text, preferredFormat.toLowerCase()).then(gif => gif));
     return Promise.all(promises);
@@ -242,10 +249,10 @@ const buildRebus = (text, preferredFormat) => {
   // Try split by space and case
   parsedWords = analyzeInput(text);
   if (parsedWords.length > 1) {
-    parsedWords.forEach(word => {
-      promises.push(requestGif(word, preferredFormat.toLowerCase()).then(gif => gif));
-    });
-    return Promise.all(promises);
+    console.info('Split by space and case');
+    return Promise
+      .all(parsedWords.map(word => requestGif(word, preferredFormat.toLowerCase)))
+      .then(gifs => gifs.filter(gif => gif !== undefined && gif !== null));
   }
 
   // We don't need super detailed analysis
@@ -253,6 +260,7 @@ const buildRebus = (text, preferredFormat) => {
 
   // We did not found any words by simple checks
   // Perform text analysis
+  console.info('dictionary check');
   return getDictionary.then(dictionary => {
     parsedWords.forEach(word => {
       const readWords = getWords(word, dictionary);

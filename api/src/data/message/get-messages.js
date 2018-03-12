@@ -7,6 +7,7 @@ const getMessages = (channelId, skip, limit) => new Promise((resolve, reject) =>
       return;
     }
 
+    console.log(messages);
     resolve(messages);
   });
 });
