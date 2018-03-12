@@ -11,6 +11,7 @@ services:
       - "./api/src:/app/src"
 
   client:
+    command: "yarn start"
     environment:
       - GRAPHQL_HTTP_ENDPOINT=http://api:3000/graphql
       - GRAPHQL_WS_ENDPOINT=ws://api:3000/subscriptions
