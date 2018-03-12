@@ -8,7 +8,7 @@ module.exports = {
 
   messages: ({ _id: channelId }, { skip, limit }) => getMessages(channelId, skip, limit + 1)
     .then(messages => ({
-      messages: messages.length > limit ? messages.slice(1) : messages,
+      messages: messages.length > limit ? messages.reverse().slice(1) : messages.reverse(),
       hasMore: messages.length > limit,
     })),
 };
